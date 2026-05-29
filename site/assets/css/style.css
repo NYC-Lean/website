@@ -76,6 +76,7 @@ a:hover { color: var(--accent); }
 .site-header.scrolled {
   background: var(--paper);
   border-bottom-color: var(--ink);
+  box-shadow: 0 10px 28px -18px rgba(13, 76, 115, 0.45);
 }
 .nav-wrap {
   max-width: var(--maxw);
@@ -398,6 +399,13 @@ a:hover { color: var(--accent); }
   /* stack the masthead and let it fill the width */
   .hero-wordmark { font-size: clamp(4.5rem, 28vw, 9rem); line-height: 0.9; }
   .hero-wordmark .word-red { display: block; }
+
+  /* solid navbar on mobile so large headings never bleed through it */
+  .site-header {
+    background: var(--paper);
+    border-bottom-color: var(--ink);
+    box-shadow: 0 10px 28px -18px rgba(13, 76, 115, 0.45);
+  }
 }
 @media (max-width: 540px) {
   .footer-meta { margin-left: 0; width: 100%; }
