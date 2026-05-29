@@ -1,60 +1,30 @@
-# lean.nyc — NYC Lean website
+# lean.nyc
 
-The website for **NYC Lean**, a community for the [Lean](https://lean-lang.org)
+Website for **NYC Lean** — a community for the [Lean](https://lean-lang.org)
 theorem prover and formal mathematics in New York City.
 
-🔗 Live at **[lean.nyc](https://lean.nyc)**
+🔗 **[lean.nyc](https://lean.nyc)**
 
-## What this is
-
-A single-page static site — plain HTML and CSS, no build step. It's served
-directly by GitHub Pages, so editing is as simple as changing a file and
-pushing.
+A single static page — plain HTML/CSS, no build step. GitHub Pages serves the
+`main` branch directly.
 
 ```
-.
-├── index.html        # the page itself (content lives here)
-├── assets/
-│   ├── style.css      # all styling
-│   └── favicon.svg
-├── CNAME              # custom domain (lean.nyc) — don't delete
-└── .nojekyll          # tell Pages to serve files as-is (no Jekyll build)
+index.html          # all content
+assets/style.css     # all styling
+assets/favicon.svg
+CNAME                # custom domain — don't delete
 ```
 
-## Editing the site
+## Editing
 
-Everything visible on the page is in `index.html`; all styling is in
-`assets/style.css`. To change copy, links, or sections, edit `index.html`.
-A few things to keep current:
+All copy and links live in `index.html`; styling in `assets/style.css`.
+Meetup info is the `#meetups` section; chat/mailing-list/GitHub links are in
+`#join`. Edit, commit to `main`, and it deploys automatically.
 
-- **Meetup info** lives in the `#meetups` section.
-- **Join links** (Zulip, Google Group, GitHub) live in the `#join` section —
-  update the `href`s if any of these move.
-
-## Running it locally
-
-No tooling required — just open `index.html` in a browser. Or serve it so
-relative paths behave exactly like production:
+Preview locally by opening `index.html`, or:
 
 ```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+python3 -m http.server 8000   # http://localhost:8000
 ```
 
-## Deploying
-
-GitHub Pages serves the `main` branch automatically. To enable it the first time:
-
-1. Push this repo to the `NYC-Lean` org.
-2. **Settings → Pages → Build and deployment → Source: "Deploy from a branch"**,
-   branch `main`, folder `/ (root)`.
-3. Under **Custom domain**, enter `lean.nyc` (the `CNAME` file already sets this).
-4. Point the domain's DNS at GitHub Pages:
-   - Four `A` records for the apex `@` →
-     `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - (optionally) a `CNAME` for `www` → `nyc-lean.github.io`
-5. Once DNS resolves, tick **Enforce HTTPS**.
-
-## License
-
-Content & code: feel free to reuse. Contributions welcome — open a PR.
+Contributions welcome — open a PR.
