@@ -1,5 +1,5 @@
 /* ============================================================
-   NYC Lean — events rendering + page motion.
+   NYC Lean: events rendering + page motion.
    - renders upcoming events from assets/events.js into the home
      page (next 3) and the calendar page (all upcoming)
    - hero masthead reveal on load (home only)
@@ -74,7 +74,7 @@
   }
   function rowHTML(e, isNext, compact) {
     var d = e._d;
-    var dnum = d ? d.getDate() : "—";
+    var dnum = d ? d.getDate() : "";
     var mon = d ? MO[d.getMonth()] : "";
     var yr = d ? d.getFullYear() : "";
     var wd = d ? WD[d.getDay()] : "";

@@ -1,30 +1,91 @@
-# lean.nyc
+# NYC Lean
 
-Website for **NYC Lean** — a community for the [Lean](https://lean-lang.org)
-theorem prover and formal mathematics in New York City.
+The website for **NYC Lean**, a community for the [Lean](https://lean-lang.org)
+theorem prover and formal methods in New York City.
 
-🔗 **[lean.nyc](https://lean.nyc)**
+Live at **[lean.nyc](https://lean.nyc)**.
 
-A single static page — plain HTML/CSS, no build step. GitHub Pages serves the
-`main` branch directly.
+## Overview
+
+A static site built with plain HTML, CSS, and vanilla JavaScript. There is no
+build step and no framework. Page motion is provided by [GSAP](https://gsap.com),
+vendored locally. The site is deployed to GitHub Pages by a GitHub Actions
+workflow.
+
+## Repository structure
 
 ```
-index.html          # all content
-assets/style.css     # all styling
-assets/favicon.svg
-CNAME                # custom domain — don't delete
+.
+├── .github/workflows/deploy.yml   GitHub Pages deployment
+├── .editorconfig
+├── .gitignore
+├── LICENSE
+├── README.md
+└── site/                          everything served at lean.nyc
+    ├── index.html                 home page
+    ├── calendar.html              served at /calendar
+    ├── members.html               served at /members
+    ├── 404.html
+    ├── CNAME                      custom domain (do not delete)
+    └── assets/
+        ├── css/style.css          all styles
+        ├── js/app.js              event rendering and GSAP motion
+        ├── js/events.js           meetup data (edit this to add meetups)
+        ├── img/                   favicon.svg, logo.svg
+        └── vendor/gsap/           GSAP (gsap.min.js, ScrollTrigger.min.js)
 ```
 
-## Editing
+## Local development
 
-All copy and links live in `index.html`; styling in `assets/style.css`.
-Meetup info is the `#meetups` section; chat/mailing-list/GitHub links are in
-`#join`. Edit, commit to `main`, and it deploys automatically.
-
-Preview locally by opening `index.html`, or:
+The site is just static files. Serve the `site` directory with any static
+file server, for example:
 
 ```bash
-python3 -m http.server 8000   # http://localhost:8000
+python3 -m http.server 8000 --directory site
 ```
 
-Contributions welcome — open a PR.
+Then open <http://localhost:8000>.
+
+## Editing content
+
+### Meetups
+
+All events live in [`site/assets/js/events.js`](site/assets/js/events.js) as a
+single list. Each entry looks like:
+
+```js
+{
+  date: "2026-06-07",   // YYYY-MM-DD, required
+  time: "2:00 PM",       // free text, "" if unknown
+  location: "Mori",      // free text, "" if none or private
+  title: "Weekend meetup",
+  description: "..."     // optional, shown on the calendar page
+}
+```
+
+Add the next meetup at the top of the list. Order does not matter, since
+entries are sorted by date. Events with a future date appear under "Upcoming";
+once a date passes, they move to "Past" automatically. The home page shows the
+next three upcoming events.
+
+### Members
+
+Edit [`site/members.html`](site/members.html). Copy a `.member` block, set the
+name, optional role, and a link to a personal site (show the domain without the
+`https://` prefix as the link text).
+
+## Deployment
+
+Every push to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which publishes the `site/` directory to GitHub Pages. The custom domain is
+configured in the repository's Pages settings and pinned by `site/CNAME`; HTTPS
+is enforced.
+
+## Contributing
+
+Pull requests are welcome. To add yourself to the members list or add a meetup,
+edit the relevant file described above and open a PR.
+
+## License
+
+Released under the [MIT License](LICENSE).

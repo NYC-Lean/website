@@ -1,5 +1,5 @@
 /* ============================================================
-   NYC Lean — events (single source of truth).
+   NYC Lean: events (single source of truth).
    The home page shows the next 3 upcoming events; the calendar
    page shows all upcoming, with past events listed below.
    Anything with a future date shows under "Upcoming"; once a
@@ -13,7 +13,7 @@
        title: "Weekend meetup",
        description: "..."     // optional, shown on the calendar page
      }
-   Order doesn't matter — entries are sorted by date.
+   Order does not matter; entries are sorted by date.
 
    History below was compiled from the NYC thread on the Lean Zulip.
    ============================================================ */
