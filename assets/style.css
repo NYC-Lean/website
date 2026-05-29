@@ -88,7 +88,7 @@ a:hover { color: var(--accent); }
 .brand-mark {
   width: 15px; height: 15px; border-radius: 50%;
   background: var(--accent);
-  box-shadow: 2px 2px 0 var(--accent-3);
+  box-shadow: 2px 2px 0 var(--accent-2);
 }
 .site-nav { display: flex; align-items: center; gap: 1.7rem; }
 .site-nav a {
@@ -391,6 +391,7 @@ a:hover { color: var(--accent); }
   .join-row { grid-template-columns: 1fr auto; gap: 0.2rem 1rem; }
   .join-k { grid-column: 1 / -1; }
   .row { grid-template-columns: 3rem 1fr; gap: 1rem; }
+  .row.event { grid-template-columns: 5.5rem 1fr; }
   .site-nav { gap: 1.1rem; }
 }
 @media (max-width: 640px) {
