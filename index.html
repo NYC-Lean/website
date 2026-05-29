@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYC Lean — formal mathematics in New York City</title>
+  <meta name="description" content="NYC Lean is a community for people interested in the Lean theorem prover and formal mathematics in New York City. We meet regularly to learn, build, and formalize together." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NYC Lean" />
+  <meta property="og:description" content="A community for the Lean theorem prover and formal mathematics in New York City." />
+  <meta property="og:url" content="https://lean.nyc" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="/">
+      <span class="brand-mark">∀</span>
+      <span class="brand-text">NYC&nbsp;Lean</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="#meetups">Meetups</a>
+      <a href="#projects">Projects</a>
+      <a href="#join" class="nav-cta">Join us</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyeline reveal" style="--d:0">A community for formal mathematics · New&nbsp;York&nbsp;City</p>
+        <h1 class="reveal" style="--d:1">
+          We meet to prove<br />
+          things <em>by hand</em>,<br />
+          and <em>by machine</em>.
+        </h1>
+        <p class="lede reveal" style="--d:2">
+          NYC&nbsp;Lean is a group of mathematicians, programmers, and students in New York
+          who gather to learn the <a href="https://lean-lang.org" target="_blank" rel="noopener">Lean</a>
+          theorem prover, formalize mathematics, and build things together.
+          Everyone is welcome — from the curious to the seasoned.
+        </p>
+        <div class="hero-actions reveal" style="--d:3">
+          <a class="btn btn-primary" href="#join">Come to a meetup</a>
+          <a class="btn btn-ghost" href="https://github.com/NYC-Lean" target="_blank" rel="noopener">See our projects ↗</a>
+        </div>
+      </div>
+
+      <figure class="hero-proof reveal" style="--d:2">
+        <div class="proof-chrome">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="proof-file">NYCLean.lean</span>
+        </div>
+        <pre class="proof-body"><code><span class="ln"></span><span class="kw">theorem</span> <span class="fn">nyc_lean</span>
+<span class="ln"></span>    (<span class="var">mathematicians programmers students</span> : <span class="ty">Person</span>)
+<span class="ln"></span>    (<span class="var">h</span> : <span class="ty">LiveNear</span> <span class="ty">NewYorkCity</span>) :
+<span class="ln"></span>    <span class="ty">Community</span> <span class="ty">Lean</span> := <span class="kw">by</span>
+<span class="ln"></span>  meet <span class="lit">weekly</span>
+<span class="ln"></span>  formalize <span class="lit">mathematics</span>
+<span class="ln"></span>  help <span class="var">everyone</span>
+<span class="ln"></span>  <span class="kw">exact</span> <span class="lit">joy</span> <span class="comment">-- ∎</span></code></pre>
+      </figure>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <p class="section-tag">01 — What we do</p>
+      <div class="about-grid">
+        <article class="card">
+          <h3>Learn Lean</h3>
+          <p>Whether you've never written a proof or you maintain Mathlib, we work through
+          ideas together — tactics, type theory, and the parts that only click out loud.</p>
+        </article>
+        <article class="card">
+          <h3>Formalize math</h3>
+          <p>We turn theorems and textbooks into machine-checked proofs, and contribute the
+          reusable pieces back to the broader Lean ecosystem.</p>
+        </article>
+        <article class="card">
+          <h3>Build &amp; share</h3>
+          <p>Members present what they're working on — tools, talks, and side projects — so
+          everyone leaves having learned something new.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MEETUPS -->
+    <section id="meetups" class="section section-meetups">
+      <p class="section-tag">02 — Meetups</p>
+      <div class="meetups-inner">
+        <div class="meetups-copy">
+          <h2>We get together most weekends, somewhere in&nbsp;the&nbsp;city.</h2>
+          <p>
+            Meetings move around New York — libraries, universities, and the occasional
+            coffee shop. Each week someone leads with a short talk or a problem to work
+            through, then we hack and chat.
+          </p>
+          <p class="muted">
+            The fastest way to find the next meetup is our chat and mailing list below —
+            that's where times and locations get posted.
+          </p>
+        </div>
+        <ul class="meetup-facts">
+          <li><span class="fact-k">When</span><span class="fact-v">Most weekends</span></li>
+          <li><span class="fact-k">Where</span><span class="fact-v">Around NYC — libraries &amp; campuses</span></li>
+          <li><span class="fact-k">Who</span><span class="fact-v">All levels, all backgrounds</span></li>
+          <li><span class="fact-k">Cost</span><span class="fact-v">Free — just show up</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <p class="section-tag">03 — What we're building</p>
+      <div class="projects">
+        <article class="project">
+          <h3>A Lean textbook companion</h3>
+          <p>
+            A community effort to write a Lean/Verso companion to a classic open-access
+            textbook — formalized in a natural, pedagogical style so it reads as a true
+            companion to the text. A great on-ramp at any skill level.
+          </p>
+          <a href="https://github.com/NYC-Lean" target="_blank" rel="noopener">Follow along on GitHub ↗</a>
+        </article>
+        <article class="project">
+          <h3>Your project here</h3>
+          <p>
+            Members bring their own work — formalization efforts, tooling, and experiments.
+            Have an idea? Bring it to a meetup or open a repo in the org and tell us about it.
+          </p>
+          <a href="https://github.com/NYC-Lean" target="_blank" rel="noopener">Browse the org ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- JOIN -->
+    <section id="join" class="section section-join">
+      <p class="section-tag">04 — Get involved</p>
+      <h2>Join the community.</h2>
+      <p class="join-lede">
+        There's no membership and no cost. Hop in the chat, join the mailing list for
+        meetup announcements, and come say hello in person.
+      </p>
+      <div class="join-grid">
+        <a class="join-card" href="https://leanprover.zulipchat.com" target="_blank" rel="noopener">
+          <span class="join-k">Chat</span>
+          <span class="join-t">Lean Zulip</span>
+          <span class="join-d">Find us in the NYC thread on the Lean community Zulip.</span>
+          <span class="join-arrow">↗</span>
+        </a>
+        <a class="join-card" href="https://groups.google.com/g/lean-nyc" target="_blank" rel="noopener">
+          <span class="join-k">Announcements</span>
+          <span class="join-t">Google Group</span>
+          <span class="join-d">Subscribe to lean-nyc for meetup times and locations.</span>
+          <span class="join-arrow">↗</span>
+        </a>
+        <a class="join-card" href="https://github.com/NYC-Lean" target="_blank" rel="noopener">
+          <span class="join-k">Code</span>
+          <span class="join-t">GitHub</span>
+          <span class="join-d">Browse and contribute to community projects.</span>
+          <span class="join-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark">∀</span>
+      <span>NYC&nbsp;Lean</span>
+    </div>
+    <p class="footer-note">
+      Formal mathematics in New York City · <a href="https://lean.nyc">lean.nyc</a>
+    </p>
+    <p class="footer-meta">
+      Made by the community. <a href="https://github.com/NYC-Lean" target="_blank" rel="noopener">Edit this site ↗</a>
+    </p>
+  </footer>
+</body>
+</html>
