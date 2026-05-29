@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar · NYC Lean</title>
+  <meta name="description" content="Upcoming NYC Lean meetups: dates, times, and locations around New York City." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">NYC Lean</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/calendar.html">Calendar</a>
+        <a href="/members.html">Members</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <h1 class="page-title" data-anim>Calendar</h1>
+      <div class="page-rule"></div>
+      <p class="page-sub" data-anim>Where and when we meet. The soonest, most accurate details always land in
+        <a href="https://leanprover.zulipchat.com/#narrow/channel/224796-Geographic-locality/topic/New.20York.20City.2C.20USA" target="_blank" rel="noopener">the chat</a>
+        first, then here.</p>
+    </section>
+
+    <!-- Events come from assets/events.js (shared with the home page).
+         Upcoming first; past events move down automatically by date. -->
+    <section class="section cal-body">
+      <div class="cal-group">
+        <div class="sec-head"><span class="tag">Upcoming</span><span class="rule" data-rule></span></div>
+        <div class="ledger events" id="calendar-upcoming"></div>
+      </div>
+      <div class="cal-group" id="past-group" hidden>
+        <div class="sec-head"><span class="tag">Past</span><span class="rule" data-rule></span></div>
+        <div class="ledger events past" id="calendar-past"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>NYC Lean</span>
+    </div>
+    <p class="footer-note">Formal methods in New York City · <a href="https://lean.nyc">lean.nyc</a></p>
+    <p class="footer-meta">Made by the community · <a href="https://github.com/NYC-Lean/website" target="_blank" rel="noopener">Edit this site ↗</a> · <span class="qed">∎</span></p>
+  </footer>
+
+  <script src="assets/events.js" defer></script>
+  <script src="assets/vendor/gsap/gsap.min.js" defer></script>
+  <script src="assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
