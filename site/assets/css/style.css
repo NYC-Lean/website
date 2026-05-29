@@ -37,7 +37,10 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  /* `clip` (not `hidden`) prevents horizontal scroll without breaking
+     position:fixed on iOS Safari, which caused the navbar to float
+     below the top with a gap above it. */
+  overflow-x: clip;
 }
 
 /* paper grain overlay */
