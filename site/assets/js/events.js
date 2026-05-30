@@ -21,7 +21,7 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
-  { date: "2026-05-31", time: "3:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "" },
+  { date: "2026-05-31", time: "3:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open discussion, short lightning talks on who you are and what you're working on, planning for the month ahead and the group's future, and a hands-on session to close out. Bring a laptop." },
 
   /* ---- past ---- */
   { date: "2026-04-25", time: "12:00 PM", location: "Brooklyn Public Library, Cadman Plaza", title: "Textbook companion planning", description: "Scoped the Lean/Verso textbook companion, settling on Axler's Linear Algebra Done Right." },
