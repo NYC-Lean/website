@@ -10,6 +10,7 @@
        date: "2026-06-07",   // YYYY-MM-DD (required)
        time: "2:00 PM",       // free text, "" if unknown
        location: "Mori",      // free text, "" if none / private
+       locationUrl: "...",    // optional; makes the location a clickable map link
        title: "Weekend meetup",
        description: "..."     // optional, shown on the calendar page
      }
@@ -20,6 +21,7 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
+  { date: "2026-05-31", time: "3:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "" },
 
   /* ---- past ---- */
   { date: "2026-04-25", time: "12:00 PM", location: "Brooklyn Public Library, Cadman Plaza", title: "Textbook companion planning", description: "Scoped the Lean/Verso textbook companion, settling on Axler's Linear Algebra Done Right." },
