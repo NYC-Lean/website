@@ -37,14 +37,15 @@ workflow.
 
 ## Local development
 
-The site is just static files. Serve the `site` directory with any static
-file server, for example:
+Run the dev server, which mimics GitHub Pages clean URLs so that `/calendar`
+and `/members` resolve exactly as they do in production:
 
 ```bash
-python3 -m http.server 8000 --directory site
+python3 scripts/serve.py        # http://localhost:8000
 ```
 
-Then open <http://localhost:8000>.
+A plain `python3 -m http.server --directory site` also works, but it will 404
+on the extensionless `/calendar` and `/members` paths.
 
 ## Editing content
 
