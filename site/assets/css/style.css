@@ -73,12 +73,13 @@ a:hover { color: var(--accent); }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 50;
-  background: var(--paper);
-  border-bottom: 1.5px solid var(--ink);
-  transition: box-shadow .3s var(--ease);
+  border-bottom: 1.5px solid transparent;
+  transition: background .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
 }
-/* slightly stronger separation once the page is scrolled */
+/* background, line, and shadow only appear once the page is scrolled */
 .site-header.scrolled {
+  background: var(--paper);
+  border-bottom-color: var(--ink);
   box-shadow: 0 10px 28px -18px rgba(13, 76, 115, 0.45);
 }
 .nav-wrap {
