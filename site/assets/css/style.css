@@ -354,6 +354,8 @@ a:hover { color: var(--accent); }
   font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 0.5rem;
 }
+.ev-meta a.ev-loc { color: inherit; text-decoration: none; transition: border-color 0.15s ease; border-bottom: 1.5px solid transparent; }
+.ev-meta a.ev-loc:hover { border-bottom-color: currentColor; }
 .events .row-body h3 { margin: 0 0 0.5rem; }
 .cal-note {
   max-width: 60ch; margin: 2.5rem 0 0; color: var(--ink-soft);

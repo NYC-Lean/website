@@ -78,12 +78,18 @@
     var mon = d ? MO[d.getMonth()] : "";
     var yr = d ? d.getFullYear() : "";
     var wd = d ? WD[d.getDay()] : "";
-    var meta = [wd, e.time, e.location].filter(Boolean).join(" · ");
+    var loc = e.location
+      ? (e.locationUrl
+          ? '<a class="ev-loc" href="' + esc(e.locationUrl) + '" target="_blank" rel="noopener">' + esc(e.location) + '</a>'
+          : esc(e.location))
+      : '';
+    var meta = [[wd, e.time].filter(Boolean).map(esc).join(" · "), loc]
+      .filter(Boolean).join(" · ");
     return '<div class="row event" data-anim>' +
       '<div class="event-date"><span class="ev-dm">' + dnum + ' ' + esc(mon) + '</span>' +
         (yr ? '<span class="ev-y">' + yr + '</span>' : '') + '</div>' +
       '<div class="row-body">' +
-        '<span class="ev-meta">' + esc(meta) + '</span>' +
+        '<span class="ev-meta">' + meta + '</span>' +
         '<h3>' + esc(e.title) + '</h3>' +
         (!compact && e.description ? '<p>' + esc(e.description) + '</p>' : '') +
       '</div></div>';
