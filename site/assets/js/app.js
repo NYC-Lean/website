@@ -117,7 +117,7 @@
 
     if (home) {
       home.innerHTML = upcoming.length
-        ? joinRows(upcoming.slice(0, 3).map(function (e, i) { return rowHTML(e, i === 0, true); }))
+        ? joinRows(upcoming.slice(0, 3).map(function (e, i) { return rowHTML(e, i === 0, false); }))
         : empty("No meetups on the calendar right now.");
     }
     if (calUp) {
