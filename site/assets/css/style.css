@@ -90,9 +90,9 @@ a:hover { color: var(--accent); }
 .brand { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink); }
 .brand-text { font-family: var(--display); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.01em; }
 .brand-mark {
-  width: 15px; height: 15px; border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 2px 2px 0 var(--accent-2);
+  flex: none;
+  width: 26px; height: 26px;
+  background: url("/assets/img/favicon.png") center / contain no-repeat;
 }
 .site-nav { display: flex; align-items: center; gap: 1.7rem; }
 .site-nav a {

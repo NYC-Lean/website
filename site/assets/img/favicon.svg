@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <!-- two shades of orange, offset down-right, no background (matches the brand dot) -->
-  <circle cx="55" cy="55" r="38" fill="#f7a71c"/>
-  <circle cx="47" cy="47" r="38" fill="#e2572a"/>
-</svg>
