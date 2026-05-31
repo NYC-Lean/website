@@ -91,7 +91,7 @@
       '<div class="row-body">' +
         '<span class="ev-meta">' + meta + '</span>' +
         '<h3>' + esc(e.title) + '</h3>' +
-        (!compact && e.description ? '<p>' + esc(e.description) + '</p>' : '') +
+        (!compact && (e.descriptionHtml || e.description) ? '<p>' + (e.descriptionHtml || esc(e.description)) + '</p>' : '') +
       '</div></div>';
   }
   function joinRows(list) {
