@@ -411,9 +411,9 @@ a:hover { color: var(--accent); }
 @media (max-width: 540px) {
   .footer-meta { margin-left: 0; width: 100%; }
   .member { grid-template-columns: 1fr; }
-  /* stack action buttons one per line, filling the content width */
-  .actions { flex-direction: column; align-items: stretch; }
-  .actions .btn { text-align: center; }
+  /* stack action buttons one per line, centered and slightly inset */
+  .actions { flex-direction: column; align-items: center; }
+  .actions .btn { width: 85%; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
