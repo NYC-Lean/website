@@ -173,6 +173,9 @@ a:hover { color: var(--accent); }
 
 /* ---------- Sections ---------- */
 .section { max-width: var(--maxw); margin: 0 auto; padding: clamp(4rem, 9vh, 7rem) 1.6rem; scroll-margin-top: 76px; }
+/* home page: tighten the gap between Upcoming and Resources */
+#upcoming { padding-bottom: clamp(2rem, 4vh, 3rem); }
+#resources { padding-top: clamp(2rem, 4vh, 3rem); }
 
 .sec-head { display: flex; align-items: baseline; gap: 1.4rem; margin-bottom: 2.6rem; }
 .tag {
