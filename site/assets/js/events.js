@@ -21,6 +21,8 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
+  { date: "2026-06-07", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Gregory Wickham gives a 30-minute talk, \"Formalizing the Gelfand-Naimark-Segal Construction in Lean.\" The GNS construction builds a Hilbert space and a *-homomorphism from a C*-algebra into the bounded operators on that space, an essential step in the proof of the Gelfand-Naimark theorem. The formalization has been merged into Mathlib. Plus open discussion and hands-on work to close out. Bring a laptop." },
+
   { date: "2026-05-31", time: "3:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open discussion, short lightning talks on who you are and what you're working on, planning for the month ahead and the group's future, and a hands-on session to close out. Bring a laptop." },
 
   /* ---- past ---- */
