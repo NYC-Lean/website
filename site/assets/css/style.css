@@ -226,7 +226,7 @@ a:hover { color: var(--accent); }
 .nm-link { color: var(--ink); white-space: nowrap; border-bottom: 1.5px solid var(--accent); }
 .nm-link:hover { color: var(--ink); border-color: var(--ink); }
 
-.actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 1.6rem; }
 .btn {
   font-family: var(--display); font-weight: 700;
   font-size: 0.86rem; letter-spacing: 0.02em; text-transform: uppercase;
@@ -411,6 +411,9 @@ a:hover { color: var(--accent); }
 @media (max-width: 540px) {
   .footer-meta { margin-left: 0; width: 100%; }
   .member { grid-template-columns: 1fr; }
+  /* stack action buttons one per line, centered and slightly inset */
+  .actions { flex-direction: column; align-items: center; }
+  .actions .btn { width: 85%; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
