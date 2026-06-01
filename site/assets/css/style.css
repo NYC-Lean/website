@@ -176,6 +176,26 @@ a:hover { color: var(--accent); }
 /* home page: tighten the gap between Upcoming and Resources */
 #upcoming { padding-bottom: clamp(2.75rem, 5.5vh, 4.25rem); }
 #resources { padding-top: clamp(2.75rem, 5.5vh, 4.25rem); }
+#photo { padding-top: clamp(2.75rem, 5.5vh, 4.25rem); }
+
+/* group photo + caption */
+.group-photo { margin: 0; }
+.group-photo img {
+  display: block; width: 100%; height: auto;
+  border: 1.5px solid var(--ink);
+  border-radius: 28px;
+  box-shadow: 8px 8px 0 var(--accent-2);
+}
+.group-photo figcaption {
+  margin: 1.4rem auto 0;
+  font-style: italic;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 80ch;
+  text-align: center;
+  text-wrap: balance;
+}
 
 .sec-head { display: flex; align-items: baseline; gap: 1.4rem; margin-bottom: 2.6rem; }
 .tag {
