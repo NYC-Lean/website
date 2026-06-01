@@ -72,6 +72,16 @@
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
+  function talkHTML(t) {
+    var speaker = t.speakerUrl
+      ? '<a href="' + esc(t.speakerUrl) + '" target="_blank" rel="noopener">' + esc(t.speaker) + '</a>'
+      : esc(t.speaker);
+    return '<div class="talk">' +
+      (t.title ? '<p class="talk-title">' + esc(t.title) + '</p>' : '') +
+      (t.speaker ? '<p class="talk-speaker">' + speaker + '</p>' : '') +
+      (t.abstract ? '<p class="talk-abstract">' + esc(t.abstract) + '</p>' : '') +
+    '</div>';
+  }
   function rowHTML(e, isNext, compact) {
     var d = e._d;
     var dnum = d ? d.getDate() : "";
@@ -91,7 +101,8 @@
       '<div class="row-body">' +
         '<span class="ev-meta">' + meta + '</span>' +
         '<h3>' + esc(e.title) + '</h3>' +
-        (!compact && (e.descriptionHtml || e.description) ? '<p>' + (e.descriptionHtml || esc(e.description)) + '</p>' : '') +
+        (!compact && e.talk ? talkHTML(e.talk) :
+          (!compact && (e.descriptionHtml || e.description) ? '<p>' + (e.descriptionHtml || esc(e.description)) + '</p>' : '')) +
       '</div></div>';
   }
   function joinRows(list) {
