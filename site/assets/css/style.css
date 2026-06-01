@@ -382,6 +382,20 @@ a:hover { color: var(--accent); }
 .ev-meta a.ev-loc { color: inherit; text-decoration: none; transition: border-color 0.15s ease; border-bottom: 1.5px solid transparent; }
 .ev-meta a.ev-loc:hover { border-bottom-color: currentColor; }
 .events .row-body h3 { margin: 0 0 0.5rem; }
+/* structured talk template: title · speaker · abstract under the meetup heading */
+/* scoped under .talk so these beat the generic `.row-body p { margin: 0 }` rule */
+.talk { margin: 1rem 0 0; }
+.talk .talk-title {
+  margin: 0 0 0.4rem; font-family: var(--display); font-weight: 700;
+  font-size: 1.05rem; line-height: 1.3; color: var(--ink); max-width: 58ch;
+}
+.talk .talk-speaker {
+  margin: 0 0 0.5rem; font-size: 0.95rem; color: var(--ink-soft);
+}
+.talk .talk-speaker a { color: inherit; text-decoration: underline; }
+.talk .talk-speaker a:hover { color: var(--accent); }
+.talk .talk-abstract { margin: 0; color: var(--ink-soft); max-width: 58ch; }
+.events.past .talk-title { color: var(--ink-soft); }
 .cal-note {
   max-width: 60ch; margin: 2.5rem 0 0; color: var(--ink-soft);
 }

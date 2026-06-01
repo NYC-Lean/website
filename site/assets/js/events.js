@@ -14,6 +14,21 @@
        title: "Weekend meetup",
        description: "..."     // optional, shown on the calendar page
      }
+   For a talk, add a `talk` object instead of (or alongside) description
+   to get a structured title / speaker / abstract template:
+     {
+       date: "2026-06-14",
+       time: "2:00 PM",
+       location: "The Pearl House",
+       locationUrl: "...",
+       title: "Weekend meetup",
+       talk: {
+         title: "...",        // talk title
+         speaker: "...",      // presenter's name
+         speakerUrl: "...",   // optional; links the speaker's name
+         abstract: "..."      // talk abstract
+       }
+     }
    Order does not matter; entries are sorted by date.
 
    History below was compiled from the NYC thread on the Lean Zulip.
@@ -21,7 +36,29 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
-  { date: "2026-06-07", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", descriptionHtml: "<a href=\"http://gregorywickham.com/\" target=\"_blank\" rel=\"noopener\">Gregory Wickham</a> will be talking about \"Formalizing the Gelfand-Naimark-Segal Construction in Lean.\" The GNS construction builds a Hilbert space and a *-homomorphism from a C*-algebra into the bounded operators on that space, an essential step in the proof of the Gelfand-Naimark theorem. The formalization has been merged into Mathlib." },
+  { date: "2026-06-21", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup",
+    talk: {
+      title: "Numina Fuse",
+      speaker: "Justin Asher",
+      speakerUrl: "https://justinasher.me",
+      abstract: "Numina Fuse is an autoformalization platform that enables users to interactively work with AI on their Lean projects. I will be going over the development and applications of Fuse."
+    } },
+
+  { date: "2026-06-14", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup",
+    talk: {
+      title: "SampCert: Verified Differential Privacy in Lean",
+      speaker: "Markus de Medeiros",
+      speakerUrl: "https://www.markusde.ca",
+      abstract: "Differential privacy is a suite of techniques for defining when, and how, a statistical program protects the privacy of its participants. Unfortunately, the history of differential privacy is mired with subtle implementation errors causing enormous privacy bugs. In this talk, I will go over the techniques we used to implement and verify differentially private programs in Lean."
+    } },
+
+  { date: "2026-06-07", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup",
+    talk: {
+      title: "Formalizing the Gelfand-Naimark-Segal Construction in Lean",
+      speaker: "Gregory Wickham",
+      speakerUrl: "http://gregorywickham.com/",
+      abstract: "The GNS construction builds a Hilbert space and a *-homomorphism from a C*-algebra into the bounded operators on that space, an essential step in the proof of the Gelfand-Naimark theorem. The formalization has been merged into Mathlib."
+    } },
 
   { date: "2026-05-31", time: "3:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open discussion, short lightning talks on who you are and what you're working on, planning for the month ahead and the group's future, and a hands-on session to close out. Bring a laptop." },
 
