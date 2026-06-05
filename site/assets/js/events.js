@@ -52,7 +52,7 @@ window.NYC_LEAN_EVENTS = [
       abstract: "Differential privacy is a suite of techniques for defining when, and how, a statistical program protects the privacy of its participants. Unfortunately, the history of differential privacy is mired with subtle implementation errors causing enormous privacy bugs. In this talk, I will go over the techniques we used to implement and verify differentially private programs in Lean."
     } },
 
-  { date: "2026-06-07", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup",
+  { date: "2026-06-07", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup",
     talk: {
       title: "Formalizing the Gelfand-Naimark-Segal Construction in Lean",
       speaker: "Gregory Wickham",
