@@ -451,7 +451,55 @@ a:hover { color: var(--accent); }
   /* stack action buttons one per line, centered and slightly inset */
   .actions { flex-direction: column; align-items: center; }
   .actions .btn { width: 85%; text-align: center; }
+  /* blog index: date above the post body, arrow hidden */
+  .post-item { grid-template-columns: 1fr; gap: 0.35rem; }
+  .post-arrow { display: none; }
 }
+
+/* ---------- Blog ---------- */
+/* index list: one .post-item anchor per post */
+.posts { margin: 0; }
+.post-item {
+  display: grid;
+  grid-template-columns: 7rem 1fr auto;
+  align-items: baseline;
+  gap: 0.4rem 1.5rem;
+  padding: 1.6rem 0.5rem;
+  border-bottom: 1px solid var(--rule-soft);
+  color: var(--ink);
+  transition: background .2s var(--ease), padding-left .2s var(--ease);
+}
+.post-item:hover { background: var(--paper-2); padding-left: 1.1rem; color: var(--ink); }
+.post-date {
+  font-family: var(--display); font-weight: 700;
+  font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--ink-soft); padding-top: 0.35rem; white-space: nowrap;
+}
+.post-body { display: block; }
+.post-item-title {
+  display: block;
+  font-family: var(--display); font-weight: 700;
+  font-size: 1.45rem; letter-spacing: -0.01em; line-height: 1.1; color: var(--ink);
+}
+.post-item:hover .post-item-title { color: var(--accent); }
+.post-item-meta {
+  display: block; margin-top: 0.35rem;
+  font-family: var(--display); font-weight: 700;
+  font-size: 0.74rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent);
+}
+.post-excerpt { display: block; margin-top: 0.5rem; color: var(--ink-soft); max-width: 60ch; }
+.post-arrow { font-family: var(--display); color: var(--ink-faint); padding-top: 0.35rem; transition: color .2s var(--ease), transform .2s var(--ease); }
+.post-item:hover .post-arrow { color: var(--accent); transform: translate(3px, -3px); }
+
+/* single post */
+.post-title { font-size: clamp(2.4rem, 7vw, 4.6rem); }
+.post { max-width: 760px; padding-top: clamp(1.5rem, 3vh, 2.5rem); }
+.prose p { margin: 0 0 1.4rem; max-width: 64ch; color: var(--ink); }
+.prose a { border-bottom: 1.5px solid var(--accent); }
+.prose a:hover { color: var(--accent); }
+.prose .nowrap { white-space: nowrap; }
+.post-downloads { margin: 2.2rem 0 0; }
+.post-back { margin: 2.6rem 0 0 !important; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

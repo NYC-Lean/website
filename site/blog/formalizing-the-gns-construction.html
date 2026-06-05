@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formalizing the GNS Construction in Lean · NYC Lean</title>
+  <meta name="description" content="Upcoming NYC Lean talk: Gregory Wickham on formalizing the Gelfand-Naimark-Segal construction in Lean, a result now merged into Mathlib." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Formalizing the Gelfand-Naimark-Segal Construction in Lean" />
+  <meta property="og:description" content="An upcoming NYC Lean talk by Gregory Wickham on formalizing the GNS construction in Lean." />
+  <meta property="og:url" content="https://lean.nyc/blog/formalizing-the-gns-construction" />
+
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">NYC Lean</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/blog/">Blog</a>
+        <a href="/calendar">Calendar</a>
+        <a href="/members">Members</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="page-kicker" data-anim>Upcoming talk · Saturday, June 7, 2026 · 2:00 PM</p>
+      <h1 class="page-title post-title" data-anim>Formalizing the GNS Construction in Lean</h1>
+      <div class="page-rule"></div>
+      <p class="page-sub" data-anim>A talk by <a href="http://gregorywickham.com/" target="_blank" rel="noopener">Gregory Wickham</a>.</p>
+    </section>
+
+    <section class="section post">
+      <article class="prose">
+        <p data-anim>
+          This month we're joined by <a href="http://gregorywickham.com/" target="_blank" rel="noopener">Gregory Wickham</a>,
+          who will walk us through his formalization of the
+          <strong>Gelfand&ndash;Naimark&ndash;Segal (GNS) construction</strong> in
+          <a href="https://lean-lang.org" target="_blank" rel="noopener">Lean</a>.
+        </p>
+
+        <p data-anim>
+          The GNS construction is a method for building a Hilbert space and a
+          <span class="nowrap">C*-algebra</span> <span class="nowrap">*-homomorphism</span>
+          from that algebra into the bounded operators on the Hilbert space. It is an
+          essential step in the proof of the <em>Gelfand&ndash;Naimark theorem</em>, a
+          foundational result in the theory of <span class="nowrap">C*-algebras</span> that
+          says every such algebra can be represented concretely as operators on a Hilbert
+          space.
+        </p>
+
+        <p data-anim>
+          The formalization has been &ldquo;peer-reviewed&rdquo; in the sense that Lean
+          formalization projects are reviewed: it has been merged into
+          <a href="https://github.com/leanprover-community/mathlib4" target="_blank" rel="noopener">Mathlib</a>,
+          the canonical, open-source library of mathematics in Lean. The talk traces the
+          path from the mathematics to the formal proof &mdash; lifting continuous
+          semilinear maps, constructing the Hilbert space, and building the
+          <span class="nowrap">*-homomorphism</span> &mdash; along with the design decisions
+          and dead ends along the way.
+        </p>
+
+        <p data-anim>
+          Gregory completed this work as his senior thesis in the Department of Mathematics
+          at Harvey Mudd College, advised by Lucas Bang with Michael Orrison as reader. The
+          full thesis and conference poster are below.
+        </p>
+
+        <div class="actions post-downloads" data-anim>
+          <a class="btn btn-primary" href="/assets/files/formalizing-the-gns-construction-in-lean.pdf" target="_blank" rel="noopener">Read the thesis (PDF)</a>
+          <a class="btn btn-ghost" href="/assets/files/formalizing-the-gns-construction-in-lean-poster.pdf" target="_blank" rel="noopener">View the poster (PDF)</a>
+        </div>
+
+        <p class="post-back" data-anim><a class="arrow" href="/blog/">↩ All posts</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>NYC Lean</span>
+    </div>
+    <p class="footer-note">Formal methods in New York City · <a href="https://lean.nyc">lean.nyc</a></p>
+    <p class="footer-meta">Made by the community · <a href="https://github.com/NYC-Lean/website" target="_blank" rel="noopener">Edit this site ↗︎</a> · <span class="qed">∎</span></p>
+  </footer>
+
+  <script src="/assets/vendor/gsap/gsap.min.js" defer></script>
+  <script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>
