@@ -498,6 +498,18 @@ a:hover { color: var(--accent); }
 .prose a { border-bottom: 1.5px solid var(--accent); }
 .prose a:hover { color: var(--accent); }
 .prose .nowrap { white-space: nowrap; }
+.prose .quote {
+  margin: 1.8rem 0; padding: 0.1rem 0 0.1rem 1.4rem;
+  border-left: 3px solid var(--accent);
+}
+.prose .quote p { font-style: italic; color: var(--ink-soft); margin: 0; max-width: 62ch; }
+.prose .quote-cite {
+  margin-top: 0.7rem;
+  font-family: var(--display); font-weight: 600; font-style: normal;
+  font-size: 0.82rem; letter-spacing: 0.02em; color: var(--ink-soft);
+}
+.prose .quote-cite cite { font-style: normal; }
+.prose .quote a { border-bottom: 1.5px solid var(--accent); }
 .post-downloads { margin: 2.2rem 0 0; }
 .post-back { margin: 2.6rem 0 0 !important; }
 

@@ -46,28 +46,35 @@
         <p data-anim>
           This month we're joined by <a href="http://gregorywickham.com/" target="_blank" rel="noopener">Gregory Wickham</a>,
           who will walk us through his formalization of the
-          <strong>Gelfand&ndash;Naimark&ndash;Segal (GNS) construction</strong> in Lean.
+          <strong>Gelfand&ndash;Naimark&ndash;Segal (GNS) construction</strong> in Lean. In his
+          own words:
         </p>
 
-        <p data-anim>
-          The GNS construction is a method for building a Hilbert space and a
-          <span class="nowrap">C*-algebra</span> <span class="nowrap">*-homomorphism</span>
-          from that algebra into the bounded operators on the Hilbert space. It is an
-          essential step in the proof of the <em>Gelfand&ndash;Naimark theorem</em>, a
-          foundational result in the theory of <span class="nowrap">C*-algebras</span> that
-          says every such algebra can be represented concretely as operators on a Hilbert
-          space.
-        </p>
+        <blockquote class="quote" data-anim>
+          <p>
+            I formalized the Gelfand&ndash;Naimark&ndash;Segal (GNS) construction using the
+            proof assistant Lean. The GNS construction is a method for constructing a Hilbert
+            space and a <span class="nowrap">&lowast;-homomorphism</span> from a
+            <span class="nowrap">C&lowast;-algebra</span> into the algebra of bounded operators
+            on that Hilbert space. The GNS construction is an essential step in the proof the
+            Gelfand&ndash;Naimark theorem, which is a foundational theorem in the theory of
+            <span class="nowrap">C&lowast;-algebras</span>. This formalization has been
+            &ldquo;peer-reviewed&rdquo; in the sense in which Lean formalization projects are
+            reviewed, meaning that it has been
+            <a href="https://github.com/leanprover-community/mathlib4/pull/33116" target="_blank" rel="noopener">merged into Mathlib</a>,
+            the canonical, open-source library of mathematics in Lean.
+          </p>
+          <footer class="quote-cite">
+            &mdash; Gregory Wickham,
+            <a href="/assets/files/formalizing-the-gns-construction-in-lean.pdf" target="_blank" rel="noopener"><cite>Formalizing the Gelfand&ndash;Naimark&ndash;Segal Construction in Lean</cite></a>
+          </footer>
+        </blockquote>
 
         <p data-anim>
-          The formalization has been &ldquo;peer-reviewed&rdquo; in the sense that Lean
-          formalization projects are reviewed: it has been
-          <a href="https://github.com/leanprover-community/mathlib4/pull/33116" target="_blank" rel="noopener">merged into Mathlib</a>,
-          the canonical, open-source library of mathematics in Lean. The talk traces the
-          path from the mathematics to the formal proof &mdash; lifting continuous
-          semilinear maps, constructing the Hilbert space, and building the
-          <span class="nowrap">*-homomorphism</span> &mdash; along with the design decisions
-          and dead ends along the way.
+          The talk traces the path from that mathematics to the formal proof &mdash; lifting
+          continuous semilinear maps, constructing the Hilbert space, and building the
+          <span class="nowrap">&lowast;-homomorphism</span> &mdash; along with the design
+          decisions and dead ends along the way.
         </p>
 
         <p data-anim>
