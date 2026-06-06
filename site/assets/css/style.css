@@ -504,7 +504,7 @@ a:hover { color: var(--accent); }
   margin: 3.2rem 0 0;
   font-family: var(--body);
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--ink-soft);
 }
 .prose .post-byline + .post-back { margin-top: 0.4rem !important; }
