@@ -500,14 +500,14 @@ a:hover { color: var(--accent); }
   color: var(--ink-faint);
 }
 .post { max-width: 760px; padding-top: clamp(1.5rem, 3vh, 2.5rem); }
-.post-byline {
-  margin: 2.6rem 0 0;
+.prose .post-byline {
+  margin: 3.2rem 0 0;
   font-family: var(--body);
   font-style: italic;
   font-size: 0.9rem;
   color: var(--ink-faint);
 }
-.post-byline + .post-back { margin-top: 0.4rem !important; }
+.prose .post-byline + .post-back { margin-top: 0.4rem !important; }
 .prose p { margin: 0 0 1.4rem; max-width: 64ch; color: var(--ink); }
 .prose a { border-bottom: 1.5px solid var(--accent); }
 .prose a:hover { color: var(--accent); }
