@@ -389,6 +389,8 @@ a:hover { color: var(--accent); }
   margin: 0 0 0.4rem; font-family: var(--display); font-weight: 700;
   font-size: 1.05rem; line-height: 1.3; color: var(--ink); max-width: 58ch;
 }
+.talk .talk-title a { color: inherit; text-decoration: underline; }
+.talk .talk-title a:hover { color: var(--accent); }
 .talk .talk-speaker {
   margin: 0 0 0.5rem; font-size: 0.95rem; color: var(--ink-soft);
 }
@@ -460,16 +462,24 @@ a:hover { color: var(--accent); }
 /* index list: one .post-item anchor per post */
 .posts { margin: 0; }
 .post-item {
+  position: relative;
   display: grid;
-  grid-template-columns: 7rem 1fr auto;
+  grid-template-columns: 7rem 1fr;
   align-items: baseline;
   gap: 0.4rem 1.5rem;
-  padding: 1.6rem 0.5rem;
-  border-bottom: 1px solid var(--rule-soft);
+  padding: 1.6rem 0.5rem 1.6rem 1.25rem;
   color: var(--ink);
-  transition: background .2s var(--ease), padding-left .2s var(--ease);
+  transition: background .2s var(--ease);
 }
-.post-item:hover { background: var(--paper-2); padding-left: 1.1rem; color: var(--ink); }
+.post-item::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+  height: 1px; background: var(--rule-soft);
+}
+.post-item:first-child::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0;
+  height: 1px; background: var(--rule-soft);
+}
+.post-item:hover { background: var(--paper-2); color: var(--ink); border-radius: 18px; }
 .post-date {
   font-family: var(--display); font-weight: 700;
   font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase;
@@ -509,8 +519,8 @@ a:hover { color: var(--accent); }
 }
 .prose .post-byline + .post-back { margin-top: 0.4rem !important; }
 .prose p { margin: 0 0 1.4rem; max-width: 64ch; color: var(--ink); }
-.prose a { border-bottom: 1.5px solid var(--accent); }
-.prose a:hover { color: var(--accent); }
+.prose a:not(.btn) { border-bottom: 1.5px solid var(--accent); }
+.prose a:not(.btn):hover { color: var(--accent); }
 .prose .nowrap { white-space: nowrap; }
 .prose .quote {
   margin: 1.8rem 0; padding: 0.1rem 0 0.1rem 1.4rem;

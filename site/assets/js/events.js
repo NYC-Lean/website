@@ -24,6 +24,7 @@
        title: "Weekend meetup",
        talk: {
          title: "...",        // talk title
+         titleUrl: "...",     // optional; links the talk title (e.g. a blog post)
          speaker: "...",      // presenter's name
          speakerUrl: "...",   // optional; links the speaker's name
          abstract: "..."      // talk abstract
@@ -55,6 +56,7 @@ window.NYC_LEAN_EVENTS = [
   { date: "2026-06-07", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup",
     talk: {
       title: "Formalizing the Gelfand-Naimark-Segal Construction in Lean",
+      titleUrl: "/blog/formalizing-the-gns-construction",
       speaker: "Gregory Wickham",
       speakerUrl: "http://gregorywickham.com/",
       abstract: "The GNS construction builds a Hilbert space and a *-homomorphism from a C*-algebra into the bounded operators on that space, an essential step in the proof of the Gelfand-Naimark theorem. The formalization has been merged into Mathlib."
