@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formalizing the GNS Construction in Lean · NYC Lean</title>
+  <meta name="description" content="Upcoming NYC Lean talk: Gregory Wickham on formalizing the Gelfand-Naimark-Segal construction in Lean, a result now merged into Mathlib." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Formalizing the Gelfand-Naimark-Segal Construction in Lean" />
+  <meta property="og:description" content="An upcoming NYC Lean talk by Gregory Wickham on formalizing the GNS construction in Lean." />
+  <meta property="og:url" content="https://lean.nyc/blog/formalizing-the-gns-construction" />
+
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">NYC Lean</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/calendar">Calendar</a>
+        <a href="/blog/">Blog</a>
+        <a href="/members">Members</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="page-kicker" data-anim>Upcoming talk · Saturday, June 7, 2026 · 2:00 PM</p>
+      <h1 class="page-title post-title" data-anim>Formalizing the GNS Construction in Lean</h1>
+      <div class="page-rule"></div>
+      <p class="page-sub" data-anim>A talk by <a href="http://gregorywickham.com/" target="_blank" rel="noopener">Gregory Wickham</a>.</p>
+      <p class="post-pubdate" data-anim><time datetime="2026-06-06">June 6, 2026</time></p>
+    </section>
+
+    <section class="section post">
+      <article class="prose">
+        <p data-anim>
+          Tomorrow we're hosting our <strong>first official NYC Lean talk</strong>, kicking
+          things off with Gregory Wickham
+          on his formalization of the
+          <a href="https://en.wikipedia.org/wiki/Gelfand%E2%80%93Naimark%E2%80%93Segal_construction" target="_blank" rel="noopener">Gelfand&ndash;Naimark&ndash;Segal (GNS) construction</a>.
+          From his abstract:
+        </p>
+
+        <blockquote class="quote" data-anim>
+          <p>
+            I formalized the Gelfand&ndash;Naimark&ndash;Segal (GNS) construction using the
+            proof assistant Lean. The GNS construction is a method for constructing a Hilbert
+            space and a <span class="nowrap">&lowast;-homomorphism</span> from a
+            <span class="nowrap">C&lowast;-algebra</span> into the algebra of bounded operators
+            on that Hilbert space. The GNS construction is an essential step in the proof [of] the
+            Gelfand&ndash;Naimark theorem, which is a foundational theorem in the theory of
+            <span class="nowrap">C&lowast;-algebras</span>. This formalization has been
+            &ldquo;peer-reviewed&rdquo; in the sense in which Lean formalization projects are
+            reviewed, meaning that it has been
+            <a href="https://github.com/leanprover-community/mathlib4/pull/33116" target="_blank" rel="noopener">merged into Mathlib</a>,
+            the canonical, open-source library of mathematics in Lean.
+          </p>
+          <footer class="quote-cite">
+            &mdash; Gregory Wickham,
+            <a href="/assets/files/formalizing-the-gns-construction-in-lean.pdf" target="_blank" rel="noopener"><cite>Formalizing the Gelfand&ndash;Naimark&ndash;Segal Construction in Lean</cite></a>
+          </footer>
+        </blockquote>
+
+        <p data-anim>
+          Wickham's work formalizes a foundational result about the representation of linear
+          functionals on infinite-dimensional complex vector spaces. Its central objects,
+          <span class="nowrap">C&lowast;-algebras</span>, impose additional structure on the
+          traditional Banach spaces from functional analysis. These results play an important role
+          in mathematical physics:
+        </p>
+
+        <blockquote class="quote" data-anim>
+          <p>
+            Algebraic Quantum Field Theory (AQFT) &mdash; the most successful attempt to
+            reformulate QFT axiomatically &mdash; employs only bounded operators. It builds upon
+            work in the 1940s by Gelfand, Neumark, and in particular Segal, who tried to describe
+            quantum physics in terms of <span class="nowrap">C&lowast;-algebras</span>.
+          </p>
+          <footer class="quote-cite">
+            &mdash; <a href="https://plato.stanford.edu/entries/quantum-field-theory/" target="_blank" rel="noopener"><cite>Quantum Field Theory</cite>, Stanford Encyclopedia of Philosophy</a>
+          </footer>
+        </blockquote>
+
+        <p data-anim>
+          Wickham completed the formalization as his senior thesis at Harvey Mudd College, advised
+          by Lucas Bang. His thesis and the poster are available below. It was a collaborative
+          effort, with extensive feedback and contributions from fellow Lean community members
+          <a href="https://github.com/j-loreaux" target="_blank" rel="noopener">Jireh Loreaux</a>
+          and <a href="https://github.com/themathqueen" target="_blank" rel="noopener">Monica Omar</a>.
+          For more details, come to
+          <a href="/calendar">his talk tomorrow at Tower 49</a>, or watch the video on our
+          <a href="https://www.youtube.com/@LeanNYC" target="_blank" rel="noopener">YouTube channel</a>.
+        </p>
+
+        <div class="actions post-downloads" data-anim>
+          <a class="btn btn-primary" href="/assets/files/formalizing-the-gns-construction-in-lean.pdf" target="_blank" rel="noopener">Read the thesis (PDF)</a>
+          <a class="btn btn-ghost" href="/assets/files/formalizing-the-gns-construction-in-lean-poster.pdf" target="_blank" rel="noopener">View the poster (PDF)</a>
+        </div>
+
+        <p class="post-byline" data-anim>Written by Jack McCarthy</p>
+
+        <p class="post-back" data-anim><a class="arrow" href="/blog/">↩ All posts</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>NYC Lean</span>
+    </div>
+    <p class="footer-note">Formal methods in New York City · <a href="https://lean.nyc">lean.nyc</a></p>
+    <p class="footer-meta">Made by the community · <a href="https://github.com/NYC-Lean/website" target="_blank" rel="noopener">Edit this site ↗︎</a> · <span class="qed">∎</span></p>
+  </footer>
+
+  <script src="/assets/vendor/gsap/gsap.min.js" defer></script>
+  <script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>

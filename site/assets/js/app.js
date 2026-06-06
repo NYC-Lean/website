@@ -76,8 +76,11 @@
     var speaker = t.speakerUrl
       ? '<a href="' + esc(t.speakerUrl) + '" target="_blank" rel="noopener">' + esc(t.speaker) + '</a>'
       : esc(t.speaker);
+    var title = t.titleUrl
+      ? '<a href="' + esc(t.titleUrl) + '">' + esc(t.title) + '</a>'
+      : esc(t.title);
     return '<div class="talk">' +
-      (t.title ? '<p class="talk-title">' + esc(t.title) + '</p>' : '') +
+      (t.title ? '<p class="talk-title">' + title + '</p>' : '') +
       (t.speaker ? '<p class="talk-speaker">' + speaker + '</p>' : '') +
       (t.abstract ? '<p class="talk-abstract">' + esc(t.abstract) + '</p>' : '') +
     '</div>';
