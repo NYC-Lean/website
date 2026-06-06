@@ -502,11 +502,12 @@ a:hover { color: var(--accent); }
 .post { max-width: 760px; padding-top: clamp(1.5rem, 3vh, 2.5rem); }
 .post-byline {
   margin: 2.6rem 0 0;
-  font-family: var(--display); font-weight: 600;
-  font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
+  font-family: var(--body);
+  font-style: italic;
+  font-size: 0.9rem;
   color: var(--ink-faint);
 }
-.post-byline + .post-back { margin-top: 0.6rem !important; }
+.post-byline + .post-back { margin-top: 0.4rem !important; }
 .prose p { margin: 0 0 1.4rem; max-width: 64ch; color: var(--ink); }
 .prose a { border-bottom: 1.5px solid var(--accent); }
 .prose a:hover { color: var(--accent); }
