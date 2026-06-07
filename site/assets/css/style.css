@@ -427,6 +427,8 @@ a:hover { color: var(--accent); }
 .member-name a { color: inherit; }
 .member-name a:hover { color: var(--accent); }
 .member-role { color: var(--ink-soft); font-size: 0.95rem; }
+.member-role a { color: inherit; border-bottom: 1.5px solid var(--accent); }
+.member-role a:hover { color: var(--accent); }
 .member-link { font-family: var(--display); font-weight: 600; font-size: 0.92rem; color: var(--ink); border-bottom: 1.5px solid var(--accent); white-space: nowrap; }
 .member-link:hover { color: var(--accent); }
 .members-cta { margin: 2.6rem 0 0; color: var(--ink-soft); max-width: 56ch; }
