@@ -45,7 +45,7 @@ window.NYC_LEAN_EVENTS = [
       abstract: "Numina Fuse is an autoformalization platform that enables users to interactively work with AI on their Lean projects. I will be going over the development and applications of Fuse."
     } },
 
-  { date: "2026-06-21", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open discussion, short lightning talks on what you're working on, and a hands-on session to close out. Bring a laptop." },
+  { date: "2026-06-21", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup", description: "Open discussion, short lightning talks on what you're working on, and a hands-on session to close out. Bring a laptop." },
 
   { date: "2026-06-14", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup",
     talk: {
