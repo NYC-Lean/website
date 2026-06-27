@@ -192,3 +192,35 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 })();
+
+/* mobile nav: hamburger toggles the menu panel (independent of motion) */
+(function () {
+  var toggle = document.querySelector(".nav-toggle");
+  var menu = document.getElementById("site-nav");
+  if (!toggle || !menu) return;
+
+  // mark the page nav-ready so the CSS collapses the nav into a hamburger
+  document.documentElement.classList.add("nav-ready");
+
+  function setOpen(open) {
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    menu.classList.toggle("open", open);
+    document.body.classList.toggle("nav-open", open);   // lock scroll behind overlay
+  }
+
+  toggle.addEventListener("click", function () {
+    setOpen(toggle.getAttribute("aria-expanded") !== "true");
+  });
+  // a chosen link closes the menu
+  menu.addEventListener("click", function (e) {
+    if (e.target.closest("a")) setOpen(false);
+  });
+  // Escape closes
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setOpen(false);
+  });
+  // tapping outside the header closes
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".nav-wrap")) setOpen(false);
+  });
+})();
