@@ -540,6 +540,10 @@ a:hover { color: var(--accent); }
   height: 1px; background: var(--rule-soft);
 }
 .post-item:hover { background: var(--paper-2); color: var(--ink); border-radius: 18px; }
+/* hide the rules directly above and below the hovered item */
+.post-item:hover::after,
+.post-item:first-child:hover::before,
+.post-item:has(+ .post-item:hover)::after { background: transparent; }
 .post-date {
   font-family: var(--display); font-weight: 700;
   font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase;
