@@ -83,12 +83,13 @@ a:hover { color: var(--accent); }
   box-shadow: 0 10px 28px -18px rgba(13, 76, 115, 0.45);
 }
 .nav-wrap {
+  position: relative;
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 1rem 1.6rem;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
 }
-.brand { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink); }
+.brand { position: relative; z-index: 60; display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink); }
 .brand-text { font-family: var(--display); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.01em; }
 .brand-mark {
   flex: none;
@@ -105,6 +106,36 @@ a:hover { color: var(--accent); }
   color: var(--ink);
 }
 .site-nav a:hover { color: var(--accent); }
+/* Home link lives only in the mobile overlay; hidden in the desktop nav */
+.nav-home { display: none; }
+
+/* mobile menu toggle (hamburger) — hidden on desktop, shown via .nav-ready below */
+.nav-toggle {
+  display: none;
+  position: relative;
+  z-index: 60;   /* stay above the full-screen overlay so the X is visible */
+  flex: none;
+  width: 32px; height: 32px;
+  margin: -0.3rem -0.3rem -0.3rem 0;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+.nav-toggle-box { position: relative; display: block; width: 22px; height: 15px; margin: 0 auto; }
+.nav-toggle-bar {
+  position: absolute; left: 0; right: 0;
+  height: 1.5px;
+  background: currentColor;
+  transition: top .25s var(--ease), transform .25s var(--ease), opacity .2s var(--ease);
+}
+.nav-toggle-bar:nth-child(1) { top: 0; }
+.nav-toggle-bar:nth-child(2) { top: 7px; }
+.nav-toggle-bar:nth-child(3) { top: 14px; }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) { top: 7px; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { top: 7px; transform: rotate(-45deg); }
 .nav-cta {
   padding: 0.34rem 0.95rem;
   border: 1.5px solid var(--ink);
@@ -448,6 +479,33 @@ a:hover { color: var(--accent); }
   /* stack the masthead and let it fill the width */
   .hero-wordmark { font-size: clamp(4.5rem, 28vw, 9rem); line-height: 0.9; }
   .hero-wordmark .word-red { display: block; }
+
+  /* nav collapses into a hamburger once JS marks the page nav-ready */
+  .nav-ready .nav-toggle { display: block; }
+  /* the open menu is a full-screen overlay, sitting just below the header bar
+     so the brand and the close (X) button stay visible and clickable */
+  .nav-ready .site-nav {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    margin: 0;
+    padding: 2rem;
+    background: var(--paper);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s var(--ease), visibility .25s var(--ease);
+  }
+  .nav-ready .site-nav.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-ready .site-nav a { font-size: 1.6rem; letter-spacing: 0.04em; }
+  .nav-ready .site-nav .nav-home { display: block; }
+  body.nav-open { overflow: hidden; }
 }
 @media (max-width: 540px) {
   .footer-meta { margin-left: 0; width: 100%; }
