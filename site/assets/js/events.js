@@ -40,6 +40,7 @@ window.NYC_LEAN_EVENTS = [
   { date: "2026-06-28", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup",
     talk: {
       title: "Numina Fuse",
+      titleUrl: "/blog/numina-fuse",
       speaker: "Justin Asher",
       speakerUrl: "https://justinasher.me",
       abstract: "Numina Fuse is an autoformalization platform that enables users to interactively work with AI on their Lean projects. I will be going over the development and applications of Fuse."
