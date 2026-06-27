@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prismriver · NYC Lean</title>
+  <meta name="description" content="Upcoming NYC Lean talk: Claire Wang on Prismriver, a formalization of music theory and algorithmic composition in Lean 4, joint work with Leni Aniva." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Prismriver" />
+  <meta property="og:description" content="An upcoming NYC Lean talk by Claire Wang on Prismriver, a formalization of music theory and algorithmic composition in Lean 4." />
+  <meta property="og:url" content="https://lean.nyc/blog/prismriver" />
+
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">NYC Lean</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a class="nav-home" href="/">Home</a>
+        <a href="/calendar">Calendar</a>
+        <a href="/blog/">Blog</a>
+        <a href="/members">Members</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="page-kicker" data-anim>Upcoming talk · Sunday, August 9, 2026 · 2:00 PM</p>
+      <h1 class="page-title post-title" data-anim>Prismriver</h1>
+      <div class="page-rule"></div>
+      <p class="page-sub" data-anim>A talk by <a href="https://clairewang.net/" target="_blank" rel="noopener">Claire Wang</a>. Joint work with <a href="https://lenianiva.com/" target="_blank" rel="noopener">Leni Aniva</a>.</p>
+      <p class="post-pubdate" data-anim><time datetime="2026-06-27">June 27, 2026</time></p>
+    </section>
+
+    <section class="section post">
+      <article class="prose">
+        <p data-anim>
+          This August we're hosting <a href="https://clairewang.net/" target="_blank" rel="noopener">Claire Wang</a>
+          to present <a href="https://arxiv.org/abs/2606.19936" target="_blank" rel="noopener">Prismriver</a>,
+          a formalization of music theory and algorithmic composition in Lean&nbsp;4, developed jointly with
+          <a href="https://lenianiva.com/" target="_blank" rel="noopener">Leni Aniva</a>. The paper opens with the
+          observation that music is, at heart, a mathematical object:
+        </p>
+
+        <blockquote class="quote" data-anim>
+          <p>
+            Music theory obeys a rich set of mathematical rules and symmetries. These symmetries follow
+            mathematical structure which can be verified and expressed in the precise language of a proof
+            assistant.
+          </p>
+          <footer class="quote-cite">
+            &mdash; Leni Aniva &amp; Claire Wang,
+            <a href="https://arxiv.org/abs/2606.19936" target="_blank" rel="noopener"><cite>Prismriver: Formalization of Music Theory and Algorithmic Composition in Lean&nbsp;4</cite></a>
+          </footer>
+        </blockquote>
+
+        <p data-anim>
+          By encoding the rules of music theory as Lean definitions and theorems, Prismriver makes those
+          rules machine-checkable rather than merely conventional. That foundation opens the door to
+          <em>verifiable</em> algorithmic composition and accompaniment generation, where a generated
+          piece can be checked against the formal structure it claims to respect, and it enables a
+          monadic analysis of the structures that recur throughout music.
+        </p>
+
+        <p data-anim>
+          Prismriver is built as a music DSL in Lean&nbsp;4; the source lives in the
+          <a href="https://github.com/lenianiva/Prismriver" target="_blank" rel="noopener">project's GitHub repository</a>.
+          Come hear Claire walk through the formalization and where it leads next at
+          <a href="/calendar">her talk on Sunday, August&nbsp;9</a>.
+        </p>
+
+        <div class="actions post-downloads" data-anim>
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2606.19936" target="_blank" rel="noopener">Read the paper</a>
+          <a class="btn btn-ghost" href="https://github.com/lenianiva/Prismriver" target="_blank" rel="noopener">View the code on GitHub</a>
+        </div>
+
+        <p class="post-back" data-anim><a class="arrow" href="/blog/">↩ All posts</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>NYC Lean</span>
+    </div>
+    <p class="footer-note">Formal methods in New York City · <a href="https://lean.nyc">lean.nyc</a></p>
+    <p class="footer-meta">Made by the community · <a href="https://github.com/NYC-Lean/website" target="_blank" rel="noopener">Edit this site ↗︎</a> · <span class="qed">∎</span></p>
+  </footer>
+
+  <script src="/assets/vendor/gsap/gsap.min.js" defer></script>
+  <script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>
