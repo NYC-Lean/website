@@ -37,6 +37,16 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
+  { date: "2026-08-02", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup" },
+
+  { date: "2026-07-26", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup" },
+
+  { date: "2026-07-19", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup" },
+
+  { date: "2026-07-12", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup" },
+
+  { date: "2026-07-05", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup" },
+
   { date: "2026-08-09", time: "2:00 PM", location: "", title: "Weekend meetup",
     talk: {
       title: "Prismriver: Formalization of Music Theory and Algorithmic Composition in Lean 4",
