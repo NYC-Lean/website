@@ -46,7 +46,7 @@ window.NYC_LEAN_EVENTS = [
       abstract: "Music theory obeys a rich set of mathematical rules and symmetries. These symmetries follow mathematical structure which can be verified and expressed in the precise language of a proof assistant. By formalizing music theory in Lean 4, we open the door to verifiable algorithmic composition and accompaniment generation. We also enable monadic analysis of structures in music. Joint work with Leni Aniva."
     } },
 
-  { date: "2026-06-28", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup",
+  { date: "2026-06-28", time: "2:00 PM", location: "Nomadworks Times Square", locationUrl: "https://www.google.com/maps/search/?api=1&query=Nomadworks%2C+240+W+40th+St%2C+New+York%2C+NY+10018", rsvpUrl: "https://www.tagvenue.com/rsvp/e8012ff3-5ebf-40a8-8440-e03696561d46", title: "Weekend meetup",
     talk: {
       title: "Numina Fuse",
       titleUrl: "/blog/numina-fuse",
