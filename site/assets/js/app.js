@@ -106,6 +106,7 @@
         '<h3>' + esc(e.title) + '</h3>' +
         (!compact && e.talk ? talkHTML(e.talk) :
           (!compact && (e.descriptionHtml || e.description) ? '<p>' + (e.descriptionHtml || esc(e.description)) + '</p>' : '')) +
+        (!compact && e.rsvpUrl ? '<div class="ev-rsvp"><a class="btn btn-primary" href="' + esc(e.rsvpUrl) + '" target="_blank" rel="noopener">RSVP</a></div>' : '') +
       '</div></div>';
   }
   function joinRows(list) {
