@@ -204,8 +204,9 @@ a:hover { color: var(--accent); }
 
 /* ---------- Sections ---------- */
 .section { max-width: var(--maxw); margin: 0 auto; padding: clamp(4rem, 9vh, 7rem) 1.6rem; scroll-margin-top: 76px; }
-/* home page: tighten the gap between Upcoming and Resources */
-#upcoming { padding-bottom: clamp(2.75rem, 5.5vh, 4.25rem); }
+/* home page: tighten the gaps between About, Upcoming, and Resources */
+#about { padding-bottom: clamp(2.75rem, 5.5vh, 4.25rem); }
+#upcoming { padding-top: clamp(2.75rem, 5.5vh, 4.25rem); padding-bottom: clamp(2.75rem, 5.5vh, 4.25rem); }
 #resources { padding-top: clamp(2.75rem, 5.5vh, 4.25rem); }
 #photo { padding-top: clamp(2.75rem, 5.5vh, 4.25rem); }
 
@@ -322,6 +323,7 @@ a:hover { color: var(--accent); }
   margin: 0 0 1.3rem; max-width: 15ch;
 }
 .meetups-copy p { color: var(--ink-soft); }
+.meetups-copy p a { border-bottom: 1.5px solid var(--accent); }
 .welcome { color: var(--ink) !important; }
 .welcome strong { color: var(--accent); }
 .facts { margin: 0; border-top: 1.5px solid var(--ink); }
