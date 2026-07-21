@@ -42,6 +42,7 @@ window.NYC_LEAN_EVENTS = [
     talk: {
       title: "From Proof to Practice: Extracting Verified Programs to Modern C++",
       speaker: "Joomy Korkut",
+      speakerUrl: "https://joomy.korkutblech.com/",
       abstract: "Proof assistants are increasingly good environments for developing correct-by-construction programs, but deployment raises a different question: how should verified code leave the prover and enter real systems? This talk presents Crane, an extraction system from the Rocq Prover to modern C++ designed to make verified developments credible candidates for large-scale C++ integration.",
       abstractMore: "Crane generates readable functional-style C++ using disciplined ownership, stack-safe control flow, and standard zero-overhead abstractions, with support for mapping Rocq types to C++ standard-library types and other target-specific libraries. Although Crane is built for Rocq, the core questions should be familiar to Lean users: what should extraction guarantee, how much runtime should the target depend on, what should generated code look like, and how do we build trust in an unverified extractor? I will discuss Crane’s design, implementation challenges, AI-assisted development workflow, trust model, and early lessons from building a bridge between verified programming and production-oriented C++."
     } },
