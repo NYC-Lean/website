@@ -79,10 +79,16 @@
     var title = t.titleUrl
       ? '<a href="' + esc(t.titleUrl) + '">' + esc(t.title) + '</a>'
       : esc(t.title);
+    var abstractMore = t.abstractMore
+      ? '<details class="talk-more"><summary>' +
+          '<span class="talk-more-open">Show more</span>' +
+          '<span class="talk-more-close">Show less</span>' +
+        '</summary><p>' + esc(t.abstractMore) + '</p></details>'
+      : '';
     return '<div class="talk">' +
       (t.title ? '<p class="talk-title">' + title + '</p>' : '') +
       (t.speaker ? '<p class="talk-speaker">' + speaker + '</p>' : '') +
-      (t.abstract ? '<p class="talk-abstract">' + esc(t.abstract) + '</p>' : '') +
+      (t.abstract ? '<p class="talk-abstract">' + esc(t.abstract) + '</p>' : '') + abstractMore +
     '</div>';
   }
   function rowHTML(e, isNext, compact) {

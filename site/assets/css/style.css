@@ -430,6 +430,16 @@ a:hover { color: var(--accent); }
 .talk .talk-speaker a { color: inherit; text-decoration: underline; }
 .talk .talk-speaker a:hover { color: var(--accent); }
 .talk .talk-abstract { margin: 0; color: var(--ink-soft); max-width: 58ch; }
+.talk-more { margin-top: 0.55rem; color: var(--ink-soft); max-width: 58ch; }
+.talk-more summary {
+  width: max-content; color: var(--accent); font-size: 0.9rem; font-weight: 600;
+  cursor: pointer;
+}
+.talk-more summary:hover { text-decoration: underline; }
+.talk-more .talk-more-close { display: none; }
+.talk-more[open] .talk-more-open { display: none; }
+.talk-more[open] .talk-more-close { display: inline; }
+.talk-more p { margin: 0.55rem 0 0; }
 .ev-rsvp { margin-top: 1.2rem; }
 .ev-rsvp .btn { display: inline-block; }
 .events.past .talk-title { color: var(--ink-soft); }

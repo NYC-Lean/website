@@ -27,7 +27,8 @@
          titleUrl: "...",     // optional; links the talk title (e.g. a blog post)
          speaker: "...",      // presenter's name
          speakerUrl: "...",   // optional; links the speaker's name
-         abstract: "..."      // talk abstract
+         abstract: "...",     // talk abstract
+         abstractMore: "..."  // optional; collapsed behind a "Show more" control
        }
      }
    Order does not matter; entries are sorted by date.
@@ -37,7 +38,15 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
-  { date: "2026-08-02", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-08-02", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup",
+    talk: {
+      title: "From Proof to Practice: Extracting Verified Programs to Modern C++",
+      speaker: "Joomy Korkut",
+      abstract: "Proof assistants are increasingly good environments for developing correct-by-construction programs, but deployment raises a different question: how should verified code leave the prover and enter real systems? This talk presents Crane, an extraction system from the Rocq Prover to modern C++ designed to make verified developments credible candidates for large-scale C++ integration.",
+      abstractMore: "Crane generates readable functional-style C++ using disciplined ownership, stack-safe control flow, and standard zero-overhead abstractions, with support for mapping Rocq types to C++ standard-library types and other target-specific libraries. Although Crane is built for Rocq, the core questions should be familiar to Lean users: what should extraction guarantee, how much runtime should the target depend on, what should generated code look like, and how do we build trust in an unverified extractor? I will discuss Crane’s design, implementation challenges, AI-assisted development workflow, trust model, and early lessons from building a bridge between verified programming and production-oriented C++."
+    } },
+
+  { date: "2026-08-09", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
   { date: "2026-07-26", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
