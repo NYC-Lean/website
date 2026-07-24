@@ -49,7 +49,7 @@ window.NYC_LEAN_EVENTS = [
 
   { date: "2026-08-09", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-07-26", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-07-26", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
   { date: "2026-07-19", time: "12:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
