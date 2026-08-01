@@ -41,6 +41,7 @@ window.NYC_LEAN_EVENTS = [
   { date: "2026-08-02", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup",
     talk: {
       title: "From Proof to Practice: Extracting Verified Programs to Modern C++",
+      titleUrl: "/blog/crane",
       speaker: "Joomy Korkut",
       speakerUrl: "https://joomy.korkutblech.com/",
       abstract: "Proof assistants are increasingly good environments for developing correct-by-construction programs, but deployment raises a different question: how should verified code leave the prover and enter real systems? This talk presents Crane, an extraction system from the Rocq Prover to modern C++ designed to make verified developments credible candidates for large-scale C++ integration.",

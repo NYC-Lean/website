@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crane · NYC Lean</title>
+  <meta name="description" content="Upcoming NYC Lean talk: Joomy Korkut on Crane, an extraction system from the Rocq Prover to modern C++ built for large-scale production integration." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Crane" />
+  <meta property="og:description" content="An upcoming NYC Lean talk by Joomy Korkut on Crane, an extraction system from the Rocq Prover to modern C++." />
+  <meta property="og:url" content="https://lean.nyc/blog/crane" />
+
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">NYC Lean</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a class="nav-home" href="/">Home</a>
+        <a href="/calendar">Calendar</a>
+        <a href="/blog/">Blog</a>
+        <a href="/members">Members</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="page-kicker" data-anim>Upcoming talk · Sunday, August 2, 2026 · 2:00 PM</p>
+      <h1 class="page-title post-title" data-anim>Crane</h1>
+      <div class="page-rule"></div>
+      <p class="page-sub" data-anim>A talk by <a href="https://joomy.korkutblech.com/" target="_blank" rel="noopener">Joomy Korkut</a>.</p>
+      <p class="post-pubdate" data-anim><time datetime="2026-08-01">August 1, 2026</time></p>
+    </section>
+
+    <section class="section post">
+      <article class="prose">
+        <p data-anim>
+          This Sunday we're hosting <a href="https://joomy.korkutblech.com/" target="_blank" rel="noopener">Joomy Korkut</a>
+          to present <a href="https://github.com/bloomberg/crane" target="_blank" rel="noopener">Crane</a>,
+          an extraction system from the <a href="https://rocq-prover.org/" target="_blank" rel="noopener">Rocq Prover</a>
+          to modern C++, developed at Bloomberg with Matthew&nbsp;Z.&nbsp;Weaver. A proof assistant is a good place to
+          build a correct-by-construction program; getting that program out of the prover and into a running system
+          is a separate problem, and it is the one Crane is aimed at:
+        </p>
+
+        <blockquote class="quote" data-anim>
+          <p>
+            Proof assistants are increasingly good environments for developing correct-by-construction programs,
+            but deployment raises a different question: how should verified code leave the prover and enter
+            real systems?
+          </p>
+          <footer class="quote-cite">
+            &mdash; Joomy Korkut, <cite>From Proof to Practice: Extracting Verified Programs to Modern C++</cite>
+          </footer>
+        </blockquote>
+
+        <p data-anim>
+          Existing extractors mostly target functional languages such as OCaml and Haskell, or drop to plain C
+          or Rust. None of those make a verified development a plausible candidate for integration into a large
+          C++ codebase. Crane instead generates readable, functional-style C++ that uses disciplined ownership,
+          stack-safe control flow, and standard zero-overhead abstractions. It ships as a Rocq plugin, needs no
+          separate runtime system, and can map Rocq datatypes onto C++ standard-library types &mdash; or onto the
+          types an existing codebase already uses &mdash; so extracted code meets the rest of the system halfway.
+        </p>
+
+        <p data-anim>
+          Although Crane targets Rocq, the design questions behind it are the ones Lean users run into too:
+          what should extraction actually guarantee, how much runtime should generated code depend on, what
+          should that code look like to a reader who never opens the proof, and how do you build trust in an
+          extractor that is itself unverified? Joomy will cover Crane's design and implementation, its trust
+          model, the AI-assisted workflow used to build it, and early lessons from bridging verified programming
+          and production C++. The work was presented as
+          <a href="https://popl26.sigplan.org/details/rocqpl-2026-papers/18/Crane-Lowers-Rocq-Safely-into-C-" target="_blank" rel="noopener">Crane Lowers Rocq Safely into C++</a>
+          at RocqPL&nbsp;2026, and the project is open source and in active development.
+        </p>
+
+        <p data-anim>
+          Come hear the full story at <a href="/calendar">his talk this Sunday, August&nbsp;2</a>.
+        </p>
+
+        <div class="actions post-downloads" data-anim>
+          <a class="btn btn-primary" href="https://bloomberg.github.io/crane/papers/crane-rocqpl26.pdf" target="_blank" rel="noopener">Read the paper (PDF)</a>
+          <a class="btn btn-ghost" href="https://github.com/bloomberg/crane" target="_blank" rel="noopener">View the code on GitHub</a>
+        </div>
+
+        <p class="post-back" data-anim><a class="arrow" href="/blog/">↩ All posts</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>NYC Lean</span>
+    </div>
+    <p class="footer-note">Formal methods in New York City · <a href="https://lean.nyc">lean.nyc</a></p>
+    <p class="footer-meta">Made by the community · <a href="https://github.com/NYC-Lean/website" target="_blank" rel="noopener">Edit this site ↗︎</a> · <span class="qed">∎</span></p>
+  </footer>
+
+  <script src="/assets/vendor/gsap/gsap.min.js" defer></script>
+  <script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>
