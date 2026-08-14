@@ -38,6 +38,14 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
+  { date: "2026-10-11", time: "", location: "", title: "Weekend meetup",
+    talk: {
+      title: "Topic to be announced",
+      speaker: "Jaume de Dios Pont",
+      speakerUrl: "https://jaume.dedios.cat/",
+      abstract: "Talk details will be announced closer to the event."
+    } },
+
   { date: "2026-08-02", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup",
     talk: {
       title: "From Proof to Practice: Extracting Verified Programs to Modern C++",
