@@ -96,7 +96,9 @@
     if (!schedule || !schedule.length) return '';
     return '<ol class="event-schedule" aria-label="Event schedule">' +
       schedule.map(function (item) {
-        return '<li><time>' + esc(item.time) + '</time><span>' + esc(item.label) + '</span></li>';
+        var untimed = item.time ? '' : ' class="event-schedule-untimed"';
+        var time = item.time ? '<time>' + esc(item.time) + '</time>' : '';
+        return '<li' + untimed + '>' + time + '<span>' + esc(item.label) + '</span></li>';
       }).join('') +
     '</ol>';
   }
