@@ -46,6 +46,23 @@ window.NYC_LEAN_EVENTS = [
       abstract: "Talk details will be announced closer to the event."
     } },
 
+  { date: "2026-10-04", time: "", location: "", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-09-20", time: "", location: "", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-09-06", time: "", location: "", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-08-30", time: "", location: "", title: "Weekend meetup",
+    talk: {
+      title: "Formalizing Gromov's theorem on groups of polynomial growth in Lean",
+      titleUrl: "https://github.com/Aaron1011/gromov",
+      speaker: "Aaron Hill",
+      speakerUrl: "https://github.com/Aaron1011",
+      abstract: "This talk will present a Lean formalization of the forward direction of Gromov's polynomial growth theorem: every finitely generated group of polynomial growth is virtually nilpotent."
+    } },
+
+  { date: "2026-08-23", time: "", location: "", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
   { date: "2026-08-02", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup",
     talk: {
       title: "From Proof to Practice: Extracting Verified Programs to Modern C++",
