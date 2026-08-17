@@ -12,10 +12,7 @@
        location: "Mori",      // free text, "" if none / private
        locationUrl: "...",    // optional; makes the location a clickable map link
        title: "Textbook companion planning", // optional; omit for a regular meetup
-       description: "...",    // optional, shown on the calendar page
-       schedule: [             // optional event agenda
-         { time: "2:00–4:00 PM", label: "Open Lean working session" }
-       ]
+       description: "..."     // optional, shown on the calendar page
      }
    For a talk, add a `talk` object instead of (or alongside) description
    to get a structured title / speaker / abstract template:
@@ -53,14 +50,11 @@ window.NYC_LEAN_EVENTS = [
       { time: "3:45 PM", label: "Social" }
     ] },
 
-  { date: "2026-10-04", time: "2:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop.",
-    schedule: [{ time: "2:00–4:00 PM", label: "Open Lean working session" }] },
+  { date: "2026-10-04", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-09-20", time: "2:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop.",
-    schedule: [{ time: "2:00–4:00 PM", label: "Open Lean working session" }] },
+  { date: "2026-09-20", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-09-06", time: "2:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop.",
-    schedule: [{ time: "2:00–4:00 PM", label: "Open Lean working session" }] },
+  { date: "2026-09-06", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
   { date: "2026-08-30", time: "2:00 PM", location: "",
     talk: {
@@ -76,8 +70,7 @@ window.NYC_LEAN_EVENTS = [
       { time: "3:45 PM", label: "Social" }
     ] },
 
-  { date: "2026-08-23", time: "2:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop.",
-    schedule: [{ time: "2:00–4:00 PM", label: "Open Lean working session" }] },
+  { date: "2026-08-23", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
   { date: "2026-08-02", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY",
     talk: {

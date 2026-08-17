@@ -60,10 +60,7 @@ single list. Each entry looks like:
   time: "2:00 PM",       // free text, "" if unknown
   location: "Mori",      // free text, "" if none or private
   title: "Textbook companion planning", // optional; omit for a regular meetup
-  description: "...",    // optional, shown on the calendar page
-  schedule: [             // optional event agenda
-    { time: "2:00–4:00 PM", label: "Open Lean working session" }
-  ]
+  description: "..."     // optional, shown on the calendar page
 }
 ```
 
