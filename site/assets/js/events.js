@@ -11,8 +11,11 @@
        time: "2:00 PM",       // free text, "" if unknown
        location: "Mori",      // free text, "" if none / private
        locationUrl: "...",    // optional; makes the location a clickable map link
-       title: "Weekend meetup",
-       description: "..."     // optional, shown on the calendar page
+       title: "Textbook companion planning", // optional; omit for a regular meetup
+       description: "...",    // optional, shown on the calendar page
+       schedule: [             // optional event agenda
+         { time: "2:00–4:00 PM", label: "Open Lean working session" }
+       ]
      }
    For a talk, add a `talk` object instead of (or alongside) description
    to get a structured title / speaker / abstract template:
@@ -21,7 +24,6 @@
        time: "2:00 PM",
        location: "The Pearl House",
        locationUrl: "...",
-       title: "Weekend meetup",
        talk: {
          title: "...",        // talk title
          titleUrl: "...",     // optional; links the talk title (e.g. a blog post)
@@ -38,32 +40,46 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
-  { date: "2026-10-11", time: "", location: "", title: "Weekend meetup",
+  { date: "2026-10-11", time: "2:00 PM", location: "",
     talk: {
       title: "Topic to be announced",
       speaker: "Jaume de Dios Pont",
       speakerUrl: "https://jaume.dedios.cat/",
       abstract: "Talk details will be announced closer to the event."
-    } },
+    },
+    schedule: [
+      { time: "2:00–2:45 PM", label: "Coffee and conversation" },
+      { time: "2:45–3:45 PM", label: "Talk" },
+      { time: "3:45 PM onward", label: "Discussion and social time" }
+    ] },
 
-  { date: "2026-10-04", time: "", location: "", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-10-04", time: "2:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop.",
+    schedule: [{ time: "2:00–4:00 PM", label: "Open Lean working session" }] },
 
-  { date: "2026-09-20", time: "", location: "", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-09-20", time: "2:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop.",
+    schedule: [{ time: "2:00–4:00 PM", label: "Open Lean working session" }] },
 
-  { date: "2026-09-06", time: "", location: "", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-09-06", time: "2:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop.",
+    schedule: [{ time: "2:00–4:00 PM", label: "Open Lean working session" }] },
 
-  { date: "2026-08-30", time: "", location: "", title: "Weekend meetup",
+  { date: "2026-08-30", time: "2:00 PM", location: "",
     talk: {
       title: "Formalizing Gromov's theorem on groups of polynomial growth in Lean",
       titleUrl: "https://github.com/Aaron1011/gromov",
       speaker: "Aaron Hill",
       speakerUrl: "https://github.com/Aaron1011",
       abstract: "This talk will present a Lean formalization of the forward direction of Gromov's polynomial growth theorem: every finitely generated group of polynomial growth is virtually nilpotent."
-    } },
+    },
+    schedule: [
+      { time: "2:00–2:45 PM", label: "Coffee and conversation" },
+      { time: "2:45–3:45 PM", label: "Talk" },
+      { time: "3:45 PM onward", label: "Discussion and social time" }
+    ] },
 
-  { date: "2026-08-23", time: "", location: "", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-08-23", time: "2:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop.",
+    schedule: [{ time: "2:00–4:00 PM", label: "Open Lean working session" }] },
 
-  { date: "2026-08-02", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup",
+  { date: "2026-08-02", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY",
     talk: {
       title: "From Proof to Practice: Extracting Verified Programs to Modern C++",
       titleUrl: "/blog/crane",
@@ -73,26 +89,31 @@ window.NYC_LEAN_EVENTS = [
       abstractMore: "Crane generates readable functional-style C++ using disciplined ownership, stack-safe control flow, and standard zero-overhead abstractions, with support for mapping Rocq types to C++ standard-library types and other target-specific libraries. Although Crane is built for Rocq, the core questions should be familiar to Lean users: what should extraction guarantee, how much runtime should the target depend on, what should generated code look like, and how do we build trust in an unverified extractor? I will discuss Crane’s design, implementation challenges, AI-assisted development workflow, trust model, and early lessons from building a bridge between verified programming and production-oriented C++."
     } },
 
-  { date: "2026-08-09", time: "2:00 PM", location: "Maiden Lane Public Atrium", locationUrl: "https://www.google.com/maps/search/?api=1&query=Maiden+Lane+Public+Atrium%2C+New+York%2C+NY", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-08-09", time: "2:00 PM", location: "Maiden Lane Public Atrium", locationUrl: "https://www.google.com/maps/search/?api=1&query=Maiden+Lane+Public+Atrium%2C+New+York%2C+NY", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-07-26", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-07-26", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-07-19", time: "12:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-07-19", time: "12:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-07-12", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-07-12", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-07-05", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-07-05", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-08-16", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup",
+  { date: "2026-08-16", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY",
     talk: {
       title: "Prismriver: Formalization of Music Theory and Algorithmic Composition in Lean 4",
       titleUrl: "/blog/prismriver",
       speaker: "Claire Wang",
       speakerUrl: "https://clairewang.net/",
       abstract: "Music theory obeys a rich set of mathematical rules and symmetries. These symmetries follow mathematical structure which can be verified and expressed in the precise language of a proof assistant. By formalizing music theory in Lean 4, we open the door to verifiable algorithmic composition and accompaniment generation. We also enable monadic analysis of structures in music. Joint work with Leni Aniva."
-    } },
+    },
+    schedule: [
+      { time: "2:00–2:45 PM", label: "Coffee and conversation" },
+      { time: "2:45–3:45 PM", label: "Talk" },
+      { time: "3:45 PM onward", label: "Discussion and social time" }
+    ] },
 
-  { date: "2026-06-28", time: "2:00 PM", location: "Nomadworks Times Square", locationUrl: "https://www.google.com/maps/search/?api=1&query=Nomadworks%2C+240+W+40th+St%2C+New+York%2C+NY+10018", rsvpUrl: "https://www.tagvenue.com/rsvp/e8012ff3-5ebf-40a8-8440-e03696561d46", title: "Weekend meetup",
+  { date: "2026-06-28", time: "2:00 PM", location: "Nomadworks Times Square", locationUrl: "https://www.google.com/maps/search/?api=1&query=Nomadworks%2C+240+W+40th+St%2C+New+York%2C+NY+10018", rsvpUrl: "https://www.tagvenue.com/rsvp/e8012ff3-5ebf-40a8-8440-e03696561d46",
     talk: {
       title: "Numina Fuse",
       titleUrl: "/blog/numina-fuse",
@@ -101,9 +122,9 @@ window.NYC_LEAN_EVENTS = [
       abstract: "Numina Fuse is an autoformalization platform that enables users to interactively work with AI on their Lean projects. I will be going over the development and applications of Fuse."
     } },
 
-  { date: "2026-06-21", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup", description: "Open discussion, short lightning talks on what you're working on, and a hands-on session to close out. Bring a laptop." },
+  { date: "2026-06-21", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", description: "Open discussion, short lightning talks on what you're working on, and a hands-on session to close out. Bring a laptop." },
 
-  { date: "2026-06-14", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup",
+  { date: "2026-06-14", time: "2:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA",
     talk: {
       title: "SampCert: Verified Differential Privacy in Lean",
       speaker: "Markus de Medeiros",
@@ -111,7 +132,7 @@ window.NYC_LEAN_EVENTS = [
       abstract: "Differential privacy is a suite of techniques for defining when, and how, a statistical program protects the privacy of its participants. Unfortunately, the history of differential privacy is mired with subtle implementation errors causing enormous privacy bugs. In this talk, I will go over the techniques we used to implement and verify differentially private programs in Lean."
     } },
 
-  { date: "2026-06-07", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY", title: "Weekend meetup",
+  { date: "2026-06-07", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY",
     talk: {
       title: "Formalizing the Gelfand-Naimark-Segal Construction in Lean",
       titleUrl: "/blog/formalizing-the-gns-construction",
@@ -120,74 +141,74 @@ window.NYC_LEAN_EVENTS = [
       abstract: "The GNS construction builds a Hilbert space and a *-homomorphism from a C*-algebra into the bounded operators on that space, an essential step in the proof of the Gelfand-Naimark theorem. The formalization has been merged into Mathlib."
     } },
 
-  { date: "2026-05-31", time: "3:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", title: "Weekend meetup", description: "Open discussion, short lightning talks on who you are and what you're working on, planning for the month ahead and the group's future, and a hands-on session to close out. Bring a laptop." },
+  { date: "2026-05-31", time: "3:00 PM", location: "The Pearl House", locationUrl: "https://maps.app.goo.gl/sVi6u4CqRtn2MrWDA", description: "Open discussion, short lightning talks on who you are and what you're working on, planning for the month ahead and the group's future, and a hands-on session to close out. Bring a laptop." },
 
   /* ---- past ---- */
   { date: "2026-04-25", time: "12:00 PM", location: "Brooklyn Public Library, Cadman Plaza", title: "Textbook companion planning", description: "Scoped the Lean/Verso textbook companion, settling on Axler's Linear Algebra Done Right." },
-  { date: "2026-04-19", time: "2:30 PM", location: "Mori", title: "Weekend meetup", description: "Discussed a community Lean companion to Evan Chen's Infinitely Large Napkin." },
+  { date: "2026-04-19", time: "2:30 PM", location: "Mori", description: "Discussed a community Lean companion to Evan Chen's Infinitely Large Napkin." },
   { date: "2026-04-12", time: "2:00 PM", location: "Stavros Niarchos Foundation Library", title: "Library meetup", description: "Work on a post about the beth numbers." },
-  { date: "2026-04-05", time: "3:00 PM", location: "", title: "Weekend meetup", description: "Worked on rpylean and strict positivity of inductive types." },
-  { date: "2026-03-01", time: "1:00 PM", location: "", title: "Weekend meetup", description: "Worked on rpylean." },
+  { date: "2026-04-05", time: "3:00 PM", location: "", description: "Worked on rpylean and strict positivity of inductive types." },
+  { date: "2026-03-01", time: "1:00 PM", location: "", description: "Worked on rpylean." },
   { date: "2026-02-22", time: "2:00 PM", location: "", title: "Snow-day meetup", description: "" },
-  { date: "2026-02-01", time: "1:30 PM", location: "Mori", title: "Weekend meetup", description: "" },
-  { date: "2026-01-18", time: "2:00 PM", location: "", title: "Weekend meetup", description: "Discussed PrimeNumberTheoremAnd." },
-  { date: "2026-01-10", time: "1:00 PM", location: "", title: "Weekend meetup", description: "Worked on PrimeNumberTheoremAnd." },
-  { date: "2026-01-03", time: "3:00 PM", location: "Mori", title: "Weekend meetup", description: "" },
-  { date: "2025-12-20", time: "1:00 PM", location: "Mori", title: "Weekend meetup", description: "Discussed finitely generated abelian groups." },
-  { date: "2025-12-06", time: "3:00 PM", location: "Mori", title: "Weekend meetup", description: "" },
-  { date: "2025-11-22", time: "5:00 PM", location: "Mori", title: "Weekend meetup", description: "" },
-  { date: "2025-11-15", time: "", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-11-08", time: "11:00 AM", location: "Mori", title: "Weekend meetup", description: "Discussed L'Hôpital and FormalBook." },
-  { date: "2025-11-02", time: "3:00 PM", location: "Mori", title: "Weekend meetup", description: "" },
-  { date: "2025-10-25", time: "3:00 PM", location: "Mori", title: "Weekend meetup", description: "Looked at a Mathlib PR and the Rupert-shape problem." },
-  { date: "2025-10-04", time: "1:00 PM", location: "Mori", title: "Weekend meetup", description: "" },
-  { date: "2025-09-27", time: "", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-09-20", time: "", location: "", title: "Weekend meetup", description: "Shared a spectral-theorem formalization." },
-  { date: "2025-09-07", time: "1:30 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-08-30", time: "1:30 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-08-16", time: "3:00 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-07-19", time: "2:00 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-07-13", time: "2:30 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-06-28", time: "2:00 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-06-14", time: "", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-06-07", time: "", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-05-25", time: "12:00 PM", location: "Union Square", title: "Weekend meetup", description: "Lean hacking at the Taiwan Festival." },
-  { date: "2025-05-18", time: "1:30 PM", location: "Madison Square Park", title: "Weekend meetup", description: "" },
-  { date: "2025-05-03", time: "1:00 PM", location: "Madison Square Park", title: "Weekend meetup", description: "" },
-  { date: "2025-04-26", time: "", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-04-12", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "" },
-  { date: "2025-04-05", time: "1:30 PM", location: "", title: "Weekend meetup", description: "Worked on rpylean." },
-  { date: "2025-03-29", time: "1:15 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-03-22", time: "1:00 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-03-16", time: "5:00 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-03-01", time: "3:00 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-02-22", time: "1:00 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-02-08", time: "1:00 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-02-01", time: "1:00 PM", location: "", title: "Weekend meetup", description: "" },
-  { date: "2025-01-25", time: "12:00 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "Worked on PrimeNumberTheoremAnd." },
-  { date: "2025-01-18", time: "1:30 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "Finished a polynomial-span proof." },
-  { date: "2025-01-11", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "" },
-  { date: "2025-01-04", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "" },
-  { date: "2024-12-29", time: "", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "" },
-  { date: "2024-12-07", time: "12:00 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "" },
-  { date: "2024-11-30", time: "3:15 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "" },
-  { date: "2024-11-23", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "" },
-  { date: "2024-11-17", time: "3:00 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "Dispatched the last sorry on Carleson 5.2.9." },
-  { date: "2024-11-09", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "" },
-  { date: "2024-10-27", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "" },
-  { date: "2024-10-20", time: "1:00 PM", location: "Madison Square Park", title: "Weekend meetup", description: "Discussed ImProver." },
-  { date: "2024-10-12", time: "12:00 PM", location: "Madison Square Park", title: "Weekend meetup", description: "" },
-  { date: "2024-10-05", time: "1:00 PM", location: "Madison Square Park", title: "Weekend meetup", description: "" },
-  { date: "2024-09-29", time: "11:30 AM", location: "Stumptown Coffee (29th St)", title: "Weekend meetup", description: "Worked on a generating-functions formalization." },
-  { date: "2024-09-22", time: "12:30 PM", location: "Madison Square Park", title: "Weekend meetup", description: "" },
-  { date: "2024-09-15", time: "1:00 PM", location: "Madison Square Park", title: "Weekend meetup", description: "" },
-  { date: "2024-09-08", time: "11:00 AM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "" },
-  { date: "2024-08-31", time: "11:00 AM", location: "Madison Square Park", title: "Weekend meetup", description: "" },
-  { date: "2024-08-24", time: "11:00 AM", location: "Madison Square Park", title: "Weekend meetup", description: "" },
-  { date: "2024-08-17", time: "11:00 AM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "Worked on generatingfunctionology." },
-  { date: "2024-07-21", time: "11:15 AM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "Worked on Carleson lemma 5.2.9." },
-  { date: "2024-07-13", time: "11:00 AM", location: "Stumptown Coffee, Ace Hotel", title: "Weekend meetup", description: "Figured out Carleson lemma 5.1.1." },
-  { date: "2024-06-09", time: "1:00 PM", location: "Chelsea Market", title: "Weekend meetup", description: "" },
-  { date: "2024-05-26", time: "1:00 PM", location: "Chelsea Market", title: "Weekend meetup", description: "Worked through Lean tutorial puzzles." },
+  { date: "2026-02-01", time: "1:30 PM", location: "Mori", description: "" },
+  { date: "2026-01-18", time: "2:00 PM", location: "", description: "Discussed PrimeNumberTheoremAnd." },
+  { date: "2026-01-10", time: "1:00 PM", location: "", description: "Worked on PrimeNumberTheoremAnd." },
+  { date: "2026-01-03", time: "3:00 PM", location: "Mori", description: "" },
+  { date: "2025-12-20", time: "1:00 PM", location: "Mori", description: "Discussed finitely generated abelian groups." },
+  { date: "2025-12-06", time: "3:00 PM", location: "Mori", description: "" },
+  { date: "2025-11-22", time: "5:00 PM", location: "Mori", description: "" },
+  { date: "2025-11-15", time: "", location: "", description: "" },
+  { date: "2025-11-08", time: "11:00 AM", location: "Mori", description: "Discussed L'Hôpital and FormalBook." },
+  { date: "2025-11-02", time: "3:00 PM", location: "Mori", description: "" },
+  { date: "2025-10-25", time: "3:00 PM", location: "Mori", description: "Looked at a Mathlib PR and the Rupert-shape problem." },
+  { date: "2025-10-04", time: "1:00 PM", location: "Mori", description: "" },
+  { date: "2025-09-27", time: "", location: "", description: "" },
+  { date: "2025-09-20", time: "", location: "", description: "Shared a spectral-theorem formalization." },
+  { date: "2025-09-07", time: "1:30 PM", location: "", description: "" },
+  { date: "2025-08-30", time: "1:30 PM", location: "", description: "" },
+  { date: "2025-08-16", time: "3:00 PM", location: "", description: "" },
+  { date: "2025-07-19", time: "2:00 PM", location: "", description: "" },
+  { date: "2025-07-13", time: "2:30 PM", location: "", description: "" },
+  { date: "2025-06-28", time: "2:00 PM", location: "", description: "" },
+  { date: "2025-06-14", time: "", location: "", description: "" },
+  { date: "2025-06-07", time: "", location: "", description: "" },
+  { date: "2025-05-25", time: "12:00 PM", location: "Union Square", description: "Lean hacking at the Taiwan Festival." },
+  { date: "2025-05-18", time: "1:30 PM", location: "Madison Square Park", description: "" },
+  { date: "2025-05-03", time: "1:00 PM", location: "Madison Square Park", description: "" },
+  { date: "2025-04-26", time: "", location: "", description: "" },
+  { date: "2025-04-12", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", description: "" },
+  { date: "2025-04-05", time: "1:30 PM", location: "", description: "Worked on rpylean." },
+  { date: "2025-03-29", time: "1:15 PM", location: "", description: "" },
+  { date: "2025-03-22", time: "1:00 PM", location: "", description: "" },
+  { date: "2025-03-16", time: "5:00 PM", location: "", description: "" },
+  { date: "2025-03-01", time: "3:00 PM", location: "", description: "" },
+  { date: "2025-02-22", time: "1:00 PM", location: "", description: "" },
+  { date: "2025-02-08", time: "1:00 PM", location: "", description: "" },
+  { date: "2025-02-01", time: "1:00 PM", location: "", description: "" },
+  { date: "2025-01-25", time: "12:00 PM", location: "Stumptown Coffee, Ace Hotel", description: "Worked on PrimeNumberTheoremAnd." },
+  { date: "2025-01-18", time: "1:30 PM", location: "Stumptown Coffee, Ace Hotel", description: "Finished a polynomial-span proof." },
+  { date: "2025-01-11", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", description: "" },
+  { date: "2025-01-04", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", description: "" },
+  { date: "2024-12-29", time: "", location: "Stumptown Coffee, Ace Hotel", description: "" },
+  { date: "2024-12-07", time: "12:00 PM", location: "Stumptown Coffee, Ace Hotel", description: "" },
+  { date: "2024-11-30", time: "3:15 PM", location: "Stumptown Coffee, Ace Hotel", description: "" },
+  { date: "2024-11-23", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", description: "" },
+  { date: "2024-11-17", time: "3:00 PM", location: "Stumptown Coffee, Ace Hotel", description: "Dispatched the last sorry on Carleson 5.2.9." },
+  { date: "2024-11-09", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", description: "" },
+  { date: "2024-10-27", time: "1:00 PM", location: "Stumptown Coffee, Ace Hotel", description: "" },
+  { date: "2024-10-20", time: "1:00 PM", location: "Madison Square Park", description: "Discussed ImProver." },
+  { date: "2024-10-12", time: "12:00 PM", location: "Madison Square Park", description: "" },
+  { date: "2024-10-05", time: "1:00 PM", location: "Madison Square Park", description: "" },
+  { date: "2024-09-29", time: "11:30 AM", location: "Stumptown Coffee (29th St)", description: "Worked on a generating-functions formalization." },
+  { date: "2024-09-22", time: "12:30 PM", location: "Madison Square Park", description: "" },
+  { date: "2024-09-15", time: "1:00 PM", location: "Madison Square Park", description: "" },
+  { date: "2024-09-08", time: "11:00 AM", location: "Stumptown Coffee, Ace Hotel", description: "" },
+  { date: "2024-08-31", time: "11:00 AM", location: "Madison Square Park", description: "" },
+  { date: "2024-08-24", time: "11:00 AM", location: "Madison Square Park", description: "" },
+  { date: "2024-08-17", time: "11:00 AM", location: "Stumptown Coffee, Ace Hotel", description: "Worked on generatingfunctionology." },
+  { date: "2024-07-21", time: "11:15 AM", location: "Stumptown Coffee, Ace Hotel", description: "Worked on Carleson lemma 5.2.9." },
+  { date: "2024-07-13", time: "11:00 AM", location: "Stumptown Coffee, Ace Hotel", description: "Figured out Carleson lemma 5.1.1." },
+  { date: "2024-06-09", time: "1:00 PM", location: "Chelsea Market", description: "" },
+  { date: "2024-05-26", time: "1:00 PM", location: "Chelsea Market", description: "Worked through Lean tutorial puzzles." },
   { date: "2024-05-05", time: "6:00 PM", location: "Veselka, East Village", title: "The first NYC Lean meetup", description: "The group's first in-person gathering." }
 ];

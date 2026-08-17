@@ -72,13 +72,15 @@
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
+  function linkedTitleHTML(title, url) {
+    return url
+      ? '<a href="' + esc(url) + '">' + esc(title) + '</a>'
+      : esc(title);
+  }
   function talkHTML(t) {
     var speaker = t.speakerUrl
       ? '<a href="' + esc(t.speakerUrl) + '" target="_blank" rel="noopener">' + esc(t.speaker) + '</a>'
       : esc(t.speaker);
-    var title = t.titleUrl
-      ? '<a href="' + esc(t.titleUrl) + '">' + esc(t.title) + '</a>'
-      : esc(t.title);
     var abstractMore = t.abstractMore
       ? '<details class="talk-more"><summary>' +
           '<span class="talk-more-open">Show more</span>' +
@@ -86,10 +88,17 @@
         '</summary><p>' + esc(t.abstractMore) + '</p></details>'
       : '';
     return '<div class="talk">' +
-      (t.title ? '<p class="talk-title">' + title + '</p>' : '') +
       (t.speaker ? '<p class="talk-speaker">' + speaker + '</p>' : '') +
       (t.abstract ? '<p class="talk-abstract">' + esc(t.abstract) + '</p>' : '') + abstractMore +
     '</div>';
+  }
+  function scheduleHTML(schedule) {
+    if (!schedule || !schedule.length) return '';
+    return '<ol class="event-schedule" aria-label="Event schedule">' +
+      schedule.map(function (item) {
+        return '<li><time>' + esc(item.time) + '</time><span>' + esc(item.label) + '</span></li>';
+      }).join('') +
+    '</ol>';
   }
   function rowHTML(e, isNext, compact) {
     var d = e._d;
@@ -104,14 +113,18 @@
       : '';
     var meta = [[wd, e.time].filter(Boolean).map(esc).join(" · "), loc]
       .filter(Boolean).join(" · ");
+    var title = e.talk && e.talk.title
+      ? linkedTitleHTML(e.talk.title, e.talk.titleUrl)
+      : esc(e.title);
     return '<div class="row event" data-anim>' +
       '<div class="event-date"><span class="ev-dm">' + dnum + ' ' + esc(mon) + '</span>' +
         (yr ? '<span class="ev-y">' + yr + '</span>' : '') + '</div>' +
       '<div class="row-body">' +
         '<span class="ev-meta">' + meta + '</span>' +
-        '<h3>' + esc(e.title) + '</h3>' +
+        (title ? '<h3>' + title + '</h3>' : '') +
         (!compact && e.talk ? talkHTML(e.talk) :
           (!compact && (e.descriptionHtml || e.description) ? '<p>' + (e.descriptionHtml || esc(e.description)) + '</p>' : '')) +
+        (!compact ? scheduleHTML(e.schedule) : '') +
         (!compact && e.rsvpUrl ? '<div class="ev-rsvp"><a class="btn btn-primary" href="' + esc(e.rsvpUrl) + '" target="_blank" rel="noopener">RSVP</a></div>' : '') +
       '</div></div>';
   }

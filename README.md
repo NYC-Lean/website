@@ -59,15 +59,19 @@ single list. Each entry looks like:
   date: "2026-06-07",   // YYYY-MM-DD, required
   time: "2:00 PM",       // free text, "" if unknown
   location: "Mori",      // free text, "" if none or private
-  title: "Weekend meetup",
-  description: "..."     // optional, shown on the calendar page
+  title: "Textbook companion planning", // optional; omit for a regular meetup
+  description: "...",    // optional, shown on the calendar page
+  schedule: [             // optional event agenda
+    { time: "2:00–4:00 PM", label: "Open Lean working session" }
+  ]
 }
 ```
 
 Add the next meetup at the top of the list. Order does not matter, since
 entries are sorted by date. Events with a future date appear under "Upcoming";
 once a date passes, they move to "Past" automatically. The home page shows the
-next three upcoming events.
+next three upcoming events. For talks, add a `talk` object; its `title` becomes
+the event heading.
 
 ### Members
 
