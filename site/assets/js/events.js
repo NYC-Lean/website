@@ -43,12 +43,7 @@ window.NYC_LEAN_EVENTS = [
       speaker: "Jaume de Dios Pont",
       speakerUrl: "https://jaume.dedios.cat/",
       abstract: "Talk details will be announced closer to the event."
-    },
-    schedule: [
-      { time: "2:00–2:45 PM", label: "Coffee" },
-      { time: "2:45–3:45 PM", label: "Talk" },
-      { time: "3:45 PM", label: "Social" }
-    ] },
+    } },
 
   { date: "2026-10-04", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
