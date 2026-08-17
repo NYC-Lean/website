@@ -39,7 +39,7 @@ window.NYC_LEAN_EVENTS = [
   /* ---- upcoming ---- (add the next meetup here) */
   { date: "2026-10-11", time: "2:00 PM", location: "",
     talk: {
-      title: "Topic to be announced",
+      title: "TBD",
       speaker: "Jaume de Dios Pont",
       speakerUrl: "https://jaume.dedios.cat/",
       abstract: "Talk details will be announced closer to the event."
