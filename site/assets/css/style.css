@@ -448,7 +448,6 @@ a:hover { color: var(--accent); }
   font-family: var(--display); font-weight: 700; color: var(--ink); white-space: nowrap;
 }
 .event-schedule span { color: var(--ink-soft); }
-.event-schedule-untimed span { grid-column: 2; }
 .ev-rsvp { margin-top: 1.2rem; }
 .ev-rsvp .btn { display: inline-block; }
 .cal-note {

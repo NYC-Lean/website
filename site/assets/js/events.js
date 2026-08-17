@@ -50,7 +50,7 @@ window.NYC_LEAN_EVENTS = [
     schedule: [
       { time: "2:00–2:45 PM", label: "Coffee" },
       { time: "2:45–3:45 PM", label: "Talk" },
-      { label: "Discussion and social" }
+      { time: "3:45 PM", label: "Social" }
     ] },
 
   { date: "2026-10-04", time: "2:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop.",
@@ -73,7 +73,7 @@ window.NYC_LEAN_EVENTS = [
     schedule: [
       { time: "2:00–2:45 PM", label: "Coffee" },
       { time: "2:45–3:45 PM", label: "Talk" },
-      { label: "Discussion and social" }
+      { time: "3:45 PM", label: "Social" }
     ] },
 
   { date: "2026-08-23", time: "2:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop.",
@@ -110,7 +110,7 @@ window.NYC_LEAN_EVENTS = [
     schedule: [
       { time: "2:00–2:45 PM", label: "Coffee" },
       { time: "2:45–3:45 PM", label: "Talk" },
-      { label: "Discussion and social" }
+      { time: "3:45 PM", label: "Social" }
     ] },
 
   { date: "2026-06-28", time: "2:00 PM", location: "Nomadworks Times Square", locationUrl: "https://www.google.com/maps/search/?api=1&query=Nomadworks%2C+240+W+40th+St%2C+New+York%2C+NY+10018", rsvpUrl: "https://www.tagvenue.com/rsvp/e8012ff3-5ebf-40a8-8440-e03696561d46",
