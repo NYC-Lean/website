@@ -51,7 +51,7 @@ window.NYC_LEAN_EVENTS = [
 
   { date: "2026-09-06", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-08-30", time: "2:00 PM", location: "",
+  { date: "2026-08-30", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY",
     talk: {
       title: "Formalizing Gromov's theorem on groups of polynomial growth in Lean",
       titleUrl: "https://github.com/Aaron1011/gromov",
