@@ -54,7 +54,7 @@ window.NYC_LEAN_EVENTS = [
   { date: "2026-08-30", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY",
     talk: {
       title: "Formalizing Gromov's theorem on groups of polynomial growth in Lean",
-      titleUrl: "https://github.com/Aaron1011/gromov",
+      titleUrl: "/blog/formalizing-gromovs-theorem",
       speaker: "Aaron Hill",
       speakerUrl: "https://github.com/Aaron1011",
       abstract: "This talk will present a Lean formalization of the forward direction of Gromov's polynomial growth theorem: every finitely generated group of polynomial growth is virtually nilpotent."

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formalizing Gromov's Theorem in Lean · NYC Lean</title>
+  <meta name="description" content="Upcoming NYC Lean talk: Aaron Hill on formalizing the forward direction of Gromov's theorem on groups of polynomial growth in Lean." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Formalizing Gromov's Theorem on Groups of Polynomial Growth in Lean" />
+  <meta property="og:description" content="An upcoming NYC Lean talk by Aaron Hill on formalizing Gromov's polynomial growth theorem in Lean." />
+  <meta property="og:url" content="https://lean.nyc/blog/formalizing-gromovs-theorem" />
+
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">NYC Lean</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a class="nav-home" href="/">Home</a>
+        <a href="/calendar">Calendar</a>
+        <a href="/blog/">Blog</a>
+        <a href="/members">Members</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="page-kicker" data-anim>Upcoming talk · Sunday, August 30, 2026 · 2:00 PM</p>
+      <h1 class="page-title post-title" data-anim>Formalizing Gromov's Theorem in Lean</h1>
+      <div class="page-rule"></div>
+      <p class="page-sub" data-anim>A talk by <a href="https://github.com/Aaron1011" target="_blank" rel="noopener">Aaron Hill</a>.</p>
+      <p class="post-pubdate" data-anim><time datetime="2026-08-28">August 28, 2026</time></p>
+    </section>
+
+    <section class="section post">
+      <article class="prose">
+        <p data-anim>
+          This Sunday we're hosting <a href="https://github.com/Aaron1011" target="_blank" rel="noopener">Aaron Hill</a>
+          to present his Lean formalization of
+          <a href="https://en.wikipedia.org/wiki/Gromov%27s_theorem_on_groups_of_polynomial_growth" target="_blank" rel="noopener">Gromov's theorem on groups of polynomial growth</a>.
+          From his abstract:
+        </p>
+
+        <blockquote class="quote" data-anim>
+          <p>
+            This talk will present a Lean formalization of the forward direction of Gromov's
+            polynomial growth theorem: every finitely generated group of polynomial growth is
+            virtually nilpotent.
+          </p>
+          <footer class="quote-cite">
+            &mdash; Aaron Hill, <cite>Formalizing Gromov's theorem on groups of polynomial growth in Lean</cite>
+          </footer>
+        </blockquote>
+
+        <p data-anim>
+          Fix a finite generating set for a group and count how many elements can be written as
+          words of length at most <span class="nowrap">n</span>; the group has polynomial growth
+          when that count is bounded by a polynomial in <span class="nowrap">n</span>. Gromov's
+          theorem, proved in 1981, says this coarse geometric condition forces genuine algebraic
+          structure: any such group contains a nilpotent subgroup of finite index. Together with
+          the earlier converse of Wolf and the growth estimates of Bass and Guivarc'h, it shows
+          that polynomial growth characterizes the virtually nilpotent groups exactly &mdash; a
+          founding result of geometric group theory, where properties of a group are read off
+          from the large-scale geometry of its Cayley graph.
+        </p>
+
+        <p data-anim>
+          It is also a serious thing to formalize. The known proofs all pass through heavy
+          machinery &mdash; Gromov's original argument views the group from far away, taking a
+          limit of rescaled Cayley graphs and invoking the structure theory of locally compact
+          groups behind Hilbert's fifth problem, while Kleiner's 2007 proof runs instead through
+          finite-dimensional spaces of harmonic functions. Come hear which route the
+          formalization takes, and how the pieces fit together in Lean, at
+          <a href="/calendar">his talk this Sunday, August&nbsp;30</a>.
+        </p>
+
+        <div class="actions post-downloads" data-anim>
+          <a class="btn btn-primary" href="https://github.com/Aaron1011/gromov" target="_blank" rel="noopener">View the code on GitHub</a>
+        </div>
+
+        <p class="post-back" data-anim><a class="arrow" href="/blog/">↩ All posts</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>NYC Lean</span>
+    </div>
+    <p class="footer-note">Formal methods in New York City · <a href="https://lean.nyc">lean.nyc</a></p>
+    <p class="footer-meta">Made by the community · <a href="https://github.com/NYC-Lean/website" target="_blank" rel="noopener">Edit this site ↗︎</a> · <span class="qed">∎</span></p>
+  </footer>
+
+  <script src="/assets/vendor/gsap/gsap.min.js" defer></script>
+  <script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>
