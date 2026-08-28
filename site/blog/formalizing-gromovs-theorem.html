@@ -73,23 +73,52 @@
         <p data-anim>
           Fix a finite generating set for a group and count how many elements can be written as
           words of length at most <span class="nowrap">n</span>; the group has polynomial growth
-          when that count is bounded by a polynomial in <span class="nowrap">n</span>. Gromov's
-          theorem, proved in 1981, says this coarse geometric condition forces genuine algebraic
-          structure: any such group contains a nilpotent subgroup of finite index. Together with
-          the earlier converse of Wolf and the growth estimates of Bass and Guivarc'h, it shows
-          that polynomial growth characterizes the virtually nilpotent groups exactly &mdash; a
-          founding result of geometric group theory, where properties of a group are read off
-          from the large-scale geometry of its Cayley graph.
+          when that count is bounded by a polynomial in <span class="nowrap">n</span>. Gromov
+          proved in 1981 that this coarse geometric condition forces genuine algebraic structure,
+          stated in the original paper in one line:
+        </p>
+
+        <blockquote class="quote" data-anim>
+          <p>
+            Main theorem. &mdash; If a finitely generated group &Gamma; has polynomial growth
+            then &Gamma; contains a nilpotent subgroup of finite index.
+          </p>
+          <footer class="quote-cite">
+            &mdash; Mikhael Gromov,
+            <a href="https://www.numdam.org/item/PMIHES_1981__53__53_0/" target="_blank" rel="noopener"><cite>Groups of polynomial growth and expanding maps</cite></a>, Publ. Math. IH&Eacute;S 53 (1981)
+          </footer>
+        </blockquote>
+
+        <p data-anim>
+          Together with the earlier converse of Wolf and the growth estimates of Bass and
+          Guivarc'h, this shows that polynomial growth characterizes the virtually nilpotent
+          groups exactly &mdash; a founding result of geometric group theory, where properties
+          of a group are read off from the large-scale geometry of its Cayley graph.
         </p>
 
         <p data-anim>
-          It is also a serious thing to formalize. The known proofs all pass through heavy
-          machinery &mdash; Gromov's original argument views the group from far away, taking a
-          limit of rescaled Cayley graphs and invoking the structure theory of locally compact
-          groups behind Hilbert's fifth problem, while Kleiner's 2007 proof runs instead through
-          finite-dimensional spaces of harmonic functions. Come hear which route the
-          formalization takes, and how the pieces fit together in Lean, at
-          <a href="/calendar">his talk this Sunday, August&nbsp;30</a>.
+          It is also a serious thing to formalize, whichever proof you follow. As Terence Tao
+          put it when he wrote up Kleiner's proof on his blog:
+        </p>
+
+        <blockquote class="quote" data-anim>
+          <p>
+            Gromov's original argument used a number of deep tools, including the
+            Montgomery-Zippin-Yamabe structure theory of locally compact groups (related to
+            Hilbert's fifth problem), as well as various earlier partial results on the problem.
+            Several proofs have subsequently been found. Recently, Kleiner obtained a proof
+            which was significantly more elementary, although it still relies on some
+            non-trivial partial versions of Gromov's theorem.
+          </p>
+          <footer class="quote-cite">
+            &mdash; Terence Tao,
+            <a href="https://terrytao.wordpress.com/2008/02/14/kleiners-proof-of-gromovs-theorem/" target="_blank" rel="noopener"><cite>Kleiner's proof of Gromov's theorem</cite></a>, What's new
+          </footer>
+        </blockquote>
+
+        <p data-anim>
+          Come hear which route the formalization takes, and how the pieces fit together in
+          Lean, at <a href="/calendar">his talk this Sunday, August&nbsp;30</a>.
         </p>
 
         <div class="actions post-downloads" data-anim>
