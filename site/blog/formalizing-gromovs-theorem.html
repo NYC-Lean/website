@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formalizing Gromov's Theorem in Lean · NYC Lean</title>
+  <meta name="description" content="Upcoming NYC Lean talk: Aaron Hill on formalizing Gromov's theorem on groups of polynomial growth in Lean." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Formalizing Gromov's Theorem on Groups of Polynomial Growth in Lean" />
+  <meta property="og:description" content="An upcoming NYC Lean talk by Aaron Hill on formalizing Gromov's polynomial growth theorem in Lean." />
+  <meta property="og:url" content="https://lean.nyc/blog/formalizing-gromovs-theorem" />
+
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">NYC Lean</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a class="nav-home" href="/">Home</a>
+        <a href="/calendar">Calendar</a>
+        <a href="/blog/">Blog</a>
+        <a href="/members">Members</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="page-kicker" data-anim>Upcoming talk · Sunday, August 30, 2026 · 2:00 PM</p>
+      <h1 class="page-title post-title" data-anim>Formalizing Gromov's Theorem in Lean</h1>
+      <div class="page-rule"></div>
+      <p class="page-sub" data-anim>A talk by <a href="https://github.com/Aaron1011" target="_blank" rel="noopener">Aaron Hill</a>.</p>
+      <p class="post-pubdate" data-anim><time datetime="2026-08-28">August 28, 2026</time></p>
+    </section>
+
+    <section class="section post">
+      <article class="prose">
+        <p data-anim>
+          This Sunday we're hosting <a href="https://github.com/Aaron1011" target="_blank" rel="noopener">Aaron Hill</a>
+          to present his Lean formalization of
+          <a href="https://en.wikipedia.org/wiki/Gromov%27s_theorem_on_groups_of_polynomial_growth" target="_blank" rel="noopener">Gromov's theorem on groups of polynomial growth</a>.
+          Proved in 1981, the theorem gives information about the global structure of a
+          group based only on the behavior of a finite set of generators. The original
+          paper states it in one line:
+        </p>
+
+        <blockquote class="quote" data-anim>
+          <p>
+            If a finitely generated group &Gamma; has polynomial growth
+            then &Gamma; contains a nilpotent subgroup of finite index.
+          </p>
+          <footer class="quote-cite">
+            &mdash; Mikhael Gromov,
+            <a href="https://www.numdam.org/item/PMIHES_1981__53__53_0/" target="_blank" rel="noopener"><cite>Groups of polynomial growth and expanding maps</cite></a>, Publ. Math. IH&Eacute;S 53 (1981)
+          </footer>
+        </blockquote>
+
+        <p data-anim>
+          Gromov builds on earlier work of
+          <a href="https://projecteuclid.org/journals/journal-of-differential-geometry/volume-2/issue-4/Growth-of-finitely-generated-solvable-groups-and-curvature-of-Riemanniann/10.4310/jdg/1214428658.full" target="_blank" rel="noopener">Wolf</a>,
+          <a href="https://doi.org/10.1112/plms/s3-25.4.603" target="_blank" rel="noopener">Bass</a>, and
+          <a href="https://www.numdam.org/item/BSMF_1973__101__333_0/" target="_blank" rel="noopener">Guivarc'h</a>,
+          who by 1973 had proved the converse: a nilpotent subgroup of finite index implies
+          polynomial growth. The theorem is a founding result of geometric group theory,
+          where it finds applications in the classification of expanding maps, the
+          <a href="https://www.math.tugraz.at/~woess/saloff_notices.pdf" target="_blank" rel="noopener">analysis of random walks</a>,
+          and the
+          <a href="https://projecteuclid.org/journals/journal-of-differential-geometry/volume-2/issue-1/A-note-on-curvature-and-fundamental-group/10.4310/jdg/1214501132.full" target="_blank" rel="noopener">topology of Riemannian manifolds</a>.
+        </p>
+
+        <p data-anim>
+          Aaron's formalization follows the proof Terence Tao presented on his blog in 2010,
+          based on <a href="https://arxiv.org/abs/0710.4593" target="_blank" rel="noopener">Kleiner's 2007 work</a>
+          and substantially more elementary than the proofs that came before:
+        </p>
+
+        <blockquote class="quote" data-anim>
+          <p>
+            The argument requires four separate ingredients. The first is the existence of
+            non-trivial Lipschitz harmonic functions&hellip; The second is that there are not
+            too many such harmonic functions&hellip; The third ingredient is that Gromov's
+            theorem is true in the compact linear Lie group case&hellip; The final ingredient
+            is that Gromov's theorem is inductively true once one can locate an infinite
+            cyclic quotient.
+          </p>
+          <footer class="quote-cite">
+            &mdash; Terence Tao,
+            <a href="https://terrytao.wordpress.com/2010/02/18/a-proof-of-gromovs-theorem/" target="_blank" rel="noopener"><cite>A proof of Gromov's theorem</cite></a>, What's new
+          </footer>
+        </blockquote>
+
+        <p data-anim>
+          The formal proof totals 28,000 lines of Lean, with its target theorem drawn from
+          Google DeepMind's
+          <a href="https://github.com/google-deepmind/formal-conjectures" target="_blank" rel="noopener">Formal Conjectures</a>
+          library. Come hear how the pieces fit together at
+          <a href="/calendar">his talk this Sunday, August&nbsp;30</a>.
+        </p>
+
+        <div class="actions post-downloads" data-anim>
+          <a class="btn btn-primary" href="https://github.com/Aaron1011/gromov" target="_blank" rel="noopener">View the code on GitHub</a>
+        </div>
+
+        <p class="post-back" data-anim><a class="arrow" href="/blog/">↩ All posts</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>NYC Lean</span>
+    </div>
+    <p class="footer-note">Formal methods in New York City · <a href="https://lean.nyc">lean.nyc</a></p>
+    <p class="footer-meta">Made by the community · <a href="https://github.com/NYC-Lean/website" target="_blank" rel="noopener">Edit this site ↗︎</a> · <span class="qed">∎</span></p>
+  </footer>
+
+  <script src="/assets/vendor/gsap/gsap.min.js" defer></script>
+  <script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>
