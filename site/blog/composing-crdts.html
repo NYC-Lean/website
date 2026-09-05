@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Composing CRDTs Convergent by Construction · NYC Lean</title>
+  <meta name="description" content="Upcoming NYC Lean talk: Alexander Städing on a Lean 4 framework for composing CRDTs while preserving convergence by construction." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Composing CRDTs Convergent by Construction" />
+  <meta property="og:description" content="An upcoming NYC Lean talk by Alexander Städing on building compositional, convergent CRDTs in Lean 4." />
+  <meta property="og:url" content="https://lean.nyc/blog/composing-crdts" />
+
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">NYC Lean</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a class="nav-home" href="/">Home</a>
+        <a href="/calendar">Calendar</a>
+        <a href="/blog/">Blog</a>
+        <a href="/members">Members</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="page-kicker" data-anim>Upcoming talk · Sunday, September 6, 2026 · 2:30 PM</p>
+      <h1 class="page-title post-title" data-anim>Composing CRDTs Convergent by Construction</h1>
+      <div class="page-rule"></div>
+      <p class="page-sub" data-anim>A talk by <a href="https://github.com/alexstaeding" target="_blank" rel="noopener">Alexander Städing</a>.</p>
+      <p class="post-pubdate" data-anim><time datetime="2026-09-05">September 5, 2026</time></p>
+    </section>
+
+    <section class="section post">
+      <article class="prose">
+        <p data-anim>
+          This Sunday we're hosting <a href="https://github.com/alexstaeding" target="_blank" rel="noopener">Alexander Städing</a>
+          to present <a href="https://2026.splashcon.org/details/oopsla-2026/104/Composing-CRDTs-Convergent-by-Construction" target="_blank" rel="noopener">Composing CRDTs Convergent by Construction</a>,
+          joint work with George Zakhour, Pascal Weisenburger, and Guido Salvaneschi. Conflict-Free Replicated
+          Data Types let copies of shared data accept updates without central coordination and still arrive at
+          the same state. That makes them useful for collaborative editors, offline-capable applications, and
+          distributed databases. The trouble begins when an application needs more than one of them:
+        </p>
+
+        <blockquote class="quote" data-anim>
+          <p>
+            Classical CRDT theory does not guarantee that a composition of convergent CRDTs converges.
+          </p>
+          <footer class="quote-cite">
+            &mdash; Alexander Städing Dominguez, George Zakhour, Pascal Weisenburger &amp; Guido Salvaneschi,
+            <a href="https://2026.splashcon.org/details/oopsla-2026/104/Composing-CRDTs-Convergent-by-Construction" target="_blank" rel="noopener"><cite>Composing CRDTs Convergent by Construction</cite></a>
+          </footer>
+        </blockquote>
+
+        <p data-anim>
+          Their answer is a basis of five combinators for operation-based CRDTs. <em>Product</em> updates two
+          component states together; <em>MapState</em> changes a CRDT's internal representation;
+          <em>Associate</em> builds maps whose values are themselves CRDTs; <em>Traverse</em> expands one operation
+          into a sequence of operations; and <em>MapInterpretation</em> changes the value exposed to the application.
+          In the <a href="https://github.com/prg-grp/crdtlib" target="_blank" rel="noopener">Crdtlib</a> implementation,
+          every CRDT carries its commutativity proof as part of its Lean structure, and every combinator constructs
+          that proof for its output. A well-typed composition therefore brings its convergence argument with it.
+        </p>
+
+        <p data-anim>
+          The authors test the framework at three scales: rebuilding standard CRDTs, modeling a collaborative
+          tic-tac-toe game with branching histories and chat, and constructing a JSON-like tree with nested maps,
+          lists, scalars, and counters. The last case offers an interface comparable to
+          <a href="https://github.com/automerge/automerge" target="_blank" rel="noopener">Automerge</a> and remains
+          competitive in the paper's runtime and memory benchmarks. Because the model, proofs, and implementation
+          are all written in Lean&nbsp;4, the machine-checked artifact is also the code that runs.
+        </p>
+
+        <p data-anim>
+          Alex will begin with the 20-minute OOPSLA conference presentation, then spend the rest of the
+          45-minute session walking through the Lean code. Join us at
+          <a href="/calendar">The Pearl House this Sunday, September&nbsp;6</a>; the meetup begins at 2:00&nbsp;PM
+          and the talk begins at 2:30&nbsp;PM.
+        </p>
+
+        <div class="actions post-downloads" data-anim>
+          <a class="btn btn-primary" href="https://programming-group.com/assets/pdf/papers/2026_Composing_CRDTs_Convergent_by_Construction.pdf" target="_blank" rel="noopener">Read the paper (PDF)</a>
+          <a class="btn btn-ghost" href="https://github.com/prg-grp/crdtlib" target="_blank" rel="noopener">View the code on GitHub</a>
+        </div>
+
+        <p class="post-back" data-anim><a class="arrow" href="/blog/">↩ All posts</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>NYC Lean</span>
+    </div>
+    <p class="footer-note">Formal methods in New York City · <a href="https://lean.nyc">lean.nyc</a></p>
+    <p class="footer-meta">Made by the community · <a href="https://github.com/NYC-Lean/website" target="_blank" rel="noopener">Edit this site ↗︎</a> · <span class="qed">∎</span></p>
+  </footer>
+
+  <script src="/assets/vendor/gsap/gsap.min.js" defer></script>
+  <script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>

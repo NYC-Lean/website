@@ -52,7 +52,7 @@ window.NYC_LEAN_EVENTS = [
   { date: "2026-09-06", time: "2:00–4:00 PM", location: "The Pearl House", locationUrl: "https://www.google.com/maps/search/?api=1&query=The+Pearl+House%2C+160+Water+St%2C+New+York%2C+NY",
     talk: {
       title: "Composing CRDTs Convergent by Construction",
-      titleUrl: "https://2026.splashcon.org/details/oopsla-2026/104/Composing-CRDTs-Convergent-by-Construction",
+      titleUrl: "/blog/composing-crdts",
       speaker: "Alexander Städing",
       speakerUrl: "https://github.com/alexstaeding",
       abstract: "Conflict-Free Replicated Data Types (CRDTs) let replicas in distributed systems converge without central coordination, but real applications need to compose CRDTs, and classical CRDT theory does not guarantee that a composition will still converge. This talk presents a framework for building operation-based CRDTs from five combinators while preserving convergence by construction.",
