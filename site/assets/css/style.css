@@ -625,3 +625,14 @@ a:hover { color: var(--accent); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Keep long links and event details inside narrow phone screens. */
+@media (max-width: 540px) {
+  .post-item { grid-template-columns: minmax(0, 1fr); }
+  .member-link { white-space: normal; overflow-wrap: anywhere; }
+  .member-main, .row-body { min-width: 0; }
+}
+@media (max-width: 360px) {
+  .row.event { grid-template-columns: minmax(0, 1fr); }
+  .event-date { display: flex; align-items: baseline; gap: 0.6rem; }
+}

@@ -182,7 +182,7 @@
         shown += batch.length;
         if (moreBtn) moreBtn.insertAdjacentHTML("beforebegin", markup);
         else calPast.insertAdjacentHTML("beforeend", markup);
-        if (!firstBatch && window.gsap) {
+        if (!firstBatch && window.gsap && !reduce) {
           var rows = Array.prototype.slice.call(calPast.querySelectorAll(".row.event")).slice(prev);
           window.gsap.fromTo(rows, { opacity: 0, y: 12 },
             { opacity: 1, y: 0, duration: 0.4, stagger: 0.03, ease: "power2.out" });
@@ -219,6 +219,14 @@
   var menu = document.getElementById("site-nav");
   if (!toggle || !menu) return;
 
+  var currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+  menu.querySelectorAll("a").forEach(function (link) {
+    var path = new URL(link.href).pathname.replace(/\/$/, "") || "/";
+    if (path === currentPath || (path === "/blog" && currentPath.indexOf("/blog/") === 0)) {
+      link.setAttribute("aria-current", "page");
+    }
+  });
+
   // mark the page nav-ready so the CSS collapses the nav into a hamburger
   document.documentElement.classList.add("nav-ready");
 
@@ -237,7 +245,22 @@
   });
   // Escape closes
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") setOpen(false);
+    if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+      setOpen(false);
+      toggle.focus();
+    }
+    if (e.key === "Tab" && toggle.getAttribute("aria-expanded") === "true") {
+      var links = menu.querySelectorAll("a");
+      var first = links[0];
+      var last = links[links.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); toggle.focus(); }
+      else if (e.shiftKey && document.activeElement === toggle) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === toggle) { e.preventDefault(); first.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); toggle.focus(); }
+    }
+  });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 640) setOpen(false);
   });
   // tapping outside the header closes
   document.addEventListener("click", function (e) {
