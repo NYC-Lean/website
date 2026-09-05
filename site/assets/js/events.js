@@ -49,7 +49,20 @@ window.NYC_LEAN_EVENTS = [
 
   { date: "2026-09-20", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-09-06", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-09-06", time: "2:00–4:00 PM", location: "The Pearl House", locationUrl: "https://www.google.com/maps/search/?api=1&query=The+Pearl+House%2C+160+Water+St%2C+New+York%2C+NY",
+    talk: {
+      title: "Composing CRDTs Convergent by Construction",
+      titleUrl: "/blog/composing-crdts",
+      speaker: "Alexander Städing",
+      speakerUrl: "https://github.com/alexstaeding",
+      abstract: "Conflict-Free Replicated Data Types (CRDTs) let replicas in distributed systems converge without central coordination, but real applications need to compose CRDTs, and classical CRDT theory does not guarantee that a composition will still converge. This talk presents a framework for building operation-based CRDTs from five combinators while preserving convergence by construction.",
+      abstractMore: "The framework, its theory, and its proofs were developed entirely in Lean 4. Its reusable library, Crdtlib, serves as both a formal model and an executable verified implementation. Case studies include standard CRDTs, a complete application, and a JSON-structured tree CRDT comparable in expressiveness to Automerge. Alex will first give the 20-minute OOPSLA conference presentation and then walk through the Lean code in greater depth."
+    },
+    schedule: [
+      { time: "2:00–2:30 PM", label: "Coffee" },
+      { time: "2:30–3:15 PM", label: "Talk" },
+      { time: "3:15 PM", label: "Social" }
+    ] },
 
   { date: "2026-08-30", time: "2:00 PM", location: "Tower 49", locationUrl: "https://www.google.com/maps/search/?api=1&query=Tower+49%2C+12+E+49th+St%2C+New+York%2C+NY",
     talk: {
