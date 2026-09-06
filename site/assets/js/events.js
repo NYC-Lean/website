@@ -49,7 +49,7 @@ window.NYC_LEAN_EVENTS = [
 
   { date: "2026-09-20", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-09-13", time: "2:00–4:00 PM", location: "TBD", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-09-13", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
   { date: "2026-09-06", time: "2:00–4:00 PM", location: "The Pearl House", locationUrl: "https://www.google.com/maps/search/?api=1&query=The+Pearl+House%2C+160+Water+St%2C+New+York%2C+NY",
     talk: {
