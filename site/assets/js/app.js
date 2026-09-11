@@ -125,7 +125,7 @@
         (!compact && e.talk ? talkHTML(e.talk) :
           (!compact && (e.descriptionHtml || e.description) ? '<p>' + (e.descriptionHtml || esc(e.description)) + '</p>' : '')) +
         (!compact ? scheduleHTML(e.schedule) : '') +
-        (!compact && e.rsvpUrl ? '<div class="ev-rsvp"><a class="btn btn-primary" href="' + esc(e.rsvpUrl) + '" target="_blank" rel="noopener">RSVP</a></div>' : '') +
+        (!compact && e.rsvpUrl ? '<div class="ev-rsvp"><a class="btn btn-primary" href="' + esc(e.rsvpUrl) + '" target="_blank" rel="noopener">Register</a></div>' : '') +
       '</div></div>';
   }
   function joinRows(list) {
