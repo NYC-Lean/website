@@ -59,6 +59,7 @@ single list. Each entry looks like:
   date: "2026-06-07",   // YYYY-MM-DD, required
   time: "2:00 PM",       // free text, "" if unknown
   location: "Mori",      // free text, "" if none or private
+  rsvpUrl: "https://docs.google.com/forms/...", // optional registration form
   title: "Textbook companion planning", // optional; omit for a regular meetup
   description: "..."     // optional, shown on the calendar page
 }

@@ -37,7 +37,25 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
-  { date: "2026-10-11", time: "2:00 PM", location: "",
+  { date: "2026-12-20", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-12-13", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-12-06", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-11-22", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-11-15", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-11-08", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-11-01", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-10-25", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-10-18", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-10-11", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
       title: "TBD",
       speaker: "Jaume de Dios Pont",
@@ -45,11 +63,13 @@ window.NYC_LEAN_EVENTS = [
       abstract: "Talk details will be announced closer to the event."
     } },
 
-  { date: "2026-10-04", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-10-04", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-09-20", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-09-27", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-09-13", time: "2:00–4:00 PM", location: "", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-09-20", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+
+  { date: "2026-09-13", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
   { date: "2026-09-06", time: "2:00–4:00 PM", location: "The Pearl House", locationUrl: "https://www.google.com/maps/search/?api=1&query=The+Pearl+House%2C+160+Water+St%2C+New+York%2C+NY",
     talk: {
