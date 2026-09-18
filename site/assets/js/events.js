@@ -73,10 +73,10 @@ window.NYC_LEAN_EVENTS = [
 
   { date: "2026-09-27", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
-      title: "TBD",
+      title: "qedbook: A computer algebra system that proves its answers",
       speaker: "Jon Kleid",
       speakerUrl: "https://www.linkedin.com/in/jonkleid/",
-      abstract: "Talk details will be announced closer to the event."
+      abstract: "qedbook is a computer algebra system that provides proofs of its answers. Proof terms are emitted at the level of Lean 4's kernel, skipping the elaborator. Nanoda, a Rust reimplementation of the Lean kernel, checks the proofs in a few milliseconds, via the qedbook server or in the browser using WebAssembly. The qedbook math engine (written in C++, largely by Claude) is never trusted. I will show how the evaluation pipeline produces a proof, how the system has discovered some (very modest) new math, and how it can make AI-produced math more trustworthy for research and education."
     } },
 
   { date: "2026-09-20", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
