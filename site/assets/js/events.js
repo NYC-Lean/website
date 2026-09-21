@@ -79,7 +79,18 @@ window.NYC_LEAN_EVENTS = [
       abstract: "qedbook is a computer algebra system that provides proofs of its answers. Proof terms are emitted at the level of Lean 4's kernel, skipping the elaborator. Nanoda, a Rust reimplementation of the Lean kernel, checks the proofs in a few milliseconds, via the qedbook server or in the browser using WebAssembly. The qedbook math engine (written in C++, largely by Claude) is never trusted. I will show how the evaluation pipeline produces a proof, how the system has discovered some (very modest) new math, and how it can make AI-produced math more trustworthy for research and education."
     } },
 
-  { date: "2026-09-20", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-09-20", time: "3:00–5:30 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+    talk: {
+      title: "Prove2Me and the formalization of Fermat's Last Theorem",
+      titleUrl: "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+      speaker: "Kunal Marwaha",
+      abstract: "Kunal will discuss Prove2Me, the collaborative platform used to coordinate theorem dependencies, Lean compilation, search, and reuse for Anthropic's multi-agent formalization of Fermat's Last Theorem."
+    },
+    schedule: [
+      { time: "3:00–4:00 PM", label: "General chat" },
+      { time: "4:00–5:00 PM", label: "Talk" },
+      { time: "5:00–5:30 PM", label: "Discussion" }
+    ] },
 
   { date: "2026-09-13", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
