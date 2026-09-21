@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formal Learning Theory in Lean 4 · NYC Lean</title>
+  <meta name="description" content="Upcoming NYC Lean talk: Dhruv Gupta on formal learning theory, Pajor's inequality, and formalization in Lean 4." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Formal Learning Theory in Lean 4" />
+  <meta property="og:description" content="An upcoming NYC Lean talk by Dhruv Gupta on Pajor's inequality and foundational questions in learning theory." />
+  <meta property="og:url" content="https://lean.nyc/blog/formal-learning-theory" />
+
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="site-header" id="nav">
+    <div class="nav-wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">NYC Lean</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a class="nav-home" href="/">Home</a>
+        <a href="/calendar">Calendar</a>
+        <a href="/blog/">Blog</a>
+        <a href="/members">Members</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-box" aria-hidden="true">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="page-kicker" data-anim>Upcoming talk · Sunday, October 18, 2026 · 3:00 PM</p>
+      <h1 class="page-title post-title" data-anim>Formal Learning Theory in Lean 4</h1>
+      <div class="page-rule"></div>
+      <p class="page-sub" data-anim>A talk by Dhruv Gupta.</p>
+      <p class="post-pubdate" data-anim><time datetime="2026-09-20">September 20, 2026</time></p>
+    </section>
+
+    <section class="section post">
+      <article class="prose">
+        <p data-anim>
+          Learning theory studies when and how a learner can recover a useful rule from
+          labeled examples. It sits at the intersection of combinatorics, measure theory,
+          and both computational and statistical complexity theory.
+        </p>
+
+        <p data-anim>
+          Fix a domain \(X\), a set of labels \(Y\), and a hypothesis class
+          \(\mathcal H \subseteq Y^X\). A learner takes a finite labeled sample and returns
+          a candidate function:
+        </p>
+
+        <div class="math-display" data-anim>
+          \[
+            A \colon \bigcup_{n \geq 0}(X \times Y)^n \longrightarrow Y^X.
+          \]
+        </div>
+
+        <p data-anim>
+          The central questions are then mathematical ones: which hypothesis classes can be
+          learned, what information a sample must contain, how complexity grows, and which
+          measurability assumptions are needed to decide that a learner has succeeded.
+        </p>
+
+        <p data-anim>
+          One direction of the subject leads to machine learning, where the goal is to build
+          practical algorithms that identify increasingly complex processes from increasingly
+          unstructured data. The foundational direction asks what learning itself permits. Can
+          learnability be decided in ZFC? How should complexity be defined over infinite sets?
+          What happens to learning problems over non-Borel spaces? What logical and
+          epistemological assumptions underlie a claimed endpoint of learning?
+        </p>
+
+        <p data-anim>
+          These questions reach well beyond machine learning. The same structures connect to
+          model theory, computational geometry, measure theory, graph theory, and Banach space
+          geometry, which makes formal learning theory a natural target for Mathlib.
+        </p>
+
+        <p data-anim>
+          In this talk, Dhruv will derive and formalize Pajor's inequality over infinite sets,
+          explain its origins and role in Banach space geometry, and use it as a case study in
+          what formalization reveals beyond a paper proof. He will close with open directions
+          for research in formal learning theory and its development in Lean 4.
+        </p>
+
+        <p data-anim>
+          If time permits, the discussion will turn to a more speculative question: whether a
+          neural network can be understood as a topological system that enriches sample-set
+          complexity layer by layer, until it matches the complexity of the hypothesis class,
+          and how a Lean formalization of a transformer might make that question precise.
+        </p>
+
+        <div class="actions post-downloads" data-anim>
+          <a class="btn btn-primary" href="/calendar">See the event details</a>
+        </div>
+
+        <p class="post-back" data-anim><a class="arrow" href="/blog/">↩ All posts</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>NYC Lean</span>
+    </div>
+    <p class="footer-note">Formal methods in New York City · <a href="https://lean.nyc">lean.nyc</a></p>
+    <p class="footer-meta">Made by the community · <a href="https://github.com/NYC-Lean/website" target="_blank" rel="noopener">Edit this site ↗︎</a> · <span class="qed">∎</span></p>
+  </footer>
+
+  <script src="/assets/vendor/gsap/gsap.min.js" defer></script>
+  <script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>
