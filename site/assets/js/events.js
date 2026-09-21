@@ -84,6 +84,7 @@ window.NYC_LEAN_EVENTS = [
       title: "Prove2Me and the formalization of Fermat's Last Theorem",
       titleUrl: "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
       speaker: "Kunal Marwaha",
+      speakerUrl: "https://kunalmarwaha.com/about",
       abstract: "Kunal will discuss Prove2Me, the collaborative platform used to coordinate theorem dependencies, Lean compilation, search, and reuse for Anthropic's multi-agent formalization of Fermat's Last Theorem."
     },
     schedule: [
