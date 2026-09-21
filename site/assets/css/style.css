@@ -636,3 +636,10 @@ a:hover { color: var(--accent); }
   .row.event { grid-template-columns: minmax(0, 1fr); }
   .event-date { display: flex; align-items: baseline; gap: 0.6rem; }
 }
+
+/* Keep MathJax display equations readable within article columns on small screens. */
+.prose mjx-container[jax="CHTML"][display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.2rem;
+}
