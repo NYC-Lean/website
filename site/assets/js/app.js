@@ -267,3 +267,23 @@
     if (!e.target.closest(".nav-wrap")) setOpen(false);
   });
 })();
+
+/* ------------------------------------------------------------
+   Email buttons: the mailto opens the mail app when one is set up;
+   also copy the address so the click works without one.
+   ------------------------------------------------------------ */
+(function () {
+  "use strict";
+  document.querySelectorAll("[data-copy-email]").forEach(function (btn) {
+    var label = btn.textContent;
+    var timer;
+    btn.addEventListener("click", function () {
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(btn.getAttribute("data-copy-email")).then(function () {
+        btn.textContent = "Email copied ✓";
+        clearTimeout(timer);
+        timer = setTimeout(function () { btn.textContent = label; }, 2000);
+      }, function () {});
+    });
+  });
+})();
