@@ -76,7 +76,13 @@ window.NYC_LEAN_EVENTS = [
       abstract: "Talk details will be announced closer to the event."
     } },
 
-  { date: "2026-10-04", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-10-04", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+    talk: {
+      title: "TBD",
+      speaker: "Jack McCarthy",
+      speakerUrl: "https://jackmccarthy.org",
+      abstract: "Talk details will be announced closer to the event."
+    } },
 
   { date: "2026-09-27", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
