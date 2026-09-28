@@ -436,6 +436,11 @@ a:hover { color: var(--accent); }
 .talk-more[open] .talk-more-open { display: none; }
 .talk-more[open] .talk-more-close { display: inline; }
 .talk-more p { margin: 0.55rem 0 0; }
+/* events with several talks: each talk gets its own title, split by a soft rule */
+.talks-item + .talks-item {
+  margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--rule-soft);
+  max-width: 58ch;
+}
 .event-schedule {
   list-style: none; max-width: 58ch; margin: 1.1rem 0 0; padding: 0.8rem 0 0;
   border-top: 1px solid var(--rule-soft);

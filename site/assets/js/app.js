@@ -113,17 +113,27 @@
       : '';
     var meta = [[wd, e.time].filter(Boolean).map(esc).join(" · "), loc]
       .filter(Boolean).join(" · ");
-    var title = e.talk && e.talk.title
-      ? linkedTitleHTML(e.talk.title, e.talk.titleUrl)
-      : esc(e.title);
+    var talks = e.talks && e.talks.length ? e.talks : null;
+    var title = talks
+      ? (compact ? talks.map(function (t) { return linkedTitleHTML(t.title, t.titleUrl); }).join(' &amp; ') : '')
+      : e.talk && e.talk.title
+        ? linkedTitleHTML(e.talk.title, e.talk.titleUrl)
+        : esc(e.title);
+    var body = talks
+      ? '<div class="talks">' + talks.map(function (t) {
+          return '<div class="talks-item">' +
+            (t.title ? '<h3>' + linkedTitleHTML(t.title, t.titleUrl) + '</h3>' : '') +
+            talkHTML(t) + '</div>';
+        }).join('') + '</div>'
+      : e.talk ? talkHTML(e.talk)
+      : (e.descriptionHtml || e.description) ? '<p>' + (e.descriptionHtml || esc(e.description)) + '</p>' : '';
     return '<div class="row event" data-anim>' +
       '<div class="event-date"><span class="ev-dm">' + dnum + ' ' + esc(mon) + '</span>' +
         (yr ? '<span class="ev-y">' + yr + '</span>' : '') + '</div>' +
       '<div class="row-body">' +
         '<span class="ev-meta">' + meta + '</span>' +
         (title ? '<h3>' + title + '</h3>' : '') +
-        (!compact && e.talk ? talkHTML(e.talk) :
-          (!compact && (e.descriptionHtml || e.description) ? '<p>' + (e.descriptionHtml || esc(e.description)) + '</p>' : '')) +
+        (!compact ? body : '') +
         (!compact ? scheduleHTML(e.schedule) : '') +
         (!compact && e.rsvpUrl ? '<div class="ev-rsvp"><a class="btn btn-primary" href="' + esc(e.rsvpUrl) + '" target="_blank" rel="noopener">Register</a></div>' : '') +
       '</div></div>';
