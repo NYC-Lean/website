@@ -38,7 +38,6 @@
     /* ---- masthead entrance (home page only) ---- */
     if (document.querySelector(".hero")) {
       gsap.timeline({ defaults: { ease: "power3.out" } })
-        .fromTo(".kicker", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 1.2 })
         .fromTo(".hero-wordmark", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 1.5 }, 0.2)
         .fromTo(".masthead-rule", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power3.inOut" }, 0.7)
         .fromTo(".hero-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.1 }, 1.0);

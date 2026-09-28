@@ -156,15 +156,6 @@ a:hover { color: var(--accent); }
   padding: 6rem 1.6rem 4rem;
 }
 .hero-inner { width: 100%; }
-.kicker {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 0.86rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  margin: 0 0 1.2rem;
-}
 .hero-wordmark {
   font-family: var(--display);
   font-weight: 800;
@@ -361,6 +352,7 @@ a:hover { color: var(--accent); }
 .footer-brand { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--display); font-weight: 800; }
 .footer-note { margin: 0; color: var(--ink-soft); }
 .footer-meta { margin: 0 0 0 auto; font-family: var(--display); font-weight: 600; font-size: 0.82rem; color: var(--ink-faint); }
+.footer-legal { margin: 0.6rem 0 0; width: 100%; font-family: var(--display); font-size: 0.75rem; color: var(--ink-faint); }
 .qed { color: var(--accent); }
 
 /* ---------- Sub-page header (Calendar / Members) ---------- */
