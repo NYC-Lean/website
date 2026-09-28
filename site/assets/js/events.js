@@ -26,6 +26,7 @@
          titleUrl: "...",     // optional; links the talk title (e.g. a blog post)
          speaker: "...",      // presenter's name
          speakerUrl: "...",   // optional; links the speaker's name
+         // or, for several presenters: speakers: [ { name: "...", url: "..." }, ... ]
          abstract: "...",     // talk abstract
          abstractMore: "..."  // optional; collapsed behind a "Show more" control
        }
@@ -62,13 +63,23 @@ window.NYC_LEAN_EVENTS = [
   { date: "2026-10-25", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
   { date: "2026-10-18", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
-    talk: {
-      title: "Formal Learning Theory in Lean 4",
-      titleUrl: "/blog/formal-learning-theory",
-      speaker: "Dhruv Gupta",
-      speakerUrl: "https://zetesislabs.com/dhruv.html",
-      abstract: "My work in learning theory sits at the intersection of combinatorics, measure theory, and complexity theory. I study when and how a learner can identify a function from labeled samples. Beyond machine learning, I am interested in foundational questions of broad mathematical interest: some questions of learnability are independent of ZFC, while notions of complexity and measurability connect the subject to model theory, computational geometry, and Banach space geometry, making it a natural target for Mathlib. In this talk, I will derive and formalize Pajor's inequality over infinite sets, discuss its origins in Banach space geometry, examine what formalization adds beyond the proof itself, and close with open directions for formal learning theory in Lean 4."
-    } },
+    talks: [
+      {
+        title: "Formal Learning Theory in Lean 4",
+        titleUrl: "/blog/formal-learning-theory",
+        speaker: "Dhruv Gupta",
+        speakerUrl: "https://zetesislabs.com/dhruv.html",
+        abstract: "My work in learning theory sits at the intersection of combinatorics, measure theory, and complexity theory. I study when and how a learner can identify a function from labeled samples. Beyond machine learning, I am interested in foundational questions of broad mathematical interest: some questions of learnability are independent of ZFC, while notions of complexity and measurability connect the subject to model theory, computational geometry, and Banach space geometry, making it a natural target for Mathlib. In this talk, I will derive and formalize Pajor's inequality over infinite sets, discuss its origins in Banach space geometry, examine what formalization adds beyond the proof itself, and close with open directions for formal learning theory in Lean 4."
+      },
+      {
+        title: "TBD",
+        speakers: [
+          { name: "Shaswat Patel", url: "https://shaswatpatel.github.io/" },
+          { name: "Daniel Aarão Reis Arturi", url: "https://darturi.github.io/" }
+        ],
+        abstract: "Shaswat and Daniel will present Lea, an open-source ecosystem for formalizing mathematics in Lean 4, including its theorem-proving agent and Overleaf workflow. Full details will be announced closer to the event."
+      }
+    ] },
 
   { date: "2026-10-11", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
