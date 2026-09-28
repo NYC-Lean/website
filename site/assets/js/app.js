@@ -2,9 +2,8 @@
    NYC Lean: events rendering + page motion.
    - renders upcoming events from assets/events.js into the home
      page (next 3) and the calendar page (all upcoming)
-   - hero masthead reveal on load (home only)
-   - one gentle grouped fade per content section on scroll
-   Degrades gracefully: no JS or reduced-motion → everything visible.
+   - draws the home masthead rule across on load (the site's only motion)
+   Degrades gracefully: no JS or reduced-motion → rule shown in place.
    ============================================================ */
 (function () {
   "use strict";
@@ -18,6 +17,7 @@
 
   // Render events first, independent of GSAP, so they always show.
   renderEvents();
+  labelTalks();
 
   if (!window.gsap || reduce) {
     root.classList.remove("js");   // reveal everything, no motion
@@ -25,35 +25,13 @@
   }
 
   var gsap = window.gsap;
-  if (window.ScrollTrigger) gsap.registerPlugin(window.ScrollTrigger);
-  var ST = window.ScrollTrigger;
-  var hasScroll = !!ST;
-
   init();
-  if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(function () { if (ST) ST.refresh(); });
-  }
 
   function init() {
-    /* ---- masthead entrance (home page only) ---- */
+    /* ---- the only motion on the site: the masthead rule draws across once ---- */
     if (document.querySelector(".hero")) {
-      gsap.timeline({ defaults: { ease: "power3.out" } })
-        .fromTo(".hero-wordmark", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 1.5 }, 0.2)
-        .fromTo(".masthead-rule", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power3.inOut" }, 0.7)
-        .fromTo(".hero-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.1 }, 1.0);
+      gsap.fromTo(".masthead-rule", { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease: "power3.inOut", delay: 0.2 });
     }
-
-    /* ---- one gentle, grouped fade per content section ---- */
-    var secs = Array.prototype.slice.call(document.querySelectorAll("main > section:not(.hero)"));
-    secs.forEach(function (sec) {
-      var items = sec.querySelectorAll("[data-anim]");
-      if (!items.length) return;
-      var a = { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", stagger: 0.04 };
-      if (hasScroll) a.scrollTrigger = { trigger: sec, start: "top 78%", once: true };
-      gsap.fromTo(items, { opacity: 0, y: 16 }, a);
-    });
-
-    if (hasScroll) ST.refresh();
   }
 
   /* ---------- events ---------- */
@@ -72,6 +50,7 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
   function linkedTitleHTML(title, url) {
+    if (/^\s*tbd\s*$/i.test(title || "")) return '<span class="tbd">Title to be announced</span>';
     return url
       ? '<a href="' + esc(url) + '">' + esc(title) + '</a>'
       : esc(title);
@@ -142,6 +121,41 @@
   }
   function empty(msg) { return '<p class="cal-empty" data-anim>' + esc(msg) + '</p>'; }
 
+  /* blog: "Upcoming talk" / "Past talk" labels follow the talk date */
+  function labelTalks() {
+    var today = startOfToday();
+    document.querySelectorAll("[data-talk-date]").forEach(function (el) {
+      var d = parseDate(el.getAttribute("data-talk-date"));
+      if (!d) return;
+      el.innerHTML = el.innerHTML.replace(/^(Upcoming|Past) talk/, d >= today ? "Upcoming talk" : "Past talk");
+    });
+  }
+
+  /* home page: long abstracts collapse behind a "Show more" toggle */
+  function clampAbstracts(container) {
+    container.querySelectorAll(".talk").forEach(function (talk) {
+      var abs = talk.querySelector(".talk-abstract");
+      if (!abs) return;
+      talk.classList.add("is-clamped");
+      var hasMore = talk.querySelector(".talk-more");
+      if (!hasMore && abs.scrollHeight <= abs.clientHeight + 1) {
+        talk.classList.remove("is-clamped");   // short enough to show whole
+        return;
+      }
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "talk-toggle";
+      btn.textContent = "Show more";
+      btn.setAttribute("aria-expanded", "false");
+      btn.addEventListener("click", function () {
+        var open = !talk.classList.toggle("is-clamped");
+        btn.textContent = open ? "Show less" : "Show more";
+        btn.setAttribute("aria-expanded", String(open));
+      });
+      talk.appendChild(btn);
+    });
+  }
+
   function renderEvents() {
     var home = document.getElementById("home-events");
     var calUp = document.getElementById("calendar-upcoming");
@@ -162,6 +176,7 @@
       home.innerHTML = upcoming.length
         ? joinRows(upcoming.slice(0, 3).map(function (e, i) { return rowHTML(e, i === 0, false); }))
         : empty("No meetups on the calendar right now.");
+      clampAbstracts(home);
     }
     if (calUp) {
       calUp.innerHTML = upcoming.length
@@ -183,19 +198,12 @@
       showBatch();   // first 10
 
       function showBatch() {
-        var prev = calPast.querySelectorAll(".row.event").length;
         var batch = past.slice(shown, shown + STEP);
         var leading = shown === 0 ? "" : '<span class="rule"></span>';
         var markup = leading + joinRows(batch.map(function (e) { return rowHTML(e, false, false); }));
-        var firstBatch = shown === 0;
         shown += batch.length;
         if (moreBtn) moreBtn.insertAdjacentHTML("beforebegin", markup);
         else calPast.insertAdjacentHTML("beforeend", markup);
-        if (!firstBatch && window.gsap && !reduce) {
-          var rows = Array.prototype.slice.call(calPast.querySelectorAll(".row.event")).slice(prev);
-          window.gsap.fromTo(rows, { opacity: 0, y: 12 },
-            { opacity: 1, y: 0, duration: 0.4, stagger: 0.03, ease: "power2.out" });
-        }
         var remaining = past.length - shown;
         if (moreBtn) {
           if (remaining > 0) moreBtn.textContent = "Show " + Math.min(STEP, remaining) + " more";

@@ -28,7 +28,8 @@ workflow.
     ├── 404.html
     ├── CNAME                      custom domain (do not delete)
     └── assets/
-        ├── css/style.css          all styles
+        ├── css/tokens.css         design tokens (colors, type, spacing)
+        ├── css/style.css          all styles, built from the tokens
         ├── js/app.js              event rendering and GSAP motion
         ├── js/events.js           meetup data (edit this to add meetups)
         ├── img/                   favicon.svg, logo.svg
@@ -71,7 +72,7 @@ once a date passes, they move to "Past" automatically. The home page shows the
 next three upcoming events. For talks, add a `talk` object; its `title` becomes
 the event heading.
 
-### Members
+### Community (members list)
 
 Edit [`site/members.html`](site/members.html). Copy a `.member` block, set the
 name, optional role, and a link to a personal site (show the domain without the

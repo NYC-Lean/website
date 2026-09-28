@@ -14,8 +14,9 @@
   <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260928-21" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260928-26" />
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -29,7 +30,7 @@
         <a class="nav-home" href="/">Home</a>
         <a href="/calendar">Calendar</a>
         <a href="/blog/">Blog</a>
-        <a href="/members">Members</a>
+        <a href="/members">Community</a>
       </nav>
       <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span class="nav-toggle-box" aria-hidden="true">
@@ -43,7 +44,7 @@
 
   <main>
     <section class="page-head">
-      <p class="page-kicker" data-anim>Upcoming talk · Sunday, August 30, 2026 · 2:00 PM</p>
+      <p class="page-kicker" data-anim data-talk-date="2026-08-30">Upcoming talk · Sunday, August 30, 2026 · 2:00 PM</p>
       <h1 class="page-title post-title" data-anim>Formalizing Gromov's Theorem in Lean</h1>
       <div class="page-rule"></div>
       <p class="page-sub" data-anim>A talk by <a href="https://github.com/Aaron1011" target="_blank" rel="noopener">Aaron Hill</a>.</p>
@@ -134,7 +135,6 @@
   </footer>
 
   <script src="/assets/vendor/gsap/gsap.min.js" defer></script>
-  <script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
-  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/app.js?v=20260928-11" defer></script>
 </body>
 </html>
