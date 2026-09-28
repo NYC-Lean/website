@@ -56,9 +56,15 @@
       : esc(title);
   }
   function talkHTML(t) {
-    var speaker = t.speakerUrl
-      ? '<a href="' + esc(t.speakerUrl) + '" target="_blank" rel="noopener">' + esc(t.speaker) + '</a>'
-      : esc(t.speaker);
+    var people = t.speakers || (t.speaker ? [{ name: t.speaker, url: t.speakerUrl }] : []);
+    var names = people.map(function (p) {
+      return p.url
+        ? '<a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.name) + '</a>'
+        : esc(p.name);
+    });
+    var speaker = names.length > 2
+      ? names.slice(0, -1).join(', ') + ', and ' + names[names.length - 1]
+      : names.join(' and ');
     var abstractMore = t.abstractMore
       ? '<details class="talk-more"><summary>' +
           '<span class="talk-more-open">Show more</span>' +
@@ -66,7 +72,7 @@
         '</summary><p>' + esc(t.abstractMore) + '</p></details>'
       : '';
     return '<div class="talk">' +
-      (t.speaker ? '<p class="talk-speaker">' + speaker + '</p>' : '') +
+      (speaker ? '<p class="talk-speaker">' + speaker + '</p>' : '') +
       (t.abstract ? '<p class="talk-abstract">' + esc(t.abstract) + '</p>' : '') + abstractMore +
     '</div>';
   }
