@@ -1,0 +1,118 @@
+/* ============================================================
+   NYC Lean: design tokens.
+   Every color, size, space, line, radius, and shadow the site
+   uses lives here; style.css only refers to these names.
+   Change a value here to restyle it everywhere.
+   ============================================================ */
+
+:root {
+  /* ---- color ---- */
+  --paper:     #f7eee1;   /* page background, light cream */
+  --paper-2:   #efe2cf;   /* hover / raised surfaces */
+  --white:     #ffffff;   /* text on the navy band */
+  --ink:       #0d4c73;   /* deep blue: text, rules, borders */
+  --ink-soft:  #3f6a83;   /* secondary text */
+  --ink-faint: #87a3b5;   /* tertiary text, placeholders */
+  --accent:    #e2572a;   /* warm orange: links, labels, "Lean" */
+  --accent-2:  #f7a71c;   /* amber: offset shadows, riso double-print */
+  --accent-3:  #5fb6d9;   /* sky blue: decorative blocks */
+  --rule:      rgba(13, 76, 115, 0.26);   /* section-head hairlines */
+  --rule-soft: rgba(13, 76, 115, 0.14);   /* dividers between rows */
+  --grain-opacity: 0.045;                 /* paper texture strength */
+  --text-body: var(--ink);                /* reading text: paragraphs, abstracts */
+
+  /* ---- type families ---- */
+  --display: "Bricolage Grotesque", "Arial Narrow", sans-serif;
+  --body:    "Newsreader", Georgia, serif;
+
+  /* ---- type weights ---- */
+  --fw-regular:  400;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    800;
+  --fw-body:     450;   /* reading text (Newsreader is variable 400–600) */
+
+  /* ---- type scale: body and UI ---- */
+  --fs-body:     19px;    /* root reading size (desktop) */
+  --fs-body-sm:  18px;    /* root reading size (≤820px) */
+  --fs-label:    0.74rem; /* tiny uppercase labels */
+  --fs-meta:     0.8rem;  /* event meta, dates, nav, footer */
+  --fs-small:    0.9rem;  /* buttons, captions, links */
+  --fs-ui:       0.95rem; /* section tags, roles */
+  --fs-base:     1rem;
+  --fs-lead:     1.1rem;  /* speaker names, brand */
+  --fs-lg:       1.3rem;  /* event dates, member names (2-col) */
+  --fs-xl:       1.45rem; /* list-item titles */
+  --fs-2xl:      1.6rem;  /* mobile menu links */
+
+  /* ---- type scale: display (fluid) ---- */
+  --fs-wordmark:       clamp(3.6rem, 12vw, 9rem);  /* home "NYC Lean" */
+  --fs-wordmark-phone: clamp(4.5rem, 28vw, 9rem);  /* stacked, ≤640px */
+  --fs-page-title:     clamp(3rem, 10vw, 6.5rem);  /* Calendar / Members / Blog */
+  --fs-post-title:     clamp(2.4rem, 7vw, 4.6rem);
+  --fs-h2:             clamp(2.2rem, 5vw, 3.8rem); /* "Get involved." */
+  --fs-h2-lg:          clamp(2.4rem, 6.5vw, 4.8rem);
+  --fs-h3:             clamp(1.8rem, 3.6vw, 2.8rem); /* "Who we are." */
+  --fs-row-title:      clamp(1.4rem, 2.8vw, 2.1rem); /* event titles */
+  --fs-hero-sub:       clamp(1.25rem, 2.2vw, 1.7rem);
+  --fs-hero-sub-phone: 1.35rem;
+  --fs-page-sub:       clamp(1.1rem, 2.4vw, 1.5rem);
+  --fs-lede:           clamp(1.1rem, 2vw, 1.3rem);
+
+  /* ---- line height ---- */
+  --lh-body:  1.6;
+  --lh-snug:  1.35;
+  --lh-solid: 1;
+  --clamp-lines: 4;   /* home-page abstracts show this many lines before "Show more" */
+
+  /* ---- letter spacing ---- */
+  --track-display: -0.04em;  /* giant headlines */
+  --track-heading: -0.02em;  /* headings */
+  --track-tight:   -0.01em;  /* names, titles */
+  --track-caps-sm:  0.02em;  /* uppercase buttons, nav */
+  --track-caps:     0.04em;  /* uppercase labels */
+  --track-caps-lg:  0.08em;  /* tiny uppercase badges */
+
+  /* ---- lines ---- */
+  --line-thin:  1px;
+  --line:       1.5px;
+  --line-thick: 3px;
+  --underline:  var(--line) solid var(--accent);  /* link underline */
+
+  /* ---- radius ---- */
+  --radius-md: 18px;
+  --radius-lg: 28px;
+
+  /* ---- shadow (offset riso prints) ---- */
+  --shadow-sm: 4px 4px 0 var(--accent-2);
+  --shadow-md: 6px 6px 0 var(--accent-2);
+  --shadow-lg: 8px 8px 0 var(--accent-2);
+  --shadow-nav: 0 10px 28px -18px rgba(13, 76, 115, 0.45);
+
+  /* ---- layout and spacing ---- */
+  --maxw:      1080px;                      /* content width */
+  --measure:   58ch;                        /* comfortable line length */
+  --gutter:    1.6rem;                      /* side padding */
+  --header-h:  76px;                        /* fixed header offset */
+  --page-top:  clamp(7rem, 16vh, 11rem);    /* space above page titles */
+  --section-y: clamp(4rem, 9vh, 7rem);      /* section padding */
+  --section-y-tight: clamp(2.75rem, 5.5vh, 4.25rem);
+  --rule-gap:  1.4rem;                      /* space around masthead rules */
+  --sec-rule: var(--line) solid var(--ink); /* line between page sections */
+  --sec-label-gap: 0.75rem;                 /* section rule to its label */
+  --col-gap:   clamp(2rem, 5vw, 4rem);      /* two-column gap */
+
+  /* ---- "Get involved" band ---- */
+  --band-bg:         var(--ink);
+  --band-fg:         var(--white);
+  --band-link:       var(--accent-2);  /* underline under links in the band */
+  --band-btn-bg:     var(--white);     /* white buttons... */
+  --band-btn-fg:     var(--ink);
+  --band-btn-shadow: var(--accent-3);  /* ...with a sky-blue offset shadow */
+  --band-btn-border: var(--white);
+
+  /* ---- motion ---- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+

@@ -8,8 +8,9 @@
   <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/tokens.css?v=20260928-21" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260928-26" />
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -23,7 +24,7 @@
         <a class="nav-home" href="/">Home</a>
         <a href="/calendar">Calendar</a>
         <a href="/blog/">Blog</a>
-        <a href="/members">Members</a>
+        <a href="/members">Community</a>
       </nav>
       <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span class="nav-toggle-box" aria-hidden="true">
@@ -52,7 +53,7 @@
           <span class="post-date">Oct 18, 2026</span>
           <span class="post-body">
             <span class="post-item-title">Formal Learning Theory in Lean 4</span>
-            <span class="post-item-meta">Upcoming talk · Dhruv Gupta</span>
+            <span class="post-item-meta" data-talk-date="2026-10-18">Upcoming talk · Dhruv Gupta</span>
             <span class="post-excerpt">Pajor's inequality over infinite sets, its origins in Banach space geometry, and the foundational questions that make learning theory a natural target for Mathlib.</span>
           </span>
         </a>
@@ -60,7 +61,7 @@
           <span class="post-date">Sep 6, 2026</span>
           <span class="post-body">
             <span class="post-item-title">Composing CRDTs Convergent by Construction</span>
-            <span class="post-item-meta">Upcoming talk · Alexander Städing</span>
+            <span class="post-item-meta" data-talk-date="2026-09-06">Upcoming talk · Alexander Städing</span>
             <span class="post-excerpt">A Lean&nbsp;4 framework for assembling operation-based CRDTs from five combinators, carrying convergence proofs through composition and into an executable implementation.</span>
           </span>
         </a>
@@ -68,7 +69,7 @@
           <span class="post-date">Aug 30, 2026</span>
           <span class="post-body">
             <span class="post-item-title">Formalizing Gromov's Theorem in Lean</span>
-            <span class="post-item-meta">Upcoming talk · Aaron Hill</span>
+            <span class="post-item-meta" data-talk-date="2026-08-30">Upcoming talk · Aaron Hill</span>
             <span class="post-excerpt">A formalization of Gromov's theorem on groups of polynomial growth &mdash; every finitely generated group of polynomial growth is virtually nilpotent &mdash; a founding result of geometric group theory.</span>
           </span>
         </a>
@@ -76,7 +77,7 @@
           <span class="post-date">Aug 16, 2026</span>
           <span class="post-body">
             <span class="post-item-title">Prismriver</span>
-            <span class="post-item-meta">Past talk · Claire Wang</span>
+            <span class="post-item-meta" data-talk-date="2026-08-16">Past talk · Claire Wang</span>
             <span class="post-excerpt">A formalization of music theory and algorithmic composition in Lean&nbsp;4 that makes the rules of music machine-checkable and opens the door to verifiable composition. Joint work with Leni Aniva.</span>
           </span>
         </a>
@@ -84,7 +85,7 @@
           <span class="post-date">Aug 2, 2026</span>
           <span class="post-body">
             <span class="post-item-title">Crane</span>
-            <span class="post-item-meta">Past talk · Joomy Korkut</span>
+            <span class="post-item-meta" data-talk-date="2026-08-02">Past talk · Joomy Korkut</span>
             <span class="post-excerpt">An extraction system from the Rocq Prover to modern C&#43;&#43;, generating readable, functional-style output with disciplined ownership and no separate runtime, built to make verified developments credible candidates for production integration.</span>
           </span>
         </a>
@@ -92,7 +93,7 @@
           <span class="post-date">Jun 28, 2026</span>
           <span class="post-body">
             <span class="post-item-title">Numina Fuse</span>
-            <span class="post-item-meta">Past talk · Justin Asher</span>
+            <span class="post-item-meta" data-talk-date="2026-06-28">Past talk · Justin Asher</span>
             <span class="post-excerpt">An agent-native autoformalization platform, built on LeanExplore, that lets you turn an AI agent loose on your Lean projects from the browser &mdash; blueprints, parallel subagents, and long-running auto mode.</span>
           </span>
         </a>
@@ -100,7 +101,7 @@
           <span class="post-date">Jun 7, 2026</span>
           <span class="post-body">
             <span class="post-item-title">Formalizing the GNS Construction in Lean</span>
-            <span class="post-item-meta">Past talk · Gregory Wickham</span>
+            <span class="post-item-meta" data-talk-date="2026-06-07">Past talk · Gregory Wickham</span>
             <span class="post-excerpt">Building a Hilbert space and a *-homomorphism from a C*-algebra &mdash; an essential step toward the Gelfand&ndash;Naimark theorem, now merged into Mathlib.</span>
           </span>
         </a>
@@ -119,7 +120,6 @@
   </footer>
 
   <script src="/assets/vendor/gsap/gsap.min.js" defer></script>
-  <script src="/assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
-  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/app.js?v=20260928-11" defer></script>
 </body>
 </html>

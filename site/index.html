@@ -15,9 +15,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=20260928-2" />
+  <link rel="stylesheet" href="assets/css/tokens.css?v=20260928-21" />
+
+  <link rel="stylesheet" href="assets/css/style.css?v=20260928-26" />
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -31,7 +33,7 @@
         <a class="nav-home" href="/">Home</a>
         <a href="/calendar">Calendar</a>
         <a href="/blog/">Blog</a>
-        <a href="/members">Members</a>
+        <a href="/members">Community</a>
       </nav>
       <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span class="nav-toggle-box" aria-hidden="true">
@@ -49,20 +51,15 @@
       <div class="hero-inner">
         <h1 class="hero-wordmark" data-anim>NYC <span class="word-red">Lean</span></h1>
         <div class="masthead-rule" data-rule></div>
-        <p class="hero-sub" data-anim>Exploring mathematics and verified programming through Lean 4</p>
+        <p class="hero-sub" data-anim>Exploring mathematics and verified programming through Lean&nbsp;4</p>
       </div>
-      <a class="scroll-cue" href="#about" aria-label="Scroll down"><span>read on</span> ↓</a>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section">
-      <div class="sec-head">
-        <span class="tag">About</span>
-        <span class="rule" data-rule></span>
-      </div>
       <div class="meetups">
         <div class="meetups-copy" data-anim>
-          <h2>Who we are.</h2>
+          <h2>About us.</h2>
           <p>
             We are a local group of mathematicians, computer scientists, and Lean
             enthusiasts in the New York City area. We meet once per week on Sundays to
@@ -73,25 +70,23 @@
             <a href="https://leanprover.zulipchat.com/#narrow/channel/224796-Geographic-locality/topic/New.20York.20City.2C.20USA/with/610697702" target="_blank" rel="noopener">Zulip chat</a>.
           </p>
         </div>
+        <figure class="group-photo" data-anim>
+          <img src="assets/img/group-2026-05-31.webp" width="2000" height="1210" loading="eager" alt="NYC Lean members gathered at the May 31, 2026 meetup at The Pearl House" />
+          <figcaption>Left to right: Richard Davison, Justin Asher, Celio Boulay, Markus de Medeiros, Loren Abdulezer, Gregory Wickham, Alex Nguyen, Kiran Gopinathan, Jack McCarthy.</figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- UPCOMING (rendered from assets/js/events.js, next 3) -->
     <section id="upcoming" class="section">
-      <div class="sec-head">
-        <span class="tag">Upcoming</span>
-        <span class="rule" data-rule></span>
-      </div>
+      <div class="sec-head"></div>
       <div class="ledger events" id="home-events"></div>
       <p class="cal-note" data-anim><a class="arrow" href="/calendar">See the full calendar ↗︎</a></p>
     </section>
 
-    <!-- RESOURCES -->
+    <!-- RESOURCES: full-width accent band (colors: --band-* in tokens.css) -->
+    <div class="band">
     <section id="resources" class="section">
-      <div class="sec-head">
-        <span class="tag">Resources</span>
-        <span class="rule" data-rule></span>
-      </div>
       <h2 class="join-head" data-anim>Get involved.</h2>
       <p class="lede" data-anim>
         Chat with the community on the NYC thread of the Lean Zulip or add our meetup calendar.
@@ -104,14 +99,7 @@
         <a class="btn btn-primary" href="https://calendar.google.com/calendar/u/0?cid=MDg2ZjRhMGVmYjNiYmVkZjNkMzNiMjY2ZjcxMGE2YzMwYzAxNDQxMzNjMmI3OTkwZGFiOGVjNmQzNmY1NDEwYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener">Add Calendar ↗︎</a>
       </p>
     </section>
-
-    <!-- GROUP PHOTO -->
-    <section id="photo" class="section photo-section">
-      <figure class="group-photo" data-anim>
-        <img src="assets/img/group-2026-05-31.webp" width="2000" height="1210" loading="lazy" alt="NYC Lean members gathered at the May 31, 2026 meetup at The Pearl House" />
-        <figcaption>Left to right: Richard Davison, Justin Asher, Celio Boulay, Markus de Medeiros, Loren Abdulezer, Gregory Wickham, Alex Nguyen, Kiran Gopinathan, Jack McCarthy.</figcaption>
-      </figure>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -126,7 +114,6 @@
 
   <script src="assets/js/events.js?v=20260928-1" defer></script>
   <script src="assets/vendor/gsap/gsap.min.js" defer></script>
-  <script src="assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
-  <script src="assets/js/app.js?v=20260928-2" defer></script>
+  <script src="assets/js/app.js?v=20260928-11" defer></script>
 </body>
 </html>
