@@ -82,20 +82,12 @@ window.NYC_LEAN_EVENTS = [
     ] },
 
   { date: "2026-10-11", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
-    talk: {
-      title: "TBD",
-      speaker: "Jaume de Dios Pont",
-      speakerUrl: "https://jaume.dedios.cat/",
-      abstract: "Talk details will be announced closer to the event."
-    } },
-
-  { date: "2026-10-04", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talks: [
       {
-        title: "Converse to the Four-Vertex Theorem",
-        speaker: "Kristoffer Josefsson",
-        speakerUrl: "http://github.com/kejace",
-        abstract: "I will describe formalizations of Gluck’s and Dahlberg’s Converse to the four-vertex theorem, some novel generalizations as well as a new proof in the discrete setting. I’ll also talk about some of the motivations behind the theorem accompanied by interactive visualizations."
+        title: "TBD",
+        speaker: "Jaume de Dios Pont",
+        speakerUrl: "https://jaume.dedios.cat/",
+        abstract: "Talk details will be announced closer to the event."
       },
       {
         title: "TBD",
@@ -104,6 +96,14 @@ window.NYC_LEAN_EVENTS = [
         abstract: "Talk details will be announced closer to the event."
       }
     ] },
+
+  { date: "2026-10-04", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+    talk: {
+      title: "Converse to the Four-Vertex Theorem",
+      speaker: "Kristoffer Josefsson",
+      speakerUrl: "http://github.com/kejace",
+      abstract: "I will describe formalizations of Gluck’s and Dahlberg’s Converse to the four-vertex theorem, some novel generalizations as well as a new proof in the discrete setting. I’ll also talk about some of the motivations behind the theorem accompanied by interactive visualizations."
+    } },
 
   { date: "2026-09-27", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
