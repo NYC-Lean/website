@@ -90,10 +90,10 @@ window.NYC_LEAN_EVENTS = [
         abstract: "Talk details will be announced closer to the event."
       },
       {
-        title: "TBD",
+        title: "On the Alternating Bundle Problem",
         speaker: "Jack McCarthy",
         speakerUrl: "https://jackmccarthy.org",
-        abstract: "Talk details will be announced closer to the event."
+        abstract: "Defining differential forms has been blocked in Mathlib for over a year due to the difficulty of instantiating a smooth vector bundle of alternating maps. We analyze the ContinuousAlternatingMap.compContinuousLinearMapCLM_contMDiff problem, which is well known to Mathlib maintainers Kudryashov, Gouëzel and Rothgang. We present several new results including a counter-example to smoothness in the infinite-dimensional, positive characteristic case; as well as positive smoothness results under mild assumptions."
       }
     ] },
 
