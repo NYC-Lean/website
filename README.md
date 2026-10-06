@@ -23,6 +23,7 @@ workflow.
 ├── README.md
 └── site/                          everything served at lean.nyc
     ├── index.html                 home page
+    ├── about.html                 served at /about (nonprofit details)
     ├── calendar.html              served at /calendar
     ├── members.html               served at /members
     ├── 404.html
