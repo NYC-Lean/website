@@ -666,3 +666,26 @@ main:has(> .band:last-child) + .site-footer { margin-top: 0; border-top-color: t
   overflow-y: hidden;
   padding-block: 0.2rem;
 }
+
+/* ---------- About ---------- */
+.about .group-head { margin: clamp(2.4rem, 5vh, 3.4rem) 0 1rem; }
+.about .group-head:first-child { margin-top: 0; }
+.about .facts { margin: 0.4rem 0 1.6rem; }
+.about .fact dd { overflow-wrap: anywhere; }
+.about .fact address { font-style: normal; }
+.about .fact a { border-bottom: var(--underline); }
+.about .topic-list { margin: -0.6rem 0 1.4rem; padding-left: 1.3rem; max-width: 64ch; color: var(--text-body); }
+.about .topic-list li { margin: 0.2rem 0; padding-left: 0.2rem; }
+.about .topic-list li::marker { color: var(--accent); }
+.about-note { font-size: var(--fs-small); color: var(--ink-soft) !important; }
+.footer-legal a { color: inherit; border-bottom: var(--underline); }
+@media (max-width: 540px) {
+  .about .fact { flex-direction: column; gap: 0.25rem; }
+  .about .fact dd { text-align: left; }
+}
+.about .topic-list a { border-bottom: var(--underline); }
+.about .topic-by { color: var(--ink-soft); font-style: italic; }
+.about .topic-by::before { content: "· "; font-style: normal; }
+/* org details: quieter values than the home-page facts */
+.about .fact { padding: 0.65rem 0; }
+.about .fact dd { font-family: var(--body); font-weight: var(--fw-body); font-size: var(--fs-base); color: var(--text-body); }
