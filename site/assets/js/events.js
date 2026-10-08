@@ -82,20 +82,12 @@ window.NYC_LEAN_EVENTS = [
     ] },
 
   { date: "2026-10-11", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
-    talks: [
-      {
-        title: "TBD",
-        speaker: "Jaume de Dios Pont",
-        speakerUrl: "https://jaume.dedios.cat/",
-        abstract: "Talk details will be announced closer to the event."
-      },
-      {
-        title: "On the Alternating Bundle Problem",
-        speaker: "Jack McCarthy",
-        speakerUrl: "https://jackmccarthy.org",
-        abstract: "Defining differential forms has been blocked in Mathlib for over a year due to the difficulty of instantiating a smooth vector bundle of alternating maps. We analyze the ContinuousAlternatingMap.compContinuousLinearMapCLM_contMDiff problem, which is well known to Mathlib maintainers Kudryashov, Gouëzel and Rothgang. We present several new results including a counter-example to smoothness in the infinite-dimensional, positive characteristic case; as well as positive smoothness results under mild assumptions."
-      }
-    ] },
+    talk: {
+      title: "On the Alternating Bundle Problem",
+      speaker: "Jack McCarthy",
+      speakerUrl: "https://jackmccarthy.org",
+      abstract: "Defining differential forms has been blocked in Mathlib for over a year due to the difficulty of instantiating a smooth vector bundle of alternating maps. We analyze the ContinuousAlternatingMap.compContinuousLinearMapCLM_contMDiff problem, which is well known to Mathlib maintainers Kudryashov, Gouëzel and Rothgang. We present several new results including a counter-example to smoothness in the infinite-dimensional, positive characteristic case; as well as positive smoothness results under mild assumptions."
+    } },
 
   { date: "2026-10-04", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
