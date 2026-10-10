@@ -411,6 +411,11 @@ main:has(> .band:last-child) + .site-footer { margin-top: 0; border-top-color: t
 .talk .talk-speaker a { color: var(--ink); border-bottom: var(--underline); }
 .talk .talk-speaker a:hover { color: var(--accent); }
 .talk .talk-abstract { margin: 0; color: var(--text-body); max-width: var(--measure); }
+/* inline code in abstracts (written with `backticks` in events.js); long identifiers may wrap */
+.talk code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em; overflow-wrap: anywhere;
+}
 /* placeholder titles read as placeholders */
 .tbd {
   font-family: var(--body); font-style: italic; font-weight: var(--fw-regular);
