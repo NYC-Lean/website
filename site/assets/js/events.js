@@ -40,17 +40,17 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
-  { date: "2026-12-20", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-12-20", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-12-13", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-12-13", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-12-06", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-12-06", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-11-22", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-11-22", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-11-15", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-11-15", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-11-08", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+  { date: "2026-11-08", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
       title: "Iris-Lean",
       speaker: "Markus de Medeiros",
@@ -58,11 +58,11 @@ window.NYC_LEAN_EVENTS = [
       abstract: "Talk details will be announced closer to the event."
     } },
 
-  { date: "2026-11-01", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-11-01", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-10-25", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-10-25", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-10-18", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+  { date: "2026-10-18", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talks: [
       {
         title: "Formal Learning Theory in Lean 4",
@@ -81,7 +81,7 @@ window.NYC_LEAN_EVENTS = [
       }
     ] },
 
-  { date: "2026-10-11", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+  { date: "2026-10-11", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
       title: "On the Alternating Bundle Problem",
       speaker: "Jack McCarthy",
