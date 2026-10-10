@@ -27,7 +27,7 @@
          speaker: "...",      // presenter's name
          speakerUrl: "...",   // optional; links the speaker's name
          // or, for several presenters: speakers: [ { name: "...", url: "..." }, ... ]
-         abstract: "...",     // talk abstract
+         abstract: "...",     // talk abstract; `backticks` show as code
          abstractMore: "..."  // optional; collapsed behind a "Show more" control
        }
      }
@@ -86,7 +86,7 @@ window.NYC_LEAN_EVENTS = [
       title: "On the Alternating Bundle Problem",
       speaker: "Jack McCarthy",
       speakerUrl: "https://jackmccarthy.org",
-      abstract: "Defining differential forms has been blocked in Mathlib for over a year due to the difficulty of instantiating a smooth vector bundle of alternating maps. We analyze the ContinuousAlternatingMap.compContinuousLinearMapCLM_contMDiff problem, which is well known to Mathlib maintainers Kudryashov, Gouëzel and Rothgang. We present several new results including a counter-example to smoothness in the infinite-dimensional, positive characteristic case; as well as positive smoothness results under mild assumptions."
+      abstract: "Defining differential forms on manifolds has been blocked in Mathlib for over a year due to the difficulty of instantiating a smooth vector bundle of alternating maps. We analyze the `ContinuousAlternatingMap.compContinuousLinearMapCLM_contMDiff` problem, which is well known to Mathlib maintainers Kudryashov, Gouëzel and Dedecker. We present several new results including a counter-example to analyticity in the infinite-dimensional, positive characteristic case; as well as positive analyticity results under mild assumptions."
     } },
 
   { date: "2026-10-04", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 102", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",

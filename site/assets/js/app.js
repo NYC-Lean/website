@@ -49,6 +49,13 @@
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
+  // abstracts: escape, then show `backticked` spans as inline code;
+  // long identifiers may break after "." or "_"
+  function abstractHTML(s) {
+    return esc(s).replace(/`([^`]+)`/g, function (_, code) {
+      return '<code>' + code.replace(/([._])/g, '$1<wbr>') + '</code>';
+    });
+  }
   function linkedTitleHTML(title, url) {
     if (/^\s*tbd\s*$/i.test(title || "")) return '<span class="tbd">Title to be announced</span>';
     return url
@@ -69,11 +76,11 @@
       ? '<details class="talk-more"><summary>' +
           '<span class="talk-more-open">Show more</span>' +
           '<span class="talk-more-close">Show less</span>' +
-        '</summary><p>' + esc(t.abstractMore) + '</p></details>'
+        '</summary><p>' + abstractHTML(t.abstractMore) + '</p></details>'
       : '';
     return '<div class="talk">' +
       (speaker ? '<p class="talk-speaker">' + speaker + '</p>' : '') +
-      (t.abstract ? '<p class="talk-abstract">' + esc(t.abstract) + '</p>' : '') + abstractMore +
+      (t.abstract ? '<p class="talk-abstract">' + abstractHTML(t.abstract) + '</p>' : '') + abstractMore +
     '</div>';
   }
   function scheduleHTML(schedule) {
