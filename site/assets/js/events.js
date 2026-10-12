@@ -69,7 +69,7 @@ window.NYC_LEAN_EVENTS = [
       abstractMore: "We carry this out for a small WHILE language, whose C interpreter we compile to RISC-V. LLMs wrote the big-step semantics and a Lean 4 proof that the binary, run on the Sail RISC-V model, halts with a program's output exactly when the semantics derives it. The proof uses a port of MachCSL's machine-code separation logic to iris-lean, and along the way it exposed errors in the semantics' rules. The validated semantics becomes a foundation for verified tools whose guarantees reach the binary, such as a type system, a program logic, an abstract interpreter and a compiler."
     },
     schedule: [
-      { time: "3:00–3:30 PM", label: "Chat" },
+      { time: "3:00–3:30 PM", label: "Introductions" },
       { time: "3:30–4:30 PM", label: "Talk" },
       { time: "5:00–6:00 PM", label: "Social" }
     ] },
@@ -93,7 +93,7 @@ window.NYC_LEAN_EVENTS = [
       }
     ],
     schedule: [
-      { time: "3:00–3:30 PM", label: "Chat" },
+      { time: "3:00–3:30 PM", label: "Introductions" },
       { time: "3:30–4:15 PM", label: "Dhruv Gupta: Formal Learning Theory in Lean 4" },
       { time: "4:15–5:00 PM", label: "Shaswat Patel and Daniel Aarão Reis Arturi: Lea" },
       { time: "5:00–6:00 PM", label: "Social" }
