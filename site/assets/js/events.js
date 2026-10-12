@@ -60,7 +60,14 @@ window.NYC_LEAN_EVENTS = [
 
   { date: "2026-11-01", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-10-25", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-10-25", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+    talk: {
+      title: "Ship Your Interpreters: Validating LLM-Written Semantics against the Binary",
+      speaker: "Kiran Gopinathan",
+      speakerUrl: "https://kirancodes.me",
+      abstract: "Can language models write semantics for real world languages that can be trusted? Large language models are rapidly reducing the manual effort required to write the proofs for formal verification. However, the cost of writing specifications remains a bottleneck. Language semantics are one such specification, and are often large, subtle and hard to review, so an LLM-generated semantics cannot simply be checked by reading it. We propose a novel technique to make LLM-generated semantics trustworthy by verifying them against the binary implementation people actually run. We compile the language's interpreter to a machine with a formal model and prove that the binary refines the semantics, that is, “ship your interpreters”.",
+      abstractMore: "We carry this out for a small WHILE language, whose C interpreter we compile to RISC-V. LLMs wrote the big-step semantics and a Lean 4 proof that the binary, run on the Sail RISC-V model, halts with a program's output exactly when the semantics derives it. The proof uses a port of MachCSL's machine-code separation logic to iris-lean, and along the way it exposed errors in the semantics' rules. The validated semantics becomes a foundation for verified tools whose guarantees reach the binary, such as a type system, a program logic, an abstract interpreter and a compiler."
+    } },
 
   { date: "2026-10-18", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talks: [
