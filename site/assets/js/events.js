@@ -67,7 +67,12 @@ window.NYC_LEAN_EVENTS = [
       speakerUrl: "https://kirancodes.me",
       abstract: "Can language models write semantics for real world languages that can be trusted? Large language models are rapidly reducing the manual effort required to write the proofs for formal verification. However, the cost of writing specifications remains a bottleneck. Language semantics are one such specification, and are often large, subtle and hard to review, so an LLM-generated semantics cannot simply be checked by reading it. We propose a novel technique to make LLM-generated semantics trustworthy by verifying them against the binary implementation people actually run. We compile the language's interpreter to a machine with a formal model and prove that the binary refines the semantics, that is, “ship your interpreters”.",
       abstractMore: "We carry this out for a small WHILE language, whose C interpreter we compile to RISC-V. LLMs wrote the big-step semantics and a Lean 4 proof that the binary, run on the Sail RISC-V model, halts with a program's output exactly when the semantics derives it. The proof uses a port of MachCSL's machine-code separation logic to iris-lean, and along the way it exposed errors in the semantics' rules. The validated semantics becomes a foundation for verified tools whose guarantees reach the binary, such as a type system, a program logic, an abstract interpreter and a compiler."
-    } },
+    },
+    schedule: [
+      { time: "3:00–3:30 PM", label: "Introductions" },
+      { time: "3:30–4:30 PM", label: "Talk" },
+      { time: "4:30–6:00 PM", label: "Social" }
+    ] },
 
   { date: "2026-10-18", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talks: [
@@ -79,13 +84,19 @@ window.NYC_LEAN_EVENTS = [
         abstract: "My work in learning theory sits at the intersection of combinatorics, measure theory, and complexity theory. I study when and how a learner can identify a function from labeled samples. Beyond machine learning, I am interested in foundational questions of broad mathematical interest: some questions of learnability are independent of ZFC, while notions of complexity and measurability connect the subject to model theory, computational geometry, and Banach space geometry, making it a natural target for Mathlib. In this talk, I will derive and formalize Pajor's inequality over infinite sets, discuss its origins in Banach space geometry, examine what formalization adds beyond the proof itself, and close with open directions for formal learning theory in Lean 4."
       },
       {
-        title: "TBD",
+        title: "Lea",
         speakers: [
           { name: "Shaswat Patel", url: "https://shaswatpatel.github.io/" },
           { name: "Daniel Aarão Reis Arturi", url: "https://darturi.github.io/" }
         ],
         abstract: "Shaswat and Daniel will present Lea, an open-source ecosystem for formalizing mathematics in Lean 4, including its theorem-proving agent and Overleaf workflow. Full details will be announced closer to the event."
       }
+    ],
+    schedule: [
+      { time: "3:00–3:30 PM", label: "Introductions" },
+      { time: "3:30–4:15 PM", label: "Dhruv Gupta: Formal Learning Theory in Lean 4" },
+      { time: "4:15–5:00 PM", label: "Shaswat Patel and Daniel Aarão Reis Arturi: Lea" },
+      { time: "5:00–6:00 PM", label: "Social" }
     ] },
 
   { date: "2026-10-11", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
