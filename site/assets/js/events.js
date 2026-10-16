@@ -84,18 +84,19 @@ window.NYC_LEAN_EVENTS = [
         abstract: "My work in learning theory sits at the intersection of combinatorics, measure theory, and complexity theory. I study when and how a learner can identify a function from labeled samples. Beyond machine learning, I am interested in foundational questions of broad mathematical interest: some questions of learnability are independent of ZFC, while notions of complexity and measurability connect the subject to model theory, computational geometry, and Banach space geometry, making it a natural target for Mathlib. In this talk, I will derive and formalize Pajor's inequality over infinite sets, discuss its origins in Banach space geometry, examine what formalization adds beyond the proof itself, and close with open directions for formal learning theory in Lean 4."
       },
       {
-        title: "Lea",
+        title: "Lea: An Agent Backbone for Mathematician-Controlled Formalization in Lean",
         speakers: [
           { name: "Shaswat Patel", url: "https://shaswatpatel.github.io/" },
           { name: "Daniel Aarão Reis Arturi", url: "https://darturi.github.io/" }
         ],
-        abstract: "Shaswat and Daniel will present Lea, an open-source ecosystem for formalizing mathematics in Lean 4, including its theorem-proving agent and Overleaf workflow. Full details will be announced closer to the event."
+        abstract: "Agentic systems now formalize research-level mathematics in Lean, but they are built for autonomy: the mathematician states a target and inspects a result. The alternative, a general-purpose coding harness, is domain-neutral and must be assembled into a formalization workspace before any mathematics begins. Mathematicians, however, report wanting to keep high-level control over how an argument is decomposed and established. We present Lea, a Lean-specific agent backbone for mathematician-facing software rather than a single interface.",
+        abstractMore: "Lea exposes runs, sessions, and typed events through one application-neutral API, and ships with Lean tooling (blueprints, LSP, Loogle, SafeVerify) already wired. We report two applications built on it: LeaChat, a web client for interactive proof authoring, and LeaOverleaf, which formalizes theorems annotated directly in an Overleaf document; a session begun in either continues in the other. In a case study, a mathematician outlined a proof of the Durfee square generating function in a few natural-language messages, and Lea produced a complete Lean development from Mathlib alone, following the intended decomposition closely and requiring substantive correction at a single point. Lea and both applications are released as open source so that further mathematician-facing tools can be built on the same backbone."
       }
     ],
     schedule: [
       { time: "3:00–3:30 PM", label: "Introductions" },
       { time: "3:30–4:15 PM", label: "Dhruv Gupta: Formal Learning Theory in Lean 4" },
-      { time: "4:15–5:00 PM", label: "Shaswat Patel and Daniel Aarão Reis Arturi: Lea" },
+      { time: "4:15–5:00 PM", label: "Shaswat Patel and Daniel Aarão Reis Arturi: Lea: An Agent Backbone for Mathematician-Controlled Formalization in Lean" },
       { time: "5:00–6:00 PM", label: "Social" }
     ] },
 
