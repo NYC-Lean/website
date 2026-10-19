@@ -58,10 +58,10 @@ window.NYC_LEAN_EVENTS = [
 
   { date: "2026-11-14", time: "3:30–4:30 PM", location: "NYU Warren Weaver Hall (room TBA)", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
-      title: "Title to be announced",
+      title: "TBD",
       speaker: "Leonardo de Moura",
       speakerUrl: "https://leodemoura.github.io",
-      abstract: "Talk details will be announced closer to the event."
+      abstract: "Abstract and schedule will be announced closer to the event."
     } },
 
   { date: "2026-11-08", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
