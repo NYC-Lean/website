@@ -11,6 +11,7 @@
        time: "2:00 PM",       // free text, "" if unknown
        location: "Mori",      // free text, "" if none / private
        locationUrl: "...",    // optional; makes the location a clickable map link
+       rsvpUrl: "...",        // optional; Luma event link, shows a Register button
        title: "Textbook companion planning", // optional; omit for a regular meetup
        description: "..."     // optional, shown on the calendar page
      }
@@ -40,11 +41,11 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
-  { date: "2026-12-20", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-12-20", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/zlju9ouw", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-12-13", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-12-13", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/9r0ui1p9", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-12-06", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+  { date: "2026-12-06", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/9byfbuov", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
       title: "Autoformalization: A Tutorial for Everyone",
       speaker: "Marcus Min",
@@ -57,9 +58,9 @@ window.NYC_LEAN_EVENTS = [
       { time: "4:30–6:00 PM", label: "Social" }
     ] },
 
-  { date: "2026-11-22", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-11-22", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/oh836gax", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-11-14", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall (room TBA)", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+  { date: "2026-11-14", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/r4ltu6qs", location: "NYU Warren Weaver Hall (room TBA)", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
       title: "Title to be announced",
       speaker: "Leonardo de Moura",
@@ -72,7 +73,7 @@ window.NYC_LEAN_EVENTS = [
       { time: "4:30–6:00 PM", label: "Social" }
     ] },
 
-  { date: "2026-11-08", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+  { date: "2026-11-08", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/86pfhyb9", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
       title: "Iris-Lean",
       speaker: "Markus de Medeiros",
@@ -85,9 +86,9 @@ window.NYC_LEAN_EVENTS = [
       { time: "4:30–6:00 PM", label: "Social" }
     ] },
 
-  { date: "2026-11-01", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-11-01", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/9wtz3vhs", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
-  { date: "2026-10-25", time: "3:00–6:00 PM", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+  { date: "2026-10-25", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/yls11ho5", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
       title: "Ship Your Interpreters: Validating LLM-Written Semantics against the Binary",
       speaker: "Kiran Gopinathan",
