@@ -465,7 +465,7 @@ main:has(> .band:last-child) + .site-footer { margin-top: 0; border-top-color: t
 /* quieter than the page-level CTA: small outlined accent, fills on hover */
 .ev-rsvp .btn {
   display: inline-block; padding: 0.3rem 0.9rem;
-  font-family: var(--body); font-weight: var(--fw-semibold);
+  font-family: var(--display); font-weight: var(--fw-bold);
   font-size: var(--fs-small); letter-spacing: 0; text-transform: none;
   background: transparent; color: var(--accent); box-shadow: none;
 }
