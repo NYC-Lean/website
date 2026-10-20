@@ -461,14 +461,13 @@ main:has(> .band:last-child) + .site-footer { margin-top: 0; border-top-color: t
   font-family: var(--display); font-weight: var(--fw-bold); color: var(--ink); white-space: nowrap;
 }
 .event-schedule span { color: var(--ink-soft); }
-/* Register link sits under the date, with a ticket icon */
+/* Register link sits under the date */
 .event-date .ev-rsvp {
-  display: inline-flex; align-items: center; gap: 0.35em; margin-top: 0.9rem;
+  display: inline-block; margin-top: 0.9rem;
   font-family: var(--display); font-weight: var(--fw-bold); font-size: var(--fs-small);
   line-height: 1; color: var(--accent); white-space: nowrap; transition: color .15s var(--ease);
 }
 .event-date .ev-rsvp:hover { color: var(--ink); }
-.ev-rsvp-icon { flex: none; }
 .cal-note {
   max-width: 60ch; margin: 2.5rem 0 0; color: var(--text-body);
 }
