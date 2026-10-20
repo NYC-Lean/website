@@ -14,6 +14,9 @@
 
   var WD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   var MO = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  /* ticket icon for the Register link; the dashed line is the perforation */
+  var TICKET = '<svg class="ev-rsvp-icon" width="17" height="13" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">' +
+    '<path d="M1 1h14v3a2 2 0 0 0 0 4v3H1V8a2 2 0 0 0 0-4z"/><path d="M10.5 2.5v7" stroke-dasharray="1.4 1.4" stroke-width="1.4"/></svg>';
 
   // Render events first, independent of GSAP, so they always show.
   renderEvents();
@@ -120,13 +123,14 @@
       : (e.descriptionHtml || e.description) ? '<p>' + (e.descriptionHtml || esc(e.description)) + '</p>' : '';
     return '<div class="row event" data-anim>' +
       '<div class="event-date"><span class="ev-dm">' + dnum + ' ' + esc(mon) + '</span>' +
-        (yr ? '<span class="ev-y">' + yr + '</span>' : '') + '</div>' +
+        (yr ? '<span class="ev-y">' + yr + '</span>' : '') +
+        (!compact && e.rsvpUrl ? '<a class="ev-rsvp" href="' + esc(e.rsvpUrl) + '" target="_blank" rel="noopener">' + TICKET + 'Register</a>' : '') +
+      '</div>' +
       '<div class="row-body">' +
         '<span class="ev-meta">' + meta + '</span>' +
         (title ? '<h3>' + title + '</h3>' : '') +
         (!compact ? body : '') +
         (!compact ? scheduleHTML(e.schedule) : '') +
-        (!compact && e.rsvpUrl ? '<div class="ev-rsvp"><a class="btn btn-primary" href="' + esc(e.rsvpUrl) + '" target="_blank" rel="noopener">Register</a></div>' : '') +
       '</div></div>';
   }
   function joinRows(list) {
