@@ -461,8 +461,15 @@ main:has(> .band:last-child) + .site-footer { margin-top: 0; border-top-color: t
   font-family: var(--display); font-weight: var(--fw-bold); color: var(--ink); white-space: nowrap;
 }
 .event-schedule span { color: var(--ink-soft); }
-.ev-rsvp { margin-top: 1.2rem; }
-.ev-rsvp .btn { display: inline-block; }
+.ev-rsvp { margin-top: 1rem; }
+/* quieter than the page-level CTA: small outlined accent, fills on hover */
+.ev-rsvp .btn {
+  display: inline-block; padding: 0.3rem 0.9rem;
+  font-family: var(--body); font-weight: var(--fw-semibold);
+  font-size: var(--fs-small); letter-spacing: 0; text-transform: none;
+  background: transparent; color: var(--accent); box-shadow: none;
+}
+.ev-rsvp .btn:hover { transform: none; background: var(--accent); color: var(--paper); box-shadow: none; }
 .cal-note {
   max-width: 60ch; margin: 2.5rem 0 0; color: var(--text-body);
 }
