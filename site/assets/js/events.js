@@ -58,8 +58,19 @@ window.NYC_LEAN_EVENTS = [
       { time: "4:30–6:00 PM", label: "Social" }
     ] },
 
-  { date: "2026-11-22", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/oh836gax", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
-
+  { date: "2026-11-22", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/oh836gax", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+    talk: {
+      title: "Iris-Lean",
+      speaker: "Markus de Medeiros",
+      speakerUrl: "https://www.markusde.ca",
+      abstract: "Talk details will be announced closer to the event."
+    },
+    schedule: [
+      { time: "3:00–3:30 PM", label: "Introductions" },
+      { time: "3:30–4:30 PM", label: "Talk" },
+      { time: "4:30–6:00 PM", label: "Social" }
+    ] },
+  
   { date: "2026-11-14", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/r4ltu6qs", location: "NYU Warren Weaver Hall (room TBA)", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
       title: "Title to be announced",
@@ -73,18 +84,7 @@ window.NYC_LEAN_EVENTS = [
       { time: "4:30–6:00 PM", label: "Social" }
     ] },
 
-  { date: "2026-11-08", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/86pfhyb9", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
-    talk: {
-      title: "Iris-Lean",
-      speaker: "Markus de Medeiros",
-      speakerUrl: "https://www.markusde.ca",
-      abstract: "Talk details will be announced closer to the event."
-    },
-    schedule: [
-      { time: "3:00–3:30 PM", label: "Introductions" },
-      { time: "3:30–4:30 PM", label: "Talk" },
-      { time: "4:30–6:00 PM", label: "Social" }
-    ] },
+  { date: "2026-11-08", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/86pfhyb9", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
   { date: "2026-11-01", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/9wtz3vhs", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
