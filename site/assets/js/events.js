@@ -84,7 +84,13 @@ window.NYC_LEAN_EVENTS = [
       { time: "4:30–6:00 PM", label: "Social" }
     ] },
 
-  { date: "2026-11-08", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/86pfhyb9", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2026-11-08", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/86pfhyb9", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
+    talk: {
+      title: "Formal verification for videogames?",
+      titleUrl: "http://sprintgame.net/",
+      speaker: "Zac Burton",
+      abstract: "A case study on sprintgame.net, a track & field simulator, peaking at 2k WAU, whose design intent was extracted by an LLM as invariants, reviewed by hand, and proved in Lean 4 about models of the engine. In total 243 theorems were proved with no sorrys, and we tested that the proofs match the real game's shipped TypeScript on almost 1,000,000 cases. Along the way this led to 7 bugs being found and fixed! I will be walking through one full example; a lemma on threshold tables and the monotonicity theorem built on it, and the bug it exposed..."
+    } },
 
   { date: "2026-11-01", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/9wtz3vhs", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
