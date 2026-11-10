@@ -73,10 +73,10 @@ window.NYC_LEAN_EVENTS = [
   
   { date: "2026-11-14", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/r4ltu6qs", location: "NYU Warren Weaver Hall (room TBA)", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012",
     talk: {
-      title: "Title to be announced",
+      title: "Lean: Machine-Checked Mathematics, Software, and AI",
       speaker: "Leonardo de Moura",
       speakerUrl: "https://leodemoura.github.io",
-      abstract: "Abstract will be announced closer to the event."
+      abstract: "Lean is an open-source programming language and proof assistant. You can use it to write mathematical definitions, theorems, and proofs, and to write programs and prove that they are correct. A small kernel checks every proof. If the kernel accepts a proof, it does not matter whether a person or an AI wrote it. Lean proofs are growing exponentially: in the last twelve months, they grew by three orders of magnitude. AI systems are auto-formalizing mathematics at large scale, translating published results into Lean, and proving open conjectures. New software and hardware verification projects have started. AI agents now write much of this code and many of these proofs. In this talk, I will explain what Lean is and how it works, using simple examples. No background in Lean or formal methods is needed. I will then show how Lean is used in mathematics, software and hardware verification, and AI, and discuss the challenges ahead."
     },
     schedule: [
       { time: "3:00–3:30 PM", label: "Introductions" },
