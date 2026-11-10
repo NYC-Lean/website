@@ -50,11 +50,12 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
   // abstracts: escape, then show `backticked` spans as inline code;
-  // long identifiers may break after "." or "_"
+  // long identifiers may break after "." or "_". A blank line ("\n\n")
+  // starts a new paragraph; line breaks keep the home-page clamp working.
   function abstractHTML(s) {
     return esc(s).replace(/`([^`]+)`/g, function (_, code) {
       return '<code>' + code.replace(/([._])/g, '$1<wbr>') + '</code>';
-    });
+    }).trim().replace(/\s*\n\s*\n\s*/g, '<br><br>');
   }
   function linkedTitleHTML(title, url) {
     if (/^\s*tbd\s*$/i.test(title || "")) return '<span class="tbd">Title to be announced</span>';
