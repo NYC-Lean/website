@@ -64,7 +64,7 @@ window.NYC_LEAN_EVENTS = [
       title: "Iris-Lean",
       speaker: "Markus de Medeiros",
       speakerUrl: "https://www.markusde.ca",
-      abstract: "Talk details will be announced closer to the event."
+      abstract: "Iris is a cutting-edge tool for program verification, with applications in distributed systems, cryptography, compiler correctness, and more. In this talk, I will give an overview of our recent port of Iris to Lean and describe how you can use it to verify your own systems. "
     },
     schedule: [
       { time: "3:00–3:30 PM", label: "Introductions" },
