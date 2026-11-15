@@ -42,7 +42,13 @@
 window.NYC_LEAN_EVENTS = [
 
   /* ---- upcoming ---- (add the next meetup here) */
-  { date: "2026-12-20", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/zlju9ouw", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
+  { date: "2027-01-31", time: "", location: "Location TBD", description: "Details to be announced." },
+
+  { date: "2027-01-24", time: "", location: "Location TBD", description: "Details to be announced." },
+
+  { date: "2027-01-17", time: "", location: "Location TBD", description: "Details to be announced." },
+
+  { date: "2027-01-10", time: "", location: "Location TBD", description: "Details to be announced." },
 
   { date: "2026-12-13", time: "3:00–6:00 PM", rsvpUrl: "https://luma.com/9r0ui1p9", location: "NYU Warren Weaver Hall, Room 1302", locationUrl: "https://www.google.com/maps/search/?api=1&query=Warren+Weaver+Hall%2C+251+Mercer+St%2C+New+York%2C+NY+10012", description: "Open session to work on Lean and meet other people in the community. Bring a laptop." },
 
