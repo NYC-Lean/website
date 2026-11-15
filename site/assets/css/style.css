@@ -293,11 +293,8 @@ main:has(> .band:last-child) + .site-footer { margin-top: 0; border-top-color: t
 .ledger .rule { width: 100%; flex: none; background: var(--rule-soft); }
 
 /* ---------- Meetups ---------- */
-.meetups {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  column-gap: var(--col-gap); align-items: start;
-}
-.meetups-copy p { max-width: none; }
+.meetups { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 2.5rem; max-width: 840px; }
+.meetups-copy p { max-width: var(--measure); }
 .meetups .group-photo img { border-radius: var(--radius-md); box-shadow: var(--shadow-md); }
 .meetups .group-photo figcaption { margin: 1rem 0 0; font-size: var(--fs-meta); text-align: left; }
 .meetups-copy h2,
@@ -519,7 +516,7 @@ main:has(> .band:last-child) + .site-footer { margin-top: 0; border-top-color: t
 /* ---------- Responsive ---------- */
 @media (max-width: 820px) {
   body { font-size: var(--fs-body-sm); }
-  .meetups { grid-template-columns: 1fr; gap: 2rem; }
+  .meetups { row-gap: 2rem; }
   .join-row { grid-template-columns: 1fr auto; gap: 0.2rem 1rem; }
   .join-k { grid-column: 1 / -1; }
   .row { grid-template-columns: 3rem 1fr; gap: 1rem; }
