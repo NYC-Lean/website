@@ -46,7 +46,12 @@ window.NYC_LEAN_EVENTS = [
 
   { date: "2027-01-24", time: "", location: "Location TBD", description: "Details to be announced." },
 
-  { date: "2027-01-17", time: "", location: "Location TBD", description: "Details to be announced." },
+  { date: "2027-01-17", time: "", location: "Location TBD",
+    talk: {
+      title: "Title to be announced",
+      speaker: "Yaroslav Kharkov",
+      abstract: "Abstract and schedule will be announced closer to the event."
+    } },
 
   { date: "2027-01-10", time: "", location: "Location TBD", description: "Details to be announced." },
 
