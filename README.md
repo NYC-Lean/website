@@ -26,6 +26,7 @@ workflow.
     ├── about.html                 served at /about (nonprofit details)
     ├── calendar.html              served at /calendar
     ├── members.html               served at /members
+    ├── chat.html                  served at /chat (forwards to the chat invite link)
     ├── 404.html
     ├── CNAME                      custom domain (do not delete)
     └── assets/
@@ -72,6 +73,15 @@ entries are sorted by date. Events with a future date appear under "Upcoming";
 once a date passes, they move to "Past" automatically. The home page shows the
 next three upcoming events. For talks, add a `talk` object; its `title` becomes
 the event heading.
+
+### Chat
+
+The community chat is a self-hosted Zulip server at
+[chat.lean.nyc](https://chat.lean.nyc). [`lean.nyc/chat`](https://lean.nyc/chat)
+forwards visitors to the chat's reusable invite link, so anyone can sign up. To
+replace the link (for example, after revoking it in Zulip's organization settings
+under *Invitations*), update the join URL in [`site/chat.html`](site/chat.html).
+Every other page links to `/chat`, so no other file needs to change.
 
 ### Community (members list)
 
